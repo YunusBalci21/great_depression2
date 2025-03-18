@@ -1,0 +1,145 @@
+add_namespace = great_depression
+
+# Wall Street Crash
+country_event = {
+    id = great_depression.1
+    title = great_depression.1.t
+    desc = great_depression.1.d
+    picture = GFX_report_event_generic_read_write  # Using existing graphic for now
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = great_depression.1.a
+        add_political_power = -50
+        add_stability = -0.1
+        
+        hidden_effect = {
+            news_event = { id = great_depression.2 days = 1 }
+        }
+    }
+}
+
+# Wall Street Crash News
+news_event = {
+    id = great_depression.2
+    title = great_depression.2.t
+    desc = great_depression.2.d
+    picture = GFX_news_event_generic_sign_treaty1  # Using existing graphic for now
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = great_depression.2.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = great_depression.2.b
+        trigger = {
+            tag = USA
+        }
+    }
+}
+
+# Economic Crisis Spreads (1930)
+country_event = {
+    id = great_depression.3
+    title = great_depression.3.t
+    desc = great_depression.3.d
+    picture = GFX_report_event_generic_factory  # Using existing graphic for now
+    
+    trigger = {
+        date > 1930.1.1
+        date < 1930.1.10
+        NOT = { tag = USA }
+        NOT = { tag = SOV }
+        NOT = { has_idea = great_depression_severe }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = great_depression.3.a
+        add_political_power = -25
+        add_stability = -0.05
+        add_ideas = great_depression_severe
+    }
+}
+
+# 1932 US Election
+country_event = {
+    id = great_depression.4
+    title = great_depression.4.t
+    desc = great_depression.4.d
+    picture = GFX_report_event_usa_election_generic
+    
+    trigger = {
+        tag = USA
+        date > 1932.11.8
+        date < 1932.11.10
+    }
+    
+    fire_only_once = yes
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    option = {
+        name = great_depression.4.a  # Roosevelt wins
+        add_political_power = 50
+        add_stability = 0.05
+        
+        hidden_effect = {
+            create_country_leader = {
+                name = "Franklin D. Roosevelt"
+                desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+                picture = "gfx/leaders/USA/Portrait_USA_Franklin_D_Roosevelt.dds"
+                expire = "1965.1.1"
+                ideology = liberalism
+                traits = {
+                    dislikes_germany
+                }
+            }
+            country_event = { id = usa_depression.4 days = 1 }
+            news_event = { id = great_depression.5 days = 1 }
+        }
+    }
+}
+
+# Roosevelt Election News
+news_event = {
+    id = great_depression.5
+    title = great_depression.5.t
+    desc = great_depression.5.d
+    picture = GFX_news_event_generic_usa
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = great_depression.5.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = great_depression.5.b
+        trigger = {
+            tag = USA
+        }
+    }
+}

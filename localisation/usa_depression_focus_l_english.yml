@@ -1,0 +1,98 @@
+﻿l_english:
+ # USA Focus Tree
+ USA_hoover_response:0 "Hoover's Crisis Response"
+ USA_hoover_response_desc:0 "President Herbert Hoover believes that the economic downturn, while severe, can be addressed through voluntary cooperation between businesses, labor, and government rather than direct federal intervention. His administration is working to coordinate responses from the private sector to stabilize the economy."
+ 
+ USA_voluntary_measures:0 "Voluntary Business Cooperation"
+ USA_voluntary_measures_desc:0 "Hoover encourages businesses to maintain wage levels and avoid layoffs while the crisis persists. This approach relies on the goodwill of corporate leaders rather than government mandates to preserve jobs and economic activity."
+ 
+ USA_banking_reform:0 "Banking Reform"
+ USA_banking_reform_desc:0 "The banking system is in crisis, with failures spreading across the country. Limited reforms to strengthen remaining institutions may help restore some confidence in the financial system and prevent further collapses."
+ 
+ USA_infrastructure_investment:0 "Infrastructure Projects"
+ USA_infrastructure_investment_desc:0 "While President Hoover resists direct relief programs, he supports public works projects to provide employment and improve national infrastructure. The construction of roads, dams, and public buildings can provide jobs while creating lasting improvements."
+ 
+ USA_1932_election:0 "1932 Election"
+ USA_1932_election_desc:0 "After nearly four years of Depression, the American people will decide whether to continue with Hoover's approach or change course. Democratic candidate Franklin D. Roosevelt offers a 'New Deal' with increased government intervention to address the crisis."
+ 
+ USA_new_deal:0 "The New Deal"
+ USA_new_deal_desc:0 "Franklin D. Roosevelt has taken office promising bold action to combat the Depression. His 'New Deal' proposes unprecedented government programs to provide relief, drive recovery, and reform the economic system to prevent future crashes."
+ 
+ USA_ccc_program:0 "Civilian Conservation Corps"
+ USA_ccc_program_desc:0 "The Civilian Conservation Corps will employ young men in conservation projects across the country. This program addresses unemployment while improving America's natural resources and public lands through reforestation, fire prevention, and park development."
+ 
+ USA_wpa_program:0 "Works Progress Administration"
+ USA_wpa_program_desc:0 "The Works Progress Administration will be the largest employer in the country, putting millions to work on public infrastructure projects. Beyond construction, the WPA will employ artists, writers, and actors in cultural programs that celebrate American heritage."
+ 
+ USA_tva_program:0 "Tennessee Valley Authority"
+ USA_tva_program_desc:0 "The Tennessee Valley Authority represents a bold experiment in regional planning and development. This program will construct dams to control flooding, generate electricity, and modernize one of America's poorest regions through economic development."
+ 
+ USA_agricultural_adjustment:0 "Agricultural Adjustment Act"
+ USA_agricultural_adjustment_desc:0 "American farmers face collapsing prices and foreclosure. The Agricultural Adjustment Act aims to raise farm incomes by controlling production and providing subsidies, addressing a crisis that has devastated rural America."
+ 
+ USA_social_security:0 "Social Security Act"
+ USA_social_security_desc:0 "The Social Security Act will create a safety net for older Americans, providing retirement benefits funded through payroll taxes. This landmark legislation marks the federal government's entry into providing direct welfare support to its citizens."
+ 
+ USA_recovery_complete:0 "Economic Recovery"
+ USA_recovery_complete_desc:0 "The New Deal's comprehensive approach has begun to reverse the Depression. With unemployment falling and production rising, America is regaining its economic footing. Though full recovery remains distant, the worst of the crisis may finally be over."
+ 
+ USA_business_as_usual:0 "Maintain Laissez-Faire"
+ USA_business_as_usual_desc:0 "Despite the 1932 election, America will continue to rely on market forces and limited government intervention to address the economic crisis. This approach trusts in the resilience of American business to ultimately correct the downturn."
+ 
+ USA_private_industry:0 "Support Private Industry"
+ USA_private_industry_desc:0 "Rather than expanding government, we will provide support to private industry through favorable policies and limited assistance. This approach maintains America's traditional economic freedoms while providing targeted support where necessary."
+ 
+ USA_tax_cuts:0 "Business Tax Cuts"
+ USA_tax_cuts_desc:0 "Tax reductions for businesses will free capital for investment and expansion. By reducing government's burden on private enterprise, we can encourage the economic activity needed for recovery."
+ 
+ USA_slow_recovery:0 "Gradual Recovery"
+ USA_slow_recovery_desc:0 "The market-oriented approach has begun to show results, though progress is gradual. As confidence slowly returns and businesses stabilize, the economy is finding its footing without massive government programs."
+ 
+ USA_military_spending:0 "Increased Military Spending"
+ USA_military_spending_desc:0 "With economic recovery underway, America must now address its military preparedness. As international tensions rise, increased spending on defense will both strengthen national security and further stimulate industrial production."
+ 
+ USA_naval_expansion:0 "Naval Expansion Program"
+ USA_naval_expansion_desc:0 "America's security and global interests require a strong navy. An expanded shipbuilding program will modernize our fleet while creating thousands of jobs in coastal shipyards and supporting industries."
+ 
+ USA_army_expansion:0 "Army Modernization"
+ USA_army_expansion_desc:0 "The U.S. Army has fallen behind potential adversaries in both size and equipment. A modernization program will update American land forces with improved weapons, vehicles, and training to meet emerging threats."
+ 
+ USA_prepare_for_war:0 "Prepare for Global Conflict"
+ USA_prepare_for_war_desc:0 "Events in Europe and Asia suggest that another global conflict may be unavoidable. America must prepare its military, industry, and citizenry for the possibility of war, even while hoping that peace prevails."
+ 
+ # USA Focus Ideas
+ USA_voluntary_business_cooperation:0 "Voluntary Business Cooperation"
+ USA_voluntary_business_cooperation_desc:0 "Major corporations have agreed to maintain wages and employment levels during the economic crisis, following President Hoover's encouragement. This voluntary cooperation aims to preserve consumer spending power without government mandates."
+ 
+ USA_banking_reform:0 "Limited Banking Reforms"
+ USA_banking_reform_desc:0 "Modest reforms to strengthen the banking system have been implemented, providing some stability to financial institutions. These measures fall short of comprehensive reform but help prevent further bank failures."
+ 
+ USA_civilian_conservation_corps:0 "Civilian Conservation Corps"
+ USA_civilian_conservation_corps_desc:0 "Young men from unemployed families now work in government conservation camps across the country. The CCC provides jobs, sends money home to families, and improves America's forests, parks, and public lands."
+ 
+ USA_wpa_program:0 "Works Progress Administration"
+ USA_wpa_program_desc:0 "The WPA employs millions of Americans on public works projects, from roads and bridges to schools and hospitals. Beyond construction, the program supports artists, writers, and performers, providing both employment and cultural enrichment."
+ 
+ USA_tva_program:0 "Tennessee Valley Authority"
+ USA_tva_program_desc:0 "The TVA represents a comprehensive approach to regional development, controlling floods, generating electricity, and modernizing agriculture in the Tennessee Valley. This model of government planning and resource management has transformed one of America's poorest regions."
+ 
+ USA_agricultural_adjustment_act:0 "Agricultural Adjustment Act"
+ USA_agricultural_adjustment_act_desc:0 "Government programs now support farm prices by controlling production and providing subsidies. These measures have begun to stabilize agricultural markets after years of catastrophic price declines."
+ 
+ USA_social_security_act:0 "Social Security Act"
+ USA_social_security_act_desc:0 "The Social Security system provides retirement benefits for older Americans, unemployment insurance for workers, and assistance to families with dependent children. This social safety net represents a fundamental shift in government's role in citizens' welfare."
+ 
+ USA_laissez_faire:0 "Laissez-Faire Approach"
+ USA_laissez_faire_desc:0 "America continues to rely on market forces and limited government to address the economic crisis. This traditional approach maintains economic freedom but may slow recovery as businesses and consumers remain cautious."
+ 
+ USA_private_industry_support:0 "Private Industry Support"
+ USA_private_industry_support_desc:0 "Government policies now favor business growth through reduced regulation and targeted support. This approach maintains America's free enterprise system while providing assistance to struggling industries."
+ 
+ USA_tax_cuts:0 "Business Tax Reduction"
+ USA_tax_cuts_desc:0 "Tax cuts for businesses aim to stimulate investment and hiring. By leaving more capital in private hands, these measures should eventually increase economic activity and employment."
+ 
+ USA_military_spending_increase:0 "Increased Military Budget"
+ USA_military_spending_increase_desc:0 "Defense spending has increased significantly, funding modernization of the armed forces and expansion of military facilities. This investment addresses security concerns while stimulating industrial production and employment."
+ 
+ USA_war_preparations:0 "War Preparations"
+ USA_war_preparations_desc:0 "America is transitioning to a war footing, with increased military production, training, and readiness measures. Industrial capacity is being redirected toward defense needs as the nation prepares for potential global conflict."

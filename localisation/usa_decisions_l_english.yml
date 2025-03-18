@@ -1,0 +1,43 @@
+﻿l_english:
+ # Decision Categories
+ usa_depression_management:0 "New Deal Programs"
+ usa_depression_management_desc:0 "President Roosevelt's New Deal represents an unprecedented expansion of federal intervention in the economy. Through a variety of agencies and programs, the government is providing relief to the suffering, promoting economic recovery, and reforming the financial system to prevent future crises."
+ 
+ usa_conservative_program:0 "Conservative Recovery Program"
+ usa_conservative_program_desc:0 "Rather than expanding government control, our approach to economic recovery emphasizes traditional American values of self-reliance, fiscal responsibility, and private enterprise. By creating favorable conditions for business and maintaining sound government finances, we aim to restore prosperity through market forces."
+ 
+ usa_military_buildup:0 "Military Buildup Program"
+ usa_military_buildup_desc:0 "With international tensions rising, America must strengthen its armed forces. This program aims to modernize and expand our military capabilities through increased funding, equipment upgrades, and personnel expansion, preparing for potential involvement in global conflicts."
+ 
+ # New Deal Decisions
+ usa_emergency_relief:0 "Federal Emergency Relief"
+ usa_emergency_relief_desc:0 "Direct federal assistance to states for relief programs will help the unemployed and destitute survive the crisis. While costly, these programs address immediate suffering and help maintain social stability."
+ 
+ usa_labor_relations_board:0 "National Labor Relations Board"
+ usa_labor_relations_board_desc:0 "A new federal agency to oversee labor relations and protect workers' rights to organize and bargain collectively. This will help reduce industrial conflicts and create more stable relationships between labor and management."
+ 
+ usa_rural_electrification:0 "Rural Electrification Administration"
+ usa_rural_electrification_desc:0 "Bringing electricity to rural America will improve living conditions for millions of farm families while creating jobs and stimulating demand for electrical appliances and equipment."
+ 
+ usa_federal_housing_administration:0 "Federal Housing Administration"
+ usa_federal_housing_administration_desc:0 "By insuring mortgage loans, the FHA will make home ownership more accessible to middle-class Americans, stimulating the construction industry and creating more stable communities."
+ 
+ # Conservative Decisions
+ usa_balanced_budget_initiative:0 "Balanced Budget Initiative"
+ usa_balanced_budget_initiative_desc:0 "Reducing government spending to balance the federal budget will restore market confidence and create a foundation for sustainable growth. Fiscal responsibility must be maintained even during economic difficulties."
+ 
+ usa_voluntary_industrial_cooperation:0 "Voluntary Industrial Cooperation"
+ usa_voluntary_industrial_cooperation_desc:0 "Encouraging voluntary cooperation among businesses to maintain employment and production levels without government mandates preserves economic freedom while addressing the crisis."
+ 
+ usa_business_incentives:0 "Business Investment Incentives"
+ usa_business_incentives_desc:0 "Tax incentives and regulatory relief for businesses will encourage private investment and job creation, stimulating economic activity through market mechanisms rather than government spending."
+ 
+ # Military Decisions
+ usa_naval_expansion_program:0 "Naval Expansion Program"
+ usa_naval_expansion_program_desc:0 "America's security requires a strong navy. This program will fund the construction of additional battleships, carriers, cruisers, and destroyers, modernizing our fleet and creating thousands of jobs in shipyards."
+ 
+ usa_modernize_army_equipment:0 "Modernize Army Equipment"
+ usa_modernize_army_equipment_desc:0 "The U.S. Army relies on outdated equipment from the Great War era. A comprehensive modernization program will provide troops with improved weapons, vehicles, and communications equipment."
+ 
+ usa_expand_air_corps:0 "Expand Army Air Corps"
+ usa_expand_air_corps_desc:0 "Modern warfare increasingly depends on air power. Expanding and modernizing the Army Air Corps will strengthen our defensive capabilities while advancing American aerospace technology."

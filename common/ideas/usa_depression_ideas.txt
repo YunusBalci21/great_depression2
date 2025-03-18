@@ -1,0 +1,155 @@
+ideas = {
+    country = {
+        USA_voluntary_business_cooperation = {
+            picture = generic_goods_red_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        
+        USA_banking_reform = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+            }
+        }
+        
+        USA_civilian_conservation_corps = {
+            picture = FRA_factory_strikes
+            
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.1
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        USA_wpa_program = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_buildings_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+        
+        USA_tva_program = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                local_resources_factor = 0.10
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        
+        USA_agricultural_adjustment_act = {
+            picture = generic_agrarian_reform
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+        
+        USA_social_security_act = {
+            picture = generic_constitutional_guarantee
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.05
+                consumer_goods_factor = 0.03
+            }
+        }
+        
+        USA_laissez_faire = {
+            picture = generic_disjointed_gov
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_speed_industrial_complex_factor = 0.05
+                stability_factor = -0.05
+            }
+        }
+        
+        USA_private_industry_support = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_arms_factory_factor = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_tax_cuts = {
+            picture = generic_goods_red_bonus
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        USA_military_spending_increase = {
+            picture = generic_constitutional_guarantee
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                production_speed_dockyard_factor = 0.10
+                war_support_factor = 0.05
+            }
+        }
+        
+        USA_war_preparations = {
+            picture = generic_prepare_civil_war
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                production_speed_dockyard_factor = 0.15
+                industrial_capacity_factory = 0.10
+                research_speed_factor = 0.05
+                war_support_factor = 0.10
+            }
+        }
+        
+        USA_bank_holiday = {
+            picture = great_depression
+            
+            modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.10
+                stability_factor = 0.05
+            }
+        }
+        
+        USA_first_hundred_days = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                political_power_gain = 0.5
+                stability_weekly = 0.01
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        USA_war_economy_preparations = {
+            picture = generic_prepare_civil_war
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                production_speed_dockyard_factor = 0.15
+                conversion_cost_civ_to_mil_factor = -0.2
+                industrial_capacity_factory = 0.15
+                research_speed_factor = 0.05
+            }
+        }
+    }
+}

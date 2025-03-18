@@ -1,0 +1,40 @@
+# Decision categories for USA in Great Depression mod
+
+usa_depression_management = {
+    icon = generic_political_support
+    
+    allowed = {
+        tag = USA
+    }
+    
+    visible = {
+        tag = USA
+        has_completed_focus = USA_new_deal
+    }
+}
+
+usa_conservative_program = {
+    icon = generic_economic_increase
+    
+    allowed = {
+        tag = USA
+    }
+    
+    visible = {
+        tag = USA
+        has_completed_focus = USA_business_as_usual
+    }
+}
+
+usa_military_buildup = {
+    icon = generic_prepare_civil_war
+    
+    allowed = {
+        tag = USA
+    }
+    
+    visible = {
+        tag = USA
+        has_completed_focus = USA_military_spending
+    }
+}

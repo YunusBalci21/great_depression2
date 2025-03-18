@@ -1,0 +1,82 @@
+﻿l_english:
+ # Bank Failures
+ usa_depression.1.t:0 "Wave of Bank Failures"
+ usa_depression.1.d:0 "The economic downturn has triggered a crisis in the banking sector. Hundreds of banks have failed across the country, wiping out the savings of countless American families. Remaining banks face 'runs' as panicked depositors withdraw their money, threatening the entire financial system with collapse. Some experts call for federal intervention to stabilize the situation, while others argue that weak institutions should be allowed to fail naturally."
+ usa_depression.1.a:0 "The government must intervene"
+ usa_depression.1.b:0 "Let failed banks fail"
+ 
+ # Dust Bowl
+ usa_depression.2.t:0 "Dust Bowl Devastates Great Plains"
+ usa_depression.2.d:0 "A combination of drought and poor farming practices has created an ecological disaster in the Great Plains. Massive dust storms are destroying farms, suffocating livestock, and causing respiratory illnesses across several states. Thousands of farmers and their families are abandoning their homes, many heading west toward California in search of work. The affected states are struggling to address this crisis on their own."
+ usa_depression.2.a:0 "Provide federal assistance"
+ usa_depression.2.b:0 "The states must handle this themselves"
+ 
+ # Bonus Army
+ usa_depression.3.t:0 "The Bonus Army Marches on Washington"
+ usa_depression.3.d:0 "Thousands of World War I veterans and their families have descended on Washington, D.C., demanding immediate payment of the service bonus certificates promised to them but not scheduled for distribution until 1945. The 'Bonus Army' has established a makeshift camp near the Capitol, vowing to remain until Congress acts. The growing encampment poses challenges for public health and safety, and some fear potential unrest."
+ usa_depression.3.a:0 "Send in the army to disperse them"
+ usa_depression.3.b:0 "Negotiate and wait them out"
+ 
+ # Roosevelt Inauguration
+ usa_depression.4.t:0 "Roosevelt Takes Office and Declares Bank Holiday"
+ usa_depression.4.d:0 "Franklin D. Roosevelt has been inaugurated as the 32nd President of the United States, declaring in his address that 'the only thing we have to fear is fear itself.' Immediately after taking office, President Roosevelt has declared a nationwide 'bank holiday,' temporarily closing all banks to prevent further runs and failures. This dramatic first step signals his intention to take bold action to address the economic crisis."
+ usa_depression.4.a:0 "A new era begins"
+ 
+ # Roosevelt Inauguration News
+ usa_depression.5.t:0 "Roosevelt Takes Office in the United States"
+ usa_depression.5.d:0 "Franklin D. Roosevelt has been inaugurated as President of the United States, promising dramatic action to combat the Great Depression. His inaugural address offered hope to a demoralized nation, most notably stating that 'the only thing we have to fear is fear itself.' International observers are watching closely to see how Roosevelt's policies might affect the global economic crisis and America's role in world affairs."
+ usa_depression.5.a:0 "An interesting development"
+ usa_depression.5.b:0 "A new chapter in American history"
+ 
+ # First Hundred Days
+ usa_depression.6.t:0 "The First Hundred Days Begin"
+ usa_depression.6.d:0 "President Roosevelt has launched what observers are calling the 'First Hundred Days,' an unprecedented period of legislative activity to address the economic crisis. Congress is rapidly passing a series of major bills, including the Emergency Banking Act, the Economy Act, the Civilian Conservation Corps, the Tennessee Valley Authority, the Agricultural Adjustment Act, and the National Industrial Recovery Act. This flurry of legislation represents the most dramatic expansion of federal government activity in American history."
+ usa_depression.6.a:0 "We must act quickly and decisively"
+ 
+ # First New Deal Complete
+ usa_depression.7.t:0 "The First New Deal"
+ usa_depression.7.d:0 "The initial wave of New Deal legislation is now complete. President Roosevelt's administration has established numerous new agencies and programs to address the economic crisis. While critics argue that these measures represent dangerous government overreach, supporters point to rising employment numbers and increased economic activity as evidence of success. Banks have reopened, agricultural prices have stabilized, and industrial production is slowly increasing."
+ usa_depression.7.a:0 "The first steps toward recovery"
+ 
+ # Supreme Court Fight
+ usa_depression.8.t:0 "Supreme Court Challenges New Deal"
+ usa_depression.8.d:0 "The Supreme Court has struck down several key New Deal programs as unconstitutional, including the National Industrial Recovery Act and the Agricultural Adjustment Act. Frustrated by these setbacks, President Roosevelt is considering a plan to expand the Supreme Court from nine to as many as fifteen justices, allowing him to appoint new members sympathetic to his agenda. Critics denounce this 'court-packing plan' as an attack on the independence of the judiciary."
+ usa_depression.8.a:0 "Push forward with the court reform plan"
+ usa_depression.8.b:0 "Accept the Court's limitations"
+ 
+ # Court Packing Fails
+ usa_depression.9.t:0 "Court-Packing Plan Fails"
+ usa_depression.9.d:0 "President Roosevelt's plan to expand the Supreme Court has been defeated in Congress, with many members of his own party joining the opposition. This represents the first major political defeat for the administration and has weakened the President's influence in Congress. However, the Court itself has begun to show more flexibility in upholding New Deal legislation, perhaps influenced by the political pressure brought to bear."
+ usa_depression.9.a:0 "A setback, but the New Deal continues"
+ 
+ # 1937 Recession
+ usa_depression.10.t:0 "The Recession of 1937"
+ usa_depression.10.d:0 "Just as recovery from the Depression seemed underway, the economy has taken another downturn. Industrial production is falling, unemployment is rising, and the stock market has dropped sharply. Many economists blame the Federal Reserve's tightening of monetary policy and the administration's efforts to balance the budget by reducing government spending. President Roosevelt must decide whether to renew deficit spending or continue pursuing a balanced budget."
+ usa_depression.10.a:0 "Increase government spending"
+ usa_depression.10.b:0 "Reduce spending to balance the budget"
+ 
+ # Recovery from 1937 Recession (Spending)
+ usa_depression.11.t:0 "Economy Recovers from Recession"
+ usa_depression.11.d:0 "The renewed government spending program has successfully reversed the economic downturn. Industrial production is rising again, unemployment is falling, and investor confidence is returning. Although the federal budget remains unbalanced, the positive economic indicators suggest that the decision to prioritize recovery over budget balance was correct."
+ usa_depression.11.a:0 "The New Deal approach is vindicated"
+ 
+ # Recovery from 1937 Recession (Budget)
+ usa_depression.12.t:0 "Slow Recovery from Recession"
+ usa_depression.12.d:0 "The economy is finally showing signs of recovery after a prolonged period of difficulty. While the administration's commitment to fiscal restraint has meant a longer and deeper recession than some economists recommended, government finances are in better condition. The federal deficit has been reduced, though at the cost of higher unemployment and slower industrial growth than might have been possible with more aggressive intervention."
+ usa_depression.12.a:0 "Fiscal responsibility has its costs"
+ 
+ # World War Approaches
+ usa_depression.13.t:0 "Storm Clouds Gather in Europe"
+ usa_depression.13.d:0 "Events in Europe suggest that another major war may be imminent. Germany's aggressive actions, Japan's expansion in Asia, and the failure of appeasement policies point toward potential global conflict. While most Americans remain firmly isolationist, defense planners warn that we must begin preparing for possible involvement. Increased military spending could also help fully overcome the lingering effects of the Depression."
+ usa_depression.13.a:0 "Begin military and industrial preparations"
+ usa_depression.13.b:0 "Maintain strict neutrality"
+ 
+ # Ideas
+ usa_bank_holiday:0 "National Bank Holiday"
+ usa_bank_holiday_desc:0 "All banks have been temporarily closed by presidential order to prevent further bank runs and failures. While necessary to stabilize the financial system, this has further disrupted an already struggling economy."
+ 
+ usa_first_hundred_days:0 "First Hundred Days"
+ usa_first_hundred_days_desc:0 "The Roosevelt administration is implementing an unprecedented wave of legislation and executive actions to combat the Depression. New agencies are being established, regulations written, and programs launched at a feverish pace."
+ 
+ war_economy_preparations:0 "War Economy Preparations"
+ war_economy_preparations_desc:0 "With global conflict appearing increasingly likely, the nation is beginning to shift toward a war economy. Defense industries are expanding, strategic resources are being stockpiled, and military production capacity is increasing."

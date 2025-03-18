@@ -1,0 +1,43 @@
+﻿l_english:
+ # Bookmark
+ GREAT_DEPRESSION_NAME:0 "The Great Depression"
+ GREAT_DEPRESSION_DESC:0 "The Wall Street Crash of 1929 sent shockwaves through the global economy. As nations struggle with unemployment and industrial collapse, the groundwork for the coming conflict is being laid. Can you guide your nation through economic crisis and prepare for the brewing storm of war?"
+ 
+ # Country Descriptions
+ USA_GREAT_DEPRESSION_DESC:0 "The United States faces its greatest economic crisis in history. With banks failing and unemployment soaring, President Hoover's administration struggles to respond. Will America recover through laissez-faire policies or through radical New Deal interventions?"
+ GER_GREAT_DEPRESSION_DESC:0 "The Weimar Republic, already weakened by hyperinflation and political instability, now faces the full force of global economic collapse. Extremist parties gain popularity as unemployment reaches record levels. Can Germany recover, or will economic desperation pave the way for radical change?"
+ ENG_GREAT_DEPRESSION_DESC:0 "The British Empire, already strained by the costs of the Great War, now faces economic downturn and growing independence movements in its colonies. Will Britain choose appeasement to focus on economic recovery, or prepare for another costly war?"
+ FRA_GREAT_DEPRESSION_DESC:0 "France, victorious but severely damaged by the Great War, now confronts economic depression amidst political turmoil. With industrial capacity lagging behind potential enemies, can France modernize its military while managing the crisis?"
+ ITA_GREAT_DEPRESSION_DESC:0 "Mussolini's Italy, though spared the worst of the initial crash, faces serious economic challenges. Limited industrialization and colonial ambitions strain resources, pushing the Fascist regime toward expansion as a solution."
+ JAP_GREAT_DEPRESSION_DESC:0 "Japan's export-dependent economy has been devastated by the global depression. Resource scarcity and economic desperation strengthen militarist factions who see expansion as the only path forward. The invasion of Manchuria marks just the beginning."
+ SOV_GREAT_DEPRESSION_DESC:0 "While isolated from the capitalist crash, the Soviet Union faces its own challenges with Stalin's ambitious Five-Year Plans. Forced collectivization and rapid industrialization aim to transform the USSR into a modern power before inevitable conflict arrives."
+ 
+ # National Spirits
+ great_depression_severe:0 "Severe Economic Depression"
+ great_depression_severe_desc:0 "Our economy has collapsed following the Wall Street Crash. Unemployment is at record levels, factories stand idle, and public confidence has been shattered. The crisis threatens political stability and military readiness."
+ 
+ great_depression_major:0 "Major Economic Depression"
+ great_depression_major_desc:0 "While the worst of the economic collapse has been addressed, our nation still suffers from widespread unemployment and reduced industrial output. Recovery efforts are beginning to take effect, but much work remains."
+ 
+ great_depression_recovering:0 "Economic Recovery"
+ great_depression_recovering_desc:0 "Recovery programs have begun to revitalize the economy. Unemployment is gradually decreasing, and industrial output is slowly rising. However, full economic health has not yet been restored."
+ 
+ great_depression_ended:0 "Depression Aftermath"
+ great_depression_ended_desc:0 "The worst effects of the Depression have passed, though some economic scars remain. The nation has largely returned to normal economic activity, with industries increasingly focused on the growing international tensions."
+ 
+ # Decision Categories
+ depression_recovery_decisions:0 "Great Depression Recovery"
+ depression_recovery_decisions_desc:0 "The global economic crisis requires decisive action. Through careful policy choices, we can guide our nation toward recovery and prepare for the uncertain future ahead."
+ 
+ # Decisions
+ new_deal_inspired_policies:0 "New Deal-Inspired Policies"
+ new_deal_inspired_policies_desc:0 "Following the American model, we can implement large-scale government programs to provide relief, recovery, and reform. These policies involve significant government intervention but may accelerate our economic revival."
+ 
+ military_industrial_investment:0 "Military-Industrial Investment"
+ military_industrial_investment_desc:0 "By channeling resources into military industries, we can create jobs while strengthening our armed forces. This approach addresses both economic and security concerns simultaneously."
+ 
+ public_works_programs:0 "Public Works Programs"
+ public_works_programs_desc:0 "Large-scale infrastructure projects can provide employment for thousands while improving our nation's roads, bridges, and public buildings. These investments will serve the nation long after the current crisis has passed."
+ 
+ # Leaders
+ POLITICS_HERBERT_HOOVER_DESC:0 "Herbert Hoover, a successful businessman and humanitarian, entered the presidency with high hopes in 1929. Only months into his term, he faces the greatest economic collapse in American history. His initial response emphasizes voluntary cooperation between business, labor, and government rather than direct federal intervention, an approach that is increasingly criticized as the crisis deepens."

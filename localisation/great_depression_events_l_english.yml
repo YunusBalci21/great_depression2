@@ -1,0 +1,24 @@
+﻿l_english:
+ great_depression.1.t:0 "Black Thursday: Wall Street Crash"
+ great_depression.1.d:0 "Today, October 24, 1929, the New York Stock Exchange experienced an unprecedented crash as panic selling led to millions of shares changing hands. Stock prices collapsed, wiping out billions of dollars in value. The ticker ran hours behind as brokers struggled to keep up with the volume of trades. Bankers and financiers attempted to stabilize the market with coordinated buying, but confidence has been severely shaken."
+ great_depression.1.a:0 "This could be devastating!"
+ 
+ great_depression.2.t:0 "Wall Street Stock Market Crashes"
+ great_depression.2.d:0 "The New York Stock Exchange has experienced a catastrophic crash, with stock prices plummeting and investors losing fortunes in a matter of hours. Leading financial experts are divided on the long-term implications, but many fear this could lead to severe economic repercussions both in America and around the world."
+ great_depression.2.a:0 "This could affect our economy as well"
+ great_depression.2.b:0 "We must contain the damage"
+ 
+ great_depression.3.t:0 "Economic Crisis Spreads"
+ great_depression.3.d:0 "The aftershocks of the American stock market crash are now being felt around the world. International trade is declining rapidly as the United States raises tariffs and reduces imports. Credit has tightened globally as banks become more conservative, and our own economy is now feeling the strain. Businesses are closing, unemployment is rising, and government revenues are falling."
+ great_depression.3.a:0 "We must weather this storm"
+ 
+ great_depression.4.t:0 "1932 Presidential Election"
+ great_depression.4.d:0 "After four years of economic depression under President Hoover, the American people have decisively elected Franklin D. Roosevelt as their next president. Roosevelt has promised a 'New Deal' for the American people, with bold government intervention to address the crisis. His famous campaign speech declared, 'The only thing we have to fear is fear itself,' offering hope to a nation in despair."
+ great_depression.4.a:0 "A new era begins"
+ 
+ great_depression.5.t:0 "Franklin D. Roosevelt Elected President of the United States"
+ great_depression.5.d:0 "The Democratic candidate Franklin D. Roosevelt has won a landslide victory in the United States presidential election, defeating incumbent Herbert Hoover. Roosevelt has promised dramatic action to combat the Great Depression, including unprecedented government programs to put Americans back to work. The election represents a strong repudiation of Hoover's more limited approach to handling the economic crisis."
+ great_depression.5.a:0 "Interesting developments in America"
+ great_depression.5.b:0 "A new direction for our nation"
+ 
+ POLITICS_FRANKLIN_ROOSEVELT_DESC:0 "Franklin Delano Roosevelt, often referred to by his initials FDR, comes to the presidency at America's darkest economic hour. A patrician by birth but a champion of the common people by conviction, Roosevelt brings energy and optimism to the White House. His campaign promised a 'New Deal' for the American people, with active government intervention to address unemployment and economic collapse. Despite being partially paralyzed from polio, Roosevelt projects strength and confidence that has already begun to restore hope to a demoralized nation."

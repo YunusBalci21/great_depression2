@@ -1,0 +1,54 @@
+ideas = {
+    country = {
+        great_depression_severe = {
+            picture = great_depression
+            
+            modifier = {
+                industrial_capacity_factory = -0.50
+                production_speed_buildings_factor = -0.50
+                consumer_goods_factor = 0.25
+                political_power_gain = -0.3
+                stability_factor = -0.2
+                conscription_factor = -0.5
+                trade_opinion_factor = -0.4
+            }
+        }
+        
+        great_depression_major = {
+            picture = great_depression
+            
+            modifier = {
+                industrial_capacity_factory = -0.35
+                production_speed_buildings_factor = -0.35
+                consumer_goods_factor = 0.15
+                political_power_gain = -0.2
+                stability_factor = -0.1
+                conscription_factor = -0.3
+                trade_opinion_factor = -0.3
+            }
+        }
+        
+        great_depression_recovering = {
+            picture = great_depression
+            
+            modifier = {
+                industrial_capacity_factory = -0.20
+                production_speed_buildings_factor = -0.20
+                consumer_goods_factor = 0.10
+                political_power_gain = -0.1
+                conscription_factor = -0.1
+                trade_opinion_factor = -0.1
+            }
+        }
+        
+        great_depression_ended = {
+            picture = great_depression
+            
+            modifier = {
+                industrial_capacity_factory = -0.05
+                production_speed_buildings_factor = -0.05
+                consumer_goods_factor = 0.05
+            }
+        }
+    }
+}

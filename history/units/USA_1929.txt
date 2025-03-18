@@ -1,0 +1,118 @@
+division_template = {
+    name = "Infantry Division"
+    division_names_group = USA_INF_01
+    
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    support = {
+        artillery = { x = 0 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Cavalry Division"
+    division_names_group = USA_CAV_01
+    
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+    }
+}
+
+units = {
+    # Eastern Command
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 3878  # New York
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 2
+        }
+        location = 788  # Norfolk
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    # Central Command
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 3
+        }
+        location = 9450  # St Louis
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    # Western Command
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 4
+        }
+        location = 9671  # San Francisco
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7834  # Dallas
+        division_template = "Cavalry Division"
+        start_experience_factor = 0.2
+    }
+}
+
+##### AIR FORCE UNITS #####
+air_wings = {
+    357 = { # New York
+        fighter_equipment_0 = {
+            owner = "USA"
+            amount = 50
+        }
+        
+        tac_bomber_equipment_0 = {
+            owner = "USA"
+            amount = 40
+        }
+    }
+    
+    378 = { # California
+        fighter_equipment_0 = {
+            owner = "USA"
+            amount = 50
+        }
+        
+        tac_bomber_equipment_0 = {
+            owner = "USA"
+            amount = 30
+        }
+    }
+}
+
+### NAVAL OOB ###
+# This will be handled through national focus rewards instead

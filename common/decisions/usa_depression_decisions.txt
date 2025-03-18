@@ -1,0 +1,371 @@
+usa_depression_management = {
+
+    usa_emergency_relief = {
+        icon = generic_civil_support
+        
+        available = {
+            has_political_power > 50
+            OR = {
+                has_idea = great_depression_severe
+                has_idea = great_depression_major
+            }
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_new_deal
+        }
+        
+        cost = 50
+        days_remove = 70
+        
+        modifier = {
+            political_power_gain = -0.3
+            stability_weekly = 0.005
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.05
+        }
+    }
+    
+    usa_labor_relations_board = {
+        icon = generic_industry
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_new_deal
+        }
+        
+        cost = 75
+        days_remove = 70
+        
+        modifier = {
+            political_power_gain = -0.2
+            industrial_capacity_factory = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.03
+            add_political_power = 25
+        }
+    }
+    
+    usa_rural_electrification = {
+        icon = generic_construction
+        
+        available = {
+            has_political_power > 100
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_tva_program
+        }
+        
+        cost = 100
+        days_remove = 120
+        
+        modifier = {
+            political_power_gain = -0.2
+            production_speed_infrastructure_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    usa_federal_housing_administration = {
+        icon = generic_political_support
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_new_deal
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            consumer_goods_factor = 0.02
+            stability_weekly = 0.005
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.05
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+}
+
+usa_conservative_program = {
+    
+    usa_balanced_budget_initiative = {
+        icon = generic_economic_increase
+        
+        available = {
+            has_political_power > 50
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_business_as_usual
+        }
+        
+        cost = 50
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.2
+            consumer_goods_factor = -0.03
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.02
+            add_political_power = 25
+        }
+    }
+    
+    usa_voluntary_industrial_cooperation = {
+        icon = generic_production
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_business_as_usual
+        }
+        
+        cost = 75
+        days_remove = 70
+        
+        modifier = {
+            political_power_gain = -0.2
+            industrial_capacity_factory = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            if = {
+                limit = { has_idea = great_depression_severe }
+                swap_ideas = {
+                    remove_idea = great_depression_severe
+                    add_idea = great_depression_major
+                }
+            }
+        }
+    }
+    
+    usa_business_incentives = {
+        icon = generic_goods_red_bonus
+        
+        available = {
+            has_political_power > 100
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_tax_cuts
+        }
+        
+        cost = 100
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.3
+            production_speed_industrial_complex_factor = 0.1
+            consumer_goods_factor = -0.03
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+}
+
+usa_military_buildup = {
+    
+    usa_naval_expansion_program = {
+        icon = generic_naval
+        
+        available = {
+            has_political_power > 100
+            has_navy_experience > 10
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_naval_expansion
+        }
+        
+        cost = 100
+        days_remove = 120
+        
+        modifier = {
+            political_power_gain = -0.2
+            production_speed_dockyard_factor = 0.15
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            navy_experience = 25
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = yes
+                    dockyard > 0
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    usa_modernize_army_equipment = {
+        icon = generic_tank
+        
+        available = {
+            has_political_power > 75
+            has_army_experience > 10
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_army_expansion
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            production_speed_arms_factory_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            army_experience = 25
+            add_tech_bonus = {
+                name = infantry_weapons_bonus
+                bonus = 0.5
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+    }
+    
+    usa_expand_air_corps = {
+        icon = generic_air
+        
+        available = {
+            has_political_power > 75
+            has_air_experience > 10
+        }
+        
+        visible = {
+            tag = USA
+            has_completed_focus = USA_military_spending
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            production_speed_air_base_factor = 0.2
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            air_experience = 25
+            add_tech_bonus = {
+                name = air_bonus
+                bonus = 0.5
+                uses = 1
+                category = light_fighter
+            }
+        }
+    }
+}

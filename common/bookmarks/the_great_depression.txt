@@ -1,0 +1,78 @@
+bookmarks = {
+    bookmark = {
+        name = "GREAT_DEPRESSION_NAME"
+        desc = "GREAT_DEPRESSION_DESC"
+        date = 1929.10.24
+        picture = "GFX_select_date_1936"  # We'll use existing 1936 graphic for now
+        default_country = "USA"
+        
+        "USA" = {
+            history = "USA_GREAT_DEPRESSION_DESC"
+            ideology = democratic
+            ideas = {
+                great_depression_severe
+                home_of_the_free
+            }
+        }
+        
+        "GER" = {
+            history = "GER_GREAT_DEPRESSION_DESC"
+            ideology = democratic
+            ideas = {
+                great_depression_severe
+                civilian_economy
+                limited_conscription
+            }
+        }
+        
+        "ENG" = {
+            history = "ENG_GREAT_DEPRESSION_DESC"
+            ideology = democratic
+            ideas = {
+                great_depression_severe
+                stiff_upper_lip
+            }
+        }
+        
+        "FRA" = {
+            history = "FRA_GREAT_DEPRESSION_DESC"
+            ideology = democratic
+            ideas = {
+                great_depression_severe
+                limited_conscription
+            }
+        }
+        
+        "ITA" = {
+            history = "ITA_GREAT_DEPRESSION_DESC"
+            ideology = fascism
+            ideas = {
+                great_depression_severe
+                limited_conscription
+            }
+        }
+        
+        "JAP" = {
+            history = "JAP_GREAT_DEPRESSION_DESC"
+            ideology = neutrality
+            ideas = {
+                great_depression_severe
+                state_shintoism
+            }
+        }
+        
+        "SOV" = {
+            history = "SOV_GREAT_DEPRESSION_DESC"
+            ideology = communism
+            ideas = {
+                great_depression_severe
+                closed_economy
+            }
+        }
+        
+        effect = {
+            randomize_weather = 12345
+            set_global_flag = great_depression_bookmark
+        }
+    }
+}

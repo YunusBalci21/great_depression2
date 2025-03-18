@@ -1,0 +1,421 @@
+add_namespace = usa_depression
+
+# Bank Failures
+country_event = {
+    id = usa_depression.1
+    title = usa_depression.1.t
+    desc = usa_depression.1.d
+    picture = GFX_report_event_generic_bank  # Using existing graphic for now
+    
+    trigger = {
+        tag = USA
+        has_idea = great_depression_severe
+        date > 1930.3.1
+        date < 1930.3.10
+    }
+    
+    mean_time_to_happen = {
+        days = 3
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.1.a  # Federal intervention
+        ai_chance = { factor = 70 }
+        add_political_power = -50
+        add_stability = 0.03
+    }
+    
+    option = {
+        name = usa_depression.1.b  # Let failed banks fail
+        ai_chance = { factor = 30 }
+        add_political_power = 25
+        add_stability = -0.05
+    }
+}
+
+# Dust Bowl Begins
+country_event = {
+    id = usa_depression.2
+    title = usa_depression.2.t
+    desc = usa_depression.2.d
+    picture = GFX_report_event_dust_bowl
+    
+    trigger = {
+        tag = USA
+        date > 1933.11.10
+        date < 1933.11.20
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.2.a  # Federal assistance
+        ai_chance = { factor = 80 }
+        add_political_power = -25
+        add_stability = 0.03
+        375 = { # Kansas
+            add_building_construction = {
+                type = infrastructure
+                level = -1
+                instant_build = yes
+            }
+        }
+        376 = { # Oklahoma
+            add_building_construction = {
+                type = infrastructure
+                level = -1
+                instant_build = yes
+            }
+        }
+    }
+    
+    option = {
+        name = usa_depression.2.b  # States must handle it
+        ai_chance = { factor = 20 }
+        add_stability = -0.05
+        375 = { # Kansas
+            add_building_construction = {
+                type = infrastructure
+                level = -2
+                instant_build = yes
+            }
+        }
+        376 = { # Oklahoma
+            add_building_construction = {
+                type = infrastructure
+                level = -2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Bonus Army March
+country_event = {
+    id = usa_depression.3
+    title = usa_depression.3.t
+    desc = usa_depression.3.d
+    picture = GFX_report_event_generic_riot
+    
+    trigger = {
+        tag = USA
+        date > 1932.6.15
+        date < 1932.6.30
+        has_government = democratic
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.3.a  # Disperse with military force
+        ai_chance = { factor = 30 }
+        add_war_support = 0.05
+        add_stability = -0.10
+        add_political_power = -50
+    }
+    
+    option = {
+        name = usa_depression.3.b  # Negotiate and wait them out
+        ai_chance = { factor = 70 }
+        add_political_power = -25
+        add_stability = -0.02
+    }
+}
+
+# Roosevelt's Inauguration and Bank Holiday
+country_event = {
+    id = usa_depression.4
+    title = usa_depression.4.t
+    desc = usa_depression.4.d
+    picture = GFX_report_event_usa_election_generic
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.4.a  # "The only thing we have to fear is fear itself"
+        add_political_power = 100
+        add_stability = 0.10
+        add_ideas = USA_bank_holiday
+        hidden_effect = { 
+            news_event = { id = usa_depression.5 days = 1 }
+            country_event = { id = usa_depression.6 days = 7 }
+        }
+    }
+}
+
+# Roosevelt Inauguration News
+news_event = {
+    id = usa_depression.5
+    title = usa_depression.5.t
+    desc = usa_depression.5.d
+    picture = GFX_news_event_generic_usa
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression.5.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = usa_depression.5.b
+        trigger = {
+            tag = USA
+        }
+    }
+}
+
+# First Hundred Days
+country_event = {
+    id = usa_depression.6
+    title = usa_depression.6.t
+    desc = usa_depression.6.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.6.a  # Begin the New Deal
+        add_political_power = 50
+        remove_ideas = USA_bank_holiday
+        add_ideas = USA_first_hundred_days
+        hidden_effect = {
+            country_event = { id = usa_depression.7 days = 100 }
+        }
+    }
+}
+
+# First New Deal Complete
+country_event = {
+    id = usa_depression.7
+    title = usa_depression.7.t
+    desc = usa_depression.7.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.7.a
+        remove_ideas = USA_first_hundred_days
+        add_stability = 0.05
+        
+        if = {
+            limit = { has_idea = great_depression_severe }
+            swap_ideas = {
+                remove_idea = great_depression_severe
+                add_idea = great_depression_major
+            }
+        }
+    }
+}
+
+# Supreme Court Fight
+country_event = {
+    id = usa_depression.8
+    title = usa_depression.8.t
+    desc = usa_depression.8.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        date > 1937.2.1
+        date < 1937.2.10
+        has_completed_focus = USA_new_deal
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.8.a  # Push court-packing plan
+        ai_chance = { factor = 60 }
+        add_political_power = -100
+        add_stability = -0.05
+        
+        hidden_effect = {
+            country_event = { id = usa_depression.9 days = 120 }
+        }
+    }
+    
+    option = {
+        name = usa_depression.8.b  # Accept court's limits
+        ai_chance = { factor = 40 }
+        add_political_power = -25
+    }
+}
+
+# Court-Packing Plan Fails
+country_event = {
+    id = usa_depression.9
+    title = usa_depression.9.t
+    desc = usa_depression.9.d
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.9.a
+        add_political_power = -50
+    }
+}
+
+# 1937 Recession
+country_event = {
+    id = usa_depression.10
+    title = usa_depression.10.t
+    desc = usa_depression.10.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        date > 1937.8.15
+        date < 1937.8.30
+        has_idea = great_depression_recovering
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.10.a  # Increase government spending
+        ai_chance = { factor = 70 }
+        add_political_power = -50
+        swap_ideas = {
+            remove_idea = great_depression_recovering
+            add_idea = great_depression_major
+        }
+        
+        hidden_effect = {
+            country_event = { id = usa_depression.11 days = 180 }
+        }
+    }
+    
+    option = {
+        name = usa_depression.10.b  # Reduce spending to balance budget
+        ai_chance = { factor = 30 }
+        add_political_power = -25
+        add_stability = -0.05
+        swap_ideas = {
+            remove_idea = great_depression_recovering
+            add_idea = great_depression_major
+        }
+        
+        hidden_effect = {
+            country_event = { id = usa_depression.12 days = 270 }
+        }
+    }
+}
+
+# Recovery from 1937 Recession (Spending Path)
+country_event = {
+    id = usa_depression.11
+    title = usa_depression.11.t
+    desc = usa_depression.11.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.11.a
+        add_political_power = 25
+        add_stability = 0.05
+        swap_ideas = {
+            remove_idea = great_depression_major
+            add_idea = great_depression_recovering
+        }
+    }
+}
+
+# Slow Recovery from 1937 Recession (Budget Path)
+country_event = {
+    id = usa_depression.12
+    title = usa_depression.12.t
+    desc = usa_depression.12.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.12.a
+        add_political_power = 25
+        swap_ideas = {
+            remove_idea = great_depression_major
+            add_idea = great_depression_recovering
+        }
+    }
+}
+
+# World War Approaches
+country_event = {
+    id = usa_depression.13
+    title = usa_depression.13.t
+    desc = usa_depression.13.d
+    picture = GFX_report_event_german_troops
+    
+    trigger = {
+        tag = USA
+        date > 1939.3.1
+        date < 1939.3.15
+    }
+    
+    mean_time_to_happen = {
+        days = 7
+    }
+    
+    fire_only_once = yes
+    
+    option = {
+        name = usa_depression.13.a  # Prepare for possible involvement
+        ai_chance = { factor = 60 }
+        add_political_power = 25
+        add_war_support = 0.10
+        add_ideas = USA_war_economy_preparations
+        
+        if = {
+            limit = { has_idea = great_depression_recovering }
+            swap_ideas = {
+                remove_idea = great_depression_recovering
+                add_idea = great_depression_ended
+            }
+        }
+    }
+    
+    option = {
+        name = usa_depression.13.b  # Maintain strict neutrality
+        ai_chance = { factor = 40 }
+        add_political_power = -25
+        add_war_support = -0.05
+    }
+}

@@ -1,0 +1,149 @@
+depression_recovery_decisions = {
+    
+    new_deal_inspired_policies = {
+        icon = generic_industry
+        
+        available = {
+            has_idea = great_depression_severe
+            has_political_power > 150
+        }
+        
+        visible = {
+            OR = {
+                has_government = democratic
+                has_government = neutrality
+            }
+            OR = {
+                has_idea = great_depression_severe
+                has_idea = great_depression_major
+            }
+        }
+        
+        cost = 150
+        days_remove = 70
+        
+        modifier = {
+            political_power_gain = -0.5
+            stability_weekly = 0.01
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision new_deal_inspired_policies"
+        }
+        
+        remove_effect = {
+            if = {
+                limit = { has_idea = great_depression_severe }
+                swap_ideas = {
+                    remove_idea = great_depression_severe
+                    add_idea = great_depression_major
+                }
+            }
+            else_if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+            add_stability = 0.05
+        }
+    }
+    
+    military_industrial_investment = {
+        icon = generic_tank
+        
+        available = {
+            OR = {
+                has_idea = great_depression_severe
+                has_idea = great_depression_major
+                has_idea = great_depression_recovering
+            }
+            has_political_power > 100
+        }
+        
+        visible = {
+            OR = {
+                has_government = fascism
+                has_government = neutrality
+            }
+        }
+        
+        cost = 100
+        days_remove = 50
+        
+        modifier = {
+            political_power_gain = -0.3
+            industrial_capacity_factory = 0.05
+            production_speed_arms_factory_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            if = {
+                limit = { has_idea = great_depression_severe }
+                swap_ideas = {
+                    remove_idea = great_depression_severe
+                    add_idea = great_depression_major
+                }
+            }
+            else_if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+            else_if = {
+                limit = { has_idea = great_depression_recovering }
+                swap_ideas = {
+                    remove_idea = great_depression_recovering
+                    add_idea = great_depression_ended
+                }
+            }
+        }
+    }
+    
+    public_works_programs = {
+        icon = generic_construction
+        
+        available = {
+            has_political_power > 75
+            OR = {
+                has_idea = great_depression_severe
+                has_idea = great_depression_major
+            }
+        }
+        
+        visible = {
+            OR = {
+                has_government = democratic
+                has_government = communism
+            }
+        }
+        
+        cost = 75
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.2
+            production_speed_infrastructure_factor = 0.15
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.03
+            add_political_power = 25
+        }
+    }
+}

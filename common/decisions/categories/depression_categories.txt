@@ -1,0 +1,15 @@
+depression_recovery_decisions = {
+    icon = generic_economy
+    
+    allowed = {
+        always = yes
+    }
+    
+    visible = {
+        OR = {
+            has_idea = great_depression_severe
+            has_idea = great_depression_major
+            has_idea = great_depression_recovering
+        }
+    }
+}
