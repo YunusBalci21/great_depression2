@@ -1,7 +1,52 @@
+# This file contains all national spirits (ideas) needed for the USA Great Depression focus tree
+# Place in common/ideas/usa_depression_ideas.txt
+
 ideas = {
     country = {
-        USA_voluntary_business_cooperation = {
+        # Hoover Administration Ideas
+        USA_hoover_philosophy = {
+            picture = generic_disjointed_gov
+            
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = -0.15
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.10
+            }
+            
+            targeted_modifier = {
+                tag = ENG
+                trade_cost_for_target_factor = 0.1
+            }
+            
+            targeted_modifier = {
+                tag = FRA
+                trade_cost_for_target_factor = 0.1
+            }
+        }
+        
+        USA_reconstruction_finance_corporation = {
             picture = generic_goods_red_bonus
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_rfc_loans = {
+            picture = generic_foreign_capital
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = 0.03
+            }
+        }
+        
+        USA_voluntary_business_cooperation = {
+            picture = generic_production_bonus
             
             modifier = {
                 industrial_capacity_factory = 0.05
@@ -9,12 +54,118 @@ ideas = {
             }
         }
         
-        USA_banking_reform = {
-            picture = generic_economic_increase
+        USA_business_coordination_council = {
+            picture = generic_foreign_capital
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = 0.10
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_high_tariffs = {
+            picture = generic_foreign_trade
             
             modifier = {
                 consumer_goods_factor = -0.05
+                local_resources_factor = 0.10
+                trade_opinion_factor = -0.50
+            }
+        }
+        
+        USA_veteran_resentment = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = -0.10
+                war_support_factor = -0.10
+                conscription = -0.02
+            }
+        }
+        
+        USA_veteran_relief = {
+            picture = generic_political_support
+            
+            modifier = {
                 stability_factor = 0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        USA_continued_hoover_policies = {
+            picture = generic_political_advisor
+            
+            modifier = {
+                stability_factor = -0.05
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                political_power_gain = -0.10
+            }
+        }
+        
+        USA_balanced_budget_austerity = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                stability_factor = -0.05
+                industrial_capacity_factory = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_free_market_recovery = {
+            picture = generic_foreign_capital
+            
+            modifier = {
+                consumer_goods_factor = -0.15
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = -0.10
+                political_power_gain = -0.10
+            }
+        }
+        
+        USA_limited_govt_intervention = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                production_speed_industrial_complex_factor = 0.05
+                stability_factor = 0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        # First New Deal Ideas
+        USA_first_hundred_days_momentum = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                political_power_gain = 0.5
+                stability_weekly = 0.01
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        USA_agricultural_adjustment_act = {
+            picture = generic_agrarian_reform
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                local_resources_factor = 0.10
+            }
+        }
+        
+        USA_farm_price_support = {
+            picture = generic_agrarian_society
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                local_resources_factor = 0.15
+                political_power_gain = 0.05
             }
         }
         
@@ -25,97 +176,36 @@ ideas = {
                 stability_factor = 0.05
                 political_power_gain = 0.1
                 production_speed_buildings_factor = 0.10
+                conscription = 0.01
             }
         }
         
-        USA_wpa_program = {
-            picture = usa_plan_war_production
-            
-            modifier = {
-                production_speed_infrastructure_factor = 0.15
-                production_speed_buildings_factor = 0.10
-                stability_factor = 0.05
-            }
-        }
-        
-        USA_tva_program = {
-            picture = generic_production_bonus
-            
-            modifier = {
-                production_speed_industrial_complex_factor = 0.10
-                local_resources_factor = 0.10
-                production_factory_max_efficiency_factor = 0.05
-            }
-        }
-        
-        USA_agricultural_adjustment_act = {
-            picture = generic_agrarian_reform
+        USA_federal_emergency_relief = {
+            picture = generic_political_support
             
             modifier = {
                 stability_factor = 0.05
-                consumer_goods_factor = -0.05
+                consumer_goods_factor = 0.05
+                political_power_gain = 0.05
             }
         }
         
-        USA_social_security_act = {
-            picture = generic_constitutional_guarantee
+        USA_direct_relief_programs = {
+            picture = generic_political_support
             
             modifier = {
                 stability_factor = 0.10
-                political_power_gain = 0.05
-                consumer_goods_factor = 0.03
-            }
-        }
-        
-        USA_laissez_faire = {
-            picture = generic_disjointed_gov
-            
-            modifier = {
-                consumer_goods_factor = -0.05
-                production_speed_industrial_complex_factor = 0.05
-                stability_factor = -0.05
-            }
-        }
-        
-        USA_private_industry_support = {
-            picture = generic_production_bonus
-            
-            modifier = {
-                production_speed_industrial_complex_factor = 0.10
-                production_speed_arms_factory_factor = 0.05
-                industrial_capacity_factory = 0.05
-            }
-        }
-        
-        USA_tax_cuts = {
-            picture = generic_goods_red_bonus
-            
-            modifier = {
-                consumer_goods_factor = -0.05
-                industrial_capacity_factory = 0.05
+                consumer_goods_factor = 0.10
                 political_power_gain = -0.05
             }
         }
         
-        USA_military_spending_increase = {
-            picture = generic_constitutional_guarantee
+        USA_emergency_banking_measures = {
+            picture = generic_economic_increase
             
             modifier = {
-                production_speed_arms_factory_factor = 0.10
-                production_speed_dockyard_factor = 0.10
-                war_support_factor = 0.05
-            }
-        }
-        
-        USA_war_preparations = {
-            picture = generic_prepare_civil_war
-            
-            modifier = {
-                production_speed_arms_factory_factor = 0.15
-                production_speed_dockyard_factor = 0.15
-                industrial_capacity_factory = 0.10
-                research_speed_factor = 0.05
-                war_support_factor = 0.10
+                stability_factor = 0.05
+                political_power_gain = 0.10
             }
         }
         
@@ -129,26 +219,349 @@ ideas = {
             }
         }
         
-        USA_first_hundred_days = {
-            picture = usa_plan_war_production
+        USA_glass_steagall_regulations = {
+            picture = generic_economic_increase
             
             modifier = {
-                political_power_gain = 0.5
-                stability_weekly = 0.01
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_investment_commercial_separation = {
+            picture = generic_foreign_capital
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_deposit_insurance = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_securities_regulation = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_regulated_markets = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_nira_regulations = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = 0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_industry_codes_compliance = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = 0.05
+            }
+        }
+        
+        USA_labor_protection_laws = {
+            picture = generic_manpower_bonus
+            
+            modifier = {
+                stability_factor = 0.05
+                conscription = 0.01
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_public_works_administration = {
+            picture = generic_construction
+            
+            modifier = {
+                production_speed_buildings_factor = 0.15
+                production_speed_infrastructure_factor = 0.15
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_national_recovery_administration = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = 0.05
+                stability_factor = 0.05
+            }
+        }
+        
+        USA_blue_eagle_campaign = {
+            picture = generic_propaganda
+            
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.10
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_post_nira_adjustments = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = -0.10
+                industrial_capacity_factory = -0.05
+            }
+        }
+        
+        USA_court_packing_controversy = {
+            picture = generic_political_advisor
+            
+            modifier = {
+                stability_factor = -0.10
+                political_power_gain = -0.20
+                democratic_drift = -0.02
+            }
+        }
+        
+        # Second New Deal Ideas
+        USA_second_new_deal_reforms = {
+            picture = FRA_factory_strikes
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.15
                 industrial_capacity_factory = 0.10
                 production_speed_buildings_factor = 0.10
             }
         }
         
-        USA_war_economy_preparations = {
+        USA_wagner_act_labor_rights = {
+            picture = generic_strike_deal
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.05
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.05
+            }
+        }
+        
+        USA_nlrb_established = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.05
+                industrial_capacity_factory = -0.05
+            }
+        }
+        
+        USA_organized_labor_growth = {
+            picture = generic_strike_deal
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = -0.05
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.05
+            }
+        }
+        
+        USA_social_security_system = {
+            picture = generic_constitutional_guarantee
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.05
+                consumer_goods_factor = 0.03
+            }
+        }
+        
+        USA_old_age_insurance = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = 0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_unemployment_compensation = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = 0.03
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_wpa_program = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_buildings_factor = 0.10
+                stability_factor = 0.05
+                consumer_goods_factor = 0.05
+            }
+        }
+        
+        USA_federal_arts_projects = {
+            picture = generic_research_bonus
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.10
+                research_speed_factor = 0.03
+            }
+        }
+        
+        # Regional Development Ideas
+        USA_tva_program = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                local_resources_factor = 0.10
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        
+        USA_rural_electrification = {
+            picture = generic_construction
+            
+            modifier = {
+                local_resources_factor = 0.10
+                production_speed_infrastructure_factor = 0.10
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_modernized_agriculture = {
+            picture = generic_agrarian_reform
+            
+            modifier = {
+                local_resources_factor = 0.15
+                production_speed_infrastructure_factor = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_soil_conservation_service = {
+            picture = generic_agrarian_reform
+            
+            modifier = {
+                local_resources_factor = 0.10
+                production_speed_infrastructure_factor = 0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_migrant_worker_programs = {
+            picture = generic_manpower_bonus
+            
+            modifier = {
+                stability_factor = 0.05
+                local_resources_factor = 0.05
+                monthly_population = 0.10
+            }
+        }
+        
+        # 1937 Recession and Recovery
+        USA_keynesian_stimulus = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = 0.10
+                stability_factor = 0.05
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        USA_keynesian_economics = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = 0.05
+                stability_factor = 0.10
+                industrial_capacity_factory = 0.15
+                production_speed_buildings_factor = 0.15
+                research_speed_factor = 0.05
+            }
+        }
+        
+        # War Preparation Ideas
+        USA_war_preparations = {
             picture = generic_prepare_civil_war
             
             modifier = {
                 production_speed_arms_factory_factor = 0.15
                 production_speed_dockyard_factor = 0.15
-                conversion_cost_civ_to_mil_factor = -0.2
-                industrial_capacity_factory = 0.15
+                industrial_capacity_factory = 0.10
                 research_speed_factor = 0.05
+                war_support_factor = 0.10
+            }
+        }
+        
+        USA_defense_industry_build_up = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.20
+                industrial_capacity_factory = 0.15
+                production_speed_dockyard_factor = 0.10
+            }
+        }
+        
+        USA_naval_expansion_program = {
+            picture = generic_navy_bonus
+            
+            modifier = {
+                production_speed_dockyard_factor = 0.20
+                navy_screen_ship_build_cost_factor = -0.10
+                navy_capital_ship_build_cost_factor = -0.10
+                naval_equipment_upgrade_xp_cost = -0.10
+            }
+        }
+        
+        USA_war_production_board = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.25
+                production_speed_dockyard_factor = 0.25
+                conversion_cost_civ_to_mil_factor = -0.3
+                industrial_capacity_factory = 0.25
+                research_speed_factor = 0.10
             }
         }
     }

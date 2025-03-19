@@ -1,5 +1,9 @@
+# This is a comprehensive USA-specific focus tree for the Great Depression era
+# Place in common/national_focus/usa_depression_era.txt
+
 focus_tree = {
     id = usa_depression_era
+    
     country = {
         factor = 0
         modifier = {
@@ -10,321 +14,82 @@ focus_tree = {
     
     default = no
     
-    # Initial Response Branch
+    # ====================================================================================
+    # MAIN STARTING FOCUS - WALL STREET CRASH
+    # ====================================================================================
+    
     focus = {
-        id = USA_hoover_response
-        icon = GFX_focus_usa_reaffirm_monroe_doctrine
-        text = "Hoover's Crisis Response"
-        x = 8
+        id = USA_wall_street_crash
+        icon = GFX_focus_usa_wall_street_crash
+        text = "Wall Street Crash"
+        x = 9
         y = 0
         cost = 10
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 100 }
+        
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
-        }
-    }
-    
-    focus = {
-        id = USA_voluntary_measures
-        icon = GFX_focus_generic_self_management
-        text = "Voluntary Business Cooperation"
-        prerequisite = { focus = USA_hoover_response }
-        x = 6
-        y = 1
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_ideas = USA_voluntary_business_cooperation
-        }
-    }
-    
-    focus = {
-        id = USA_banking_reform
-        icon = GFX_focus_generic_treaty
-        text = "Banking Reform"
-        prerequisite = { focus = USA_hoover_response }
-        x = 10
-        y = 1
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_ideas = USA_banking_reform
-        }
-    }
-    
-    focus = {
-        id = USA_infrastructure_investment
-        icon = GFX_goal_generic_construct_infrastructure
-        text = "Infrastructure Projects"
-        prerequisite = { focus = USA_voluntary_measures }
-        x = 6
-        y = 2
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            random_owned_controlled_state = {
-                limit = {
-                    free_building_slots = {
-                        building = infrastructure
-                        size > 0
-                    }
-                }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            random_owned_controlled_state = {
-                limit = {
-                    free_building_slots = {
-                        building = infrastructure
-                        size > 0
-                    }
-                }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-    }
-    
-    # Election Branch
-    focus = {
-        id = USA_1932_election
-        icon = GFX_goal_generic_demand_territory
-        text = "1932 Election"
-        prerequisite = { 
-            focus = USA_banking_reform 
-            focus = USA_infrastructure_investment
-        }
-        x = 8
-        y = 3
-        cost = 10
-        available_if_capitulated = yes
-        available = {
-            date > 1932.11.1
-        }
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            country_event = { id = great_depression.4 }
-        }
-    }
-    
-    # New Deal Branch
-    focus = {
-        id = USA_new_deal
-        icon = GFX_focus_usa_reestablish_the_gold_standard
-        text = "The New Deal"
-        prerequisite = { focus = USA_1932_election }
-        mutually_exclusive = { focus = USA_business_as_usual }
-        x = 6
-        y = 4
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_political_power = 100
-            add_stability = 0.1
+            add_political_power = -50
+            add_stability = -0.10
             add_war_support = -0.05
-            if = {
-                limit = { has_idea = great_depression_severe }
-                swap_ideas = {
-                    remove_idea = great_depression_severe
-                    add_idea = great_depression_major
-                }
-            }
+            add_ideas = great_depression_severe
+            news_event = { id = usa_depression.stock_market_crash days = 1 }
         }
     }
     
-    focus = {
-        id = USA_ccc_program
-        icon = GFX_goal_generic_positive_trade_relations
-        text = "Civilian Conservation Corps"
-        prerequisite = { focus = USA_new_deal }
-        x = 4
-        y = 5
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_ideas = USA_civilian_conservation_corps
-            add_stability = 0.05
-        }
-    }
+    # ====================================================================================
+    # HOOVER ADMINISTRATION BRANCH
+    # ====================================================================================
     
     focus = {
-        id = USA_wpa_program
-        icon = GFX_goal_generic_construct_civilian
-        text = "Works Progress Administration"
-        prerequisite = { focus = USA_new_deal }
-        x = 6
-        y = 5
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_ideas = USA_wpa_program
-            random_owned_controlled_state = {
-                limit = {
-                    free_building_slots = {
-                        building = infrastructure
-                        size > 0
-                    }
-                }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            random_owned_controlled_state = {
-                limit = {
-                    free_building_slots = {
-                        building = infrastructure
-                        size > 0
-                    }
-                }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-    }
-    
-    focus = {
-        id = USA_tva_program
-        icon = GFX_goal_generic_construct_infrastructure
-        text = "Tennessee Valley Authority"
-        prerequisite = { focus = USA_new_deal }
-        x = 8
-        y = 5
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            371 = { # Tennessee
-                add_building_construction = {
-                    type = infrastructure
-                    level = 3
-                    instant_build = yes
-                }
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            add_ideas = USA_tva_program
-        }
-    }
-    
-    focus = {
-        id = USA_agricultural_adjustment
-        icon = GFX_goal_generic_national_unity
-        text = "Agricultural Adjustment Act"
-        prerequisite = { focus = USA_ccc_program }
-        prerequisite = { focus = USA_wpa_program }
-        x = 5
-        y = 6
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            add_ideas = USA_agricultural_adjustment_act
-            add_stability = 0.05
-        }
-    }
-    
-    focus = {
-        id = USA_social_security
-        icon = GFX_goal_support_democracy
-        text = "Social Security Act"
-        prerequisite = { focus = USA_wpa_program }
-        prerequisite = { focus = USA_tva_program }
+        id = USA_hoover_administration
+        icon = GFX_focus_usa_hoover_administration
+        text = "Hoover Administration"
+        prerequisite = { focus = USA_wall_street_crash }
         x = 7
-        y = 6
-        cost = 10
+        y = 1
+        cost = 70
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        
         completion_reward = {
-            add_ideas = USA_social_security_act
-            add_stability = 0.10
-            add_political_power = 50
-        }
-    }
-    
-    focus = {
-        id = USA_recovery_complete
-        icon = GFX_goal_generic_consumer_goods
-        text = "Economic Recovery"
-        prerequisite = { focus = USA_agricultural_adjustment }
-        prerequisite = { focus = USA_social_security }
-        x = 6
-        y = 7
-        cost = 10
-        available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
-        completion_reward = {
-            if = {
-                limit = { has_idea = great_depression_major }
-                swap_ideas = {
-                    remove_idea = great_depression_major
-                    add_idea = great_depression_recovering
-                }
+            add_political_power = 25
+            add_timed_idea = {
+                idea = USA_hoover_philosophy
+                days = 365
             }
-            else_if = {
-                limit = { has_idea = great_depression_recovering }
-                swap_ideas = {
-                    remove_idea = great_depression_recovering
-                    add_idea = great_depression_ended
-                }
-            }
-            add_stability = 0.10
-            add_political_power = 100
+            country_event = { id = usa_depression.hoover_response days = 1 }
         }
     }
     
-    # Conservative Branch
+    # RFC SUB-BRANCH
     focus = {
-        id = USA_business_as_usual
-        icon = GFX_focus_generic_industry_1
-        text = "Maintain Laissez-Faire"
-        prerequisite = { focus = USA_1932_election }
-        mutually_exclusive = { focus = USA_new_deal }
-        x = 10
-        y = 4
-        cost = 10
+        id = USA_rfc_establishment
+        icon = GFX_focus_generic_self_management
+        text = "RFC Establishment"
+        prerequisite = { focus = USA_hoover_administration }
+        x = 5
+        y = 2
+        cost = 70
         available_if_capitulated = yes
-        ai_will_do = { factor = 0.25 }
+        
         completion_reward = {
-            add_political_power = 50
-            add_stability = -0.05
-            add_war_support = 0.05
-            add_ideas = USA_laissez_faire
+            add_ideas = USA_reconstruction_finance_corporation
+            add_stability = 0.03
+            add_political_power = 25
+            country_event = { id = usa_depression.rfc_established days = 1 }
         }
     }
     
     focus = {
-        id = USA_private_industry
-        icon = GFX_goal_generic_production
-        text = "Support Private Industry"
-        prerequisite = { focus = USA_business_as_usual }
-        x = 10
-        y = 5
-        cost = 10
+        id = USA_emergency_loans
+        icon = GFX_focus_generic_foreign_loans
+        text = "Emergency Loans"
+        prerequisite = { focus = USA_rfc_establishment }
+        x = 5
+        y = 3
+        cost = 70
         available_if_capitulated = yes
-        ai_will_do = { factor = 0.25 }
+        
         completion_reward = {
             random_owned_controlled_state = {
                 limit = {
@@ -334,28 +99,55 @@ focus_tree = {
                         include_locked = yes
                     }
                 }
+                add_extra_state_shared_building_slots = 1
                 add_building_construction = {
                     type = industrial_complex
-                    level = 2
+                    level = 1
                     instant_build = yes
                 }
             }
-            add_ideas = USA_private_industry_support
+            if = {
+                limit = { has_idea = great_depression_severe }
+                add_timed_idea = {
+                    idea = USA_rfc_loans
+                    days = 180
+                }
+            }
+        }
+    }
+    
+    # VOLUNTARY MEASURES SUB-BRANCH
+    focus = {
+        id = USA_voluntary_measures
+        icon = GFX_focus_generic_diplomatic_treaty
+        text = "Voluntary Measures"
+        prerequisite = { focus = USA_hoover_administration }
+        x = 7
+        y = 2
+        cost = 70
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_voluntary_business_cooperation
+            add_political_power = 25
         }
     }
     
     focus = {
-        id = USA_tax_cuts
-        icon = GFX_goal_generic_consumer_goods
-        text = "Business Tax Cuts"
-        prerequisite = { focus = USA_private_industry }
-        x = 10
-        y = 6
-        cost = 10
+        id = USA_business_coordination
+        icon = GFX_focus_generic_industry_1
+        text = "Business Coordination"
+        prerequisite = { focus = USA_voluntary_measures }
+        x = 7
+        y = 3
+        cost = 70
         available_if_capitulated = yes
-        ai_will_do = { factor = 0.25 }
+        
         completion_reward = {
-            add_ideas = USA_tax_cuts
+            add_timed_idea = {
+                idea = USA_business_coordination_council
+                days = 365
+            }
             if = {
                 limit = { has_idea = great_depression_severe }
                 swap_ideas = {
@@ -366,17 +158,675 @@ focus_tree = {
         }
     }
     
+    # SMOOT-HAWLEY SUB-BRANCH
     focus = {
-        id = USA_slow_recovery
-        icon = GFX_goal_generic_national_unity
-        text = "Gradual Recovery"
-        prerequisite = { focus = USA_tax_cuts }
-        x = 10
-        y = 7
-        cost = 10
+        id = USA_smoot_hawley
+        icon = GFX_focus_generic_strike_deal
+        text = "Smoot-Hawley Tariff"
+        prerequisite = { focus = USA_hoover_administration }
+        x = 9
+        y = 2
+        cost = 70
         available_if_capitulated = yes
-        ai_will_do = { factor = 0.25 }
+        
         completion_reward = {
+            add_ideas = USA_high_tariffs
+            add_political_power = -25
+            add_stability = -0.03
+            country_event = { id = usa_depression.smoot_hawley days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_tariff_protection
+        icon = GFX_focus_generic_foreign_trade
+        text = "Tariff Protection"
+        prerequisite = { focus = USA_smoot_hawley }
+        x = 9
+        y = 3
+        cost = 70
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_trade_opinion_modifier = {
+                target = ENG
+                modifier = trade_sanctions
+            }
+            add_trade_opinion_modifier = {
+                target = FRA
+                modifier = trade_sanctions
+            }
+            add_trade_opinion_modifier = {
+                target = GER
+                modifier = trade_sanctions
+            }
+        }
+    }
+    
+    # BONUS ARMY EVENT
+    focus = {
+        id = USA_bonus_army
+        icon = GFX_focus_generic_military_mission
+        text = "Bonus Army Crisis"
+        prerequisite = { 
+            focus = USA_emergency_loans
+            focus = USA_business_coordination
+            focus = USA_tariff_protection
+        }
+        x = 7
+        y = 4
+        cost = 70
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            country_event = { id = usa_depression.bonus_army days = 1 }
+        }
+    }
+    
+    # Bonus Army choices done via event - leading to these two focuses
+    focus = {
+        id = USA_macarthur_suppression
+        icon = GFX_focus_generic_military_academy
+        text = "MacArthur Suppression"
+        prerequisite = { focus = USA_bonus_army }
+        available = {
+            has_country_flag = bonus_army_suppressed
+        }
+        x = 6
+        y = 5
+        cost = 70
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = -0.10
+            add_political_power = -50
+            add_timed_idea = {
+                idea = USA_veteran_resentment
+                days = 365
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_negotiated_settlement
+        icon = GFX_focus_generic_concessions
+        text = "Negotiated Settlement"
+        prerequisite = { focus = USA_bonus_army }
+        available = {
+            has_country_flag = bonus_army_negotiated
+        }
+        x = 8
+        y = 5
+        cost = 70
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = -25
+            add_stability = -0.02
+            add_timed_idea = {
+                idea = USA_veteran_relief
+                days = 180
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # 1932 ELECTION BRANCH
+    # ====================================================================================
+    
+    focus = {
+        id = USA_1932_election
+        icon = GFX_focus_usa_election
+        text = "1932 Election"
+        prerequisite = { focus = USA_wall_street_crash }
+        x = 11
+        y = 1
+        cost = 70
+        
+        available = {
+            date > 1932.11.1
+        }
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            country_event = { id = usa_depression.election_1932 days = 1 }
+        }
+    }
+    
+    # FDR VICTORY PATH - HISTORICAL
+    focus = {
+        id = USA_fdr_victory
+        icon = GFX_focus_usa_fdr
+        text = "FDR Victory"
+        prerequisite = { focus = USA_1932_election }
+        available = {
+            has_country_flag = fdr_wins_1932
+        }
+        mutually_exclusive = { focus = USA_hoover_second_term }
+        x = 9
+        y = 2
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            create_country_leader = {
+                name = "Franklin D. Roosevelt"
+                desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+                picture = "gfx/leaders/USA/Portrait_USA_Franklin_D_Roosevelt.dds"
+                expire = "1965.1.1"
+                ideology = liberalism
+                traits = {
+                    dislikes_germany
+                    new_deal_democrat
+                }
+            }
+            add_political_power = 100
+            add_stability = 0.10
+            add_war_support = 0.05
+            country_event = { id = usa_depression.fdr_inauguration days = 1 }
+        }
+    }
+    
+    # HOOVER SECOND TERM - ALTERNATIVE PATH
+    focus = {
+        id = USA_hoover_second_term
+        icon = GFX_focus_usa_hoover_second_term
+        text = "Hoover Second Term"
+        prerequisite = { focus = USA_1932_election }
+        available = {
+            has_country_flag = hoover_wins_1932
+        }
+        mutually_exclusive = { focus = USA_fdr_victory }
+        x = 13
+        y = 2
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 50
+            add_stability = -0.05
+            add_war_support = 0.03
+            add_ideas = USA_continued_hoover_policies
+            country_event = { id = usa_depression.hoover_second_term days = 1 }
+        }
+    }
+    
+    # ALTERNATIVE HOOVER PATH
+    focus = {
+        id = USA_continued_austerity
+        icon = GFX_focus_generic_concessions
+        text = "Continued Austerity"
+        prerequisite = { focus = USA_hoover_second_term }
+        x = 13
+        y = 3
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = -0.05
+            add_ideas = USA_balanced_budget_austerity
+        }
+    }
+    
+    focus = {
+        id = USA_free_market_approach
+        icon = GFX_focus_generic_foreign_trade
+        text = "Free Market Approach"
+        prerequisite = { focus = USA_continued_austerity }
+        mutually_exclusive = { focus = USA_limited_intervention }
+        x = 12
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_timed_idea = {
+                idea = USA_free_market_recovery
+                days = 730
+            }
+            set_country_flag = free_market_approach
+        }
+    }
+    
+    focus = {
+        id = USA_limited_intervention
+        icon = GFX_focus_generic_treaty
+        text = "Limited Intervention"
+        prerequisite = { focus = USA_continued_austerity }
+        mutually_exclusive = { focus = USA_free_market_approach }
+        x = 14
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_timed_idea = {
+                idea = USA_limited_govt_intervention
+                days = 730
+            }
+            set_country_flag = limited_intervention_approach
+        }
+    }
+    
+    # ====================================================================================
+    # FIRST HUNDRED DAYS - NEW DEAL BEGINS
+    # ====================================================================================
+    
+    focus = {
+        id = USA_first_hundred_days
+        icon = GFX_focus_usa_hundred_days
+        text = "First Hundred Days"
+        prerequisite = { focus = USA_fdr_victory }
+        x = 9
+        y = 3
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_first_hundred_days_momentum
+                days = 100
+            }
+            country_event = { id = usa_depression.first_hundred_days days = 1 }
+        }
+    }
+    
+    # ====================================================================================
+    # ECONOMIC RELIEF BRANCH
+    # ====================================================================================
+    
+    focus = {
+        id = USA_economic_relief
+        icon = GFX_focus_generic_industry_1
+        text = "Economic Relief"
+        prerequisite = { focus = USA_first_hundred_days }
+        x = 6
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            if = {
+                limit = { has_idea = great_depression_severe }
+                swap_ideas = {
+                    remove_idea = great_depression_severe
+                    add_idea = great_depression_major
+                }
+            }
+            country_event = { id = usa_depression.economic_relief_programs days = 1 }
+        }
+    }
+    
+    # AGRICULTURE ADJUSTMENT ACT SUB-BRANCH
+    focus = {
+        id = USA_agricultural_adjustment_act
+        icon = GFX_focus_generic_agrarian_reform
+        text = "AAA"
+        prerequisite = { focus = USA_economic_relief }
+        x = 4
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_agricultural_adjustment_act
+            add_stability = 0.05
+            country_event = { id = usa_depression.aaa_implementation days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_farm_subsidies
+        icon = GFX_focus_generic_agrarian_society
+        text = "Farm Subsidies"
+        prerequisite = { focus = USA_agricultural_adjustment_act }
+        x = 4
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_farm_price_support
+            random_owned_controlled_state = {
+                limit = {
+                    has_resources_amount = { 
+                        resource = food
+                        amount > 0
+                    }
+                }
+                add_resource = {
+                    type = food
+                    amount = 8
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_soil_conservation
+        icon = GFX_focus_generic_agrarian_reform
+        text = "Soil Conservation"
+        prerequisite = { focus = USA_farm_subsidies }
+        x = 4
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+            random_owned_controlled_state = {
+                limit = {
+                    has_resources_amount = { 
+                        resource = food
+                        amount > 0
+                    }
+                }
+                add_resource = {
+                    type = food
+                    amount = 4
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # CIVILIAN CONSERVATION CORPS SUB-BRANCH
+    focus = {
+        id = USA_civilian_conservation_corps
+        icon = GFX_focus_generic_self_management
+        text = "CCC"
+        prerequisite = { focus = USA_economic_relief }
+        x = 6
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_civilian_conservation_corps
+            add_manpower = 50000
+            country_event = { id = usa_depression.ccc_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_youth_employment
+        icon = GFX_focus_generic_manpower
+        text = "Youth Employment"
+        prerequisite = { focus = USA_civilian_conservation_corps }
+        x = 6
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_manpower = 100000
+        }
+    }
+    
+    focus = {
+        id = USA_national_parks
+        icon = GFX_focus_generic_support_the_left_right
+        text = "National Parks"
+        prerequisite = { focus = USA_youth_employment }
+        x = 6
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # FEDERAL EMERGENCY RELIEF ADMINISTRATION SUB-BRANCH
+    focus = {
+        id = USA_federal_emergency_relief
+        icon = GFX_focus_generic_concessions
+        text = "FERA"
+        prerequisite = { focus = USA_economic_relief }
+        x = 8
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_federal_emergency_relief
+                days = 365
+            }
+            country_event = { id = usa_depression.fera_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_direct_relief
+        icon = GFX_focus_generic_concessions
+        text = "Direct Relief"
+        prerequisite = { focus = USA_federal_emergency_relief }
+        x = 8
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = -25
+            add_ideas = USA_direct_relief_programs
+        }
+    }
+    
+    focus = {
+        id = USA_work_programs
+        icon = GFX_focus_generic_industry_3
+        text = "Work Programs"
+        prerequisite = { focus = USA_direct_relief }
+        x = 8
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # BANKING REFORM BRANCH
+    # ====================================================================================
+    
+    focus = {
+        id = USA_banking_reform
+        icon = GFX_focus_generic_treaty
+        text = "Banking Reform"
+        prerequisite = { focus = USA_first_hundred_days }
+        x = 9
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            country_event = { id = usa_depression.banking_reform days = 1 }
+        }
+    }
+    
+    # EMERGENCY BANKING ACT SUB-BRANCH
+    focus = {
+        id = USA_emergency_banking_act
+        icon = GFX_focus_generic_treaty
+        text = "Emergency Banking Act"
+        prerequisite = { focus = USA_banking_reform }
+        x = 8
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_emergency_banking_measures
+                days = 180
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_bank_holiday
+        icon = GFX_focus_generic_strike_deal
+        text = "Bank Holiday"
+        prerequisite = { focus = USA_emergency_banking_act }
+        x = 8
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = -25
+            add_timed_idea = {
+                idea = USA_bank_holiday
+                days = 30
+            }
+        }
+    }
+    
+    # GLASS-STEAGALL ACT SUB-BRANCH
+    focus = {
+        id = USA_glass_steagall_act
+        icon = GFX_focus_generic_self_management
+        text = "Glass-Steagall Act"
+        prerequisite = { focus = USA_banking_reform }
+        x = 9
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_glass_steagall_regulations
+            add_stability = 0.03
+            add_political_power = 25
+            country_event = { id = usa_depression.glass_steagall days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_banking_separation
+        icon = GFX_focus_generic_treaty
+        text = "Banking Separation"
+        prerequisite = { focus = USA_glass_steagall_act }
+        x = 9
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+            add_ideas = USA_investment_commercial_separation
+        }
+    }
+    
+    focus = {
+        id = USA_fdic_insurance
+        icon = GFX_focus_generic_concessions
+        text = "FDIC Insurance"
+        prerequisite = { focus = USA_banking_separation }
+        x = 9
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.10
+            add_ideas = USA_deposit_insurance
             if = {
                 limit = { has_idea = great_depression_major }
                 swap_ideas = {
@@ -384,57 +834,1214 @@ focus_tree = {
                     add_idea = great_depression_recovering
                 }
             }
-            else_if = {
+        }
+    }
+    
+    # SECURITIES EXCHANGE COMMISSION SUB-BRANCH
+    focus = {
+        id = USA_securities_exchange_commission
+        icon = GFX_focus_generic_support_the_left_right
+        text = "SEC"
+        prerequisite = { focus = USA_banking_reform }
+        x = 10
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_securities_regulation
+            add_stability = 0.03
+            add_political_power = 25
+            country_event = { id = usa_depression.sec_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_market_regulation
+        icon = GFX_focus_generic_self_management
+        text = "Market Regulation"
+        prerequisite = { focus = USA_securities_exchange_commission }
+        x = 10
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_ideas = USA_regulated_markets
+        }
+    }
+    
+    focus = {
+        id = USA_investor_protection
+        icon = GFX_focus_generic_concessions
+        text = "Investor Protection"
+        prerequisite = { focus = USA_market_regulation }
+        x = 10
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # LABOR REFORM BRANCH
+    # ====================================================================================
+    
+    focus = {
+        id = USA_labor_reform
+        icon = GFX_focus_generic_strike_deal
+        text = "Labor Reform"
+        prerequisite = { focus = USA_first_hundred_days }
+        x = 12
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            country_event = { id = usa_depression.labor_reform days = 1 }
+        }
+    }
+    
+    # NATIONAL INDUSTRIAL RECOVERY ACT SUB-BRANCH
+    focus = {
+        id = USA_national_industrial_recovery_act
+        icon = GFX_focus_generic_the_giant_wakes
+        text = "NIRA"
+        prerequisite = { focus = USA_labor_reform }
+        x = 11
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_nira_regulations
+            add_political_power = 25
+            country_event = { id = usa_depression.nira_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_industry_codes
+        icon = GFX_focus_generic_industry_1
+        text = "Industry Codes"
+        prerequisite = { focus = USA_national_industrial_recovery_act }
+        x = 11
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_timed_idea = {
+                idea = USA_industry_codes_compliance
+                days = 365
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_labor_protections
+        icon = GFX_focus_generic_strike_deal
+        text = "Labor Protections"
+        prerequisite = { focus = USA_industry_codes }
+        x = 11
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_ideas = USA_labor_protection_laws
+        }
+    }
+    
+    # PUBLIC WORKS ADMINISTRATION SUB-BRANCH
+    focus = {
+        id = USA_public_works_administration
+        icon = GFX_focus_generic_industry_3
+        text = "PWA"
+        prerequisite = { focus = USA_labor_reform }
+        x = 12
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_public_works_administration
+            add_political_power = 25
+            country_event = { id = usa_depression.pwa_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_public_works
+        icon = GFX_focus_generic_construct_civilian
+        text = "Public Works"
+        prerequisite = { focus = USA_public_works_administration }
+        x = 12
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_large_construction
+        icon = GFX_focus_generic_construct_infrastructure
+        text = "Large Construction"
+        prerequisite = { focus = USA_public_works }
+        x = 12
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = yes
+                }
+                add_building_construction = {
+                    type = naval_base
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # NATIONAL RECOVERY ADMINISTRATION SUB-BRANCH
+    focus = {
+        id = USA_national_recovery_administration
+        icon = GFX_focus_generic_industry_2
+        text = "NRA"
+        prerequisite = { focus = USA_labor_reform }
+        x = 13
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_national_recovery_administration
+            add_political_power = 25
+            country_event = { id = usa_depression.nra_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_blue_eagle
+        icon = GFX_focus_generic_little_entente
+        text = "Blue Eagle"
+        prerequisite = { focus = USA_national_recovery_administration }
+        x = 13
+        y = 6
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_timed_idea = {
+                idea = USA_blue_eagle_campaign
+                days = 365
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_business_cooperation
+        icon = GFX_focus_generic_foreign_trade
+        text = "Business Cooperation"
+        prerequisite = { focus = USA_blue_eagle }
+        x = 13
+        y = 7
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # SUPREME COURT CHALLENGE
+    # ====================================================================================
+    
+    focus = {
+        id = USA_supreme_court_challenge
+        icon = GFX_focus_generic_support_the_left_right
+        text = "Supreme Court Challenge"
+        prerequisite = { 
+            focus = USA_soil_conservation
+            focus = USA_national_parks
+            focus = USA_work_programs
+            focus = USA_fdic_insurance
+            focus = USA_investor_protection
+            focus = USA_labor_protections
+            focus = USA_large_construction
+            focus = USA_business_cooperation
+        }
+        available = {
+            date > 1935.5.1
+        }
+        x = 9
+        y = 8
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = -50
+            add_stability = -0.05
+            country_event = { id = usa_depression.schechter_case days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_schechter_decision
+        icon = GFX_focus_generic_concessions
+        text = "Schechter Decision"
+        prerequisite = { focus = USA_supreme_court_challenge }
+        x = 8
+        y = 9
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            remove_ideas = USA_nira_regulations
+            remove_ideas = USA_national_recovery_administration
+            remove_ideas = USA_industry_codes_compliance
+            add_political_power = -50
+            add_stability = -0.05
+            country_event = { id = usa_depression.schechter_aftermath days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_nira_invalidated
+        icon = GFX_focus_generic_strike_deal
+        text = "NIRA Invalidated"
+        prerequisite = { focus = USA_schechter_decision }
+        x = 8
+        y = 10
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_post_nira_adjustments
+                days = 180
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_court_packing_plan
+        icon = GFX_focus_generic_home_defense
+        text = "Court Packing Plan"
+        prerequisite = { focus = USA_supreme_court_challenge }
+        x = 10
+        y = 9
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = -100
+            add_stability = -0.10
+            country_event = { id = usa_depression.court_packing days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_political_backlash
+        icon = GFX_focus_generic_concessions
+        text = "Political Backlash"
+        prerequisite = { focus = USA_court_packing_plan }
+        x = 10
+        y = 10
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = -50
+            add_timed_idea = {
+                idea = USA_court_packing_controversy
+                days = 365
+            }
+            country_event = { id = usa_depression.court_packing_aftermath days = 1 }
+        }
+    }
+    
+    # ====================================================================================
+    # SECOND NEW DEAL
+    # ====================================================================================
+    
+    focus = {
+        id = USA_second_new_deal
+        icon = GFX_focus_usa_second_new_deal
+        text = "Second New Deal"
+        prerequisite = { 
+            focus = USA_nira_invalidated
+            focus = USA_political_backlash
+        }
+        available = {
+            date > 1935.6.1
+        }
+        x = 9
+        y = 11
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.10
+            add_ideas = USA_second_new_deal_reforms
+            country_event = { id = usa_depression.second_new_deal days = 1 }
+        }
+    }
+    
+    # WAGNER ACT / NLRB
+    focus = {
+        id = USA_wagner_act
+        icon = GFX_focus_generic_strike_deal
+        text = "Wagner Act"
+        prerequisite = { focus = USA_second_new_deal }
+        x = 7
+        y = 12
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_wagner_act_labor_rights
+            add_stability = 0.05
+            add_political_power = 25
+            country_event = { id = usa_depression.wagner_act days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_nlrb_creation
+        icon = GFX_focus_generic_strike_deal
+        text = "NLRB Creation"
+        prerequisite = { focus = USA_wagner_act }
+        x = 7
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_nlrb_established
+                days = 730
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_labor_movement
+        icon = GFX_focus_generic_join_comintern
+        text = "Labor Movement"
+        prerequisite = { focus = USA_nlrb_creation }
+        x = 7
+        y = 14
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = -25
+            add_ideas = USA_organized_labor_growth
+            if = {
                 limit = { has_idea = great_depression_recovering }
                 swap_ideas = {
                     remove_idea = great_depression_recovering
                     add_idea = great_depression_ended
                 }
             }
-            add_stability = 0.05
-            add_political_power = 50
         }
     }
     
-    # Military and Foreign Policy Branch
+    # SOCIAL SECURITY
     focus = {
-        id = USA_military_spending
-        icon = GFX_goal_generic_build_tank
-        text = "Increased Military Spending"
-        prerequisite = { 
-            focus = USA_recovery_complete
-            focus = USA_slow_recovery
-        }
-        x = 8
-        y = 8
-        cost = 10
+        id = USA_social_security_act
+        icon = GFX_focus_generic_self_management
+        text = "Social Security Act"
+        prerequisite = { focus = USA_second_new_deal }
+        x = 9
+        y = 12
+        cost = 70
+        
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        
         completion_reward = {
-            add_ideas = USA_military_spending_increase
-            add_war_support = 0.1
+            add_ideas = USA_social_security_system
+            add_stability = 0.10
             add_political_power = 50
+            country_event = { id = usa_depression.social_security days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_old_age_benefits
+        icon = GFX_focus_generic_concessions
+        text = "Old Age Benefits"
+        prerequisite = { focus = USA_social_security_act }
+        x = 8
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_timed_idea = {
+                idea = USA_old_age_insurance
+                days = 730
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_unemployment_insurance
+        icon = GFX_focus_generic_selfpropelled_equipment
+        text = "Unemployment Insurance"
+        prerequisite = { focus = USA_social_security_act }
+        x = 10
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            add_timed_idea = {
+                idea = USA_unemployment_compensation
+                days = 730
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_safety_net
+        icon = GFX_focus_generic_concessions
+        text = "Safety Net"
+        prerequisite = { 
+            focus = USA_old_age_benefits
+            focus = USA_unemployment_insurance
+        }
+        x = 9
+        y = 14
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_stability = 0.10
+            add_political_power = 50
+            if = {
+                limit = { has_idea = great_depression_recovering }
+                swap_ideas = {
+                    remove_idea = great_depression_recovering
+                    add_idea = great_depression_ended
+                }
+            }
+        }
+    }
+    
+    # WORKS PROGRESS ADMINISTRATION
+    focus = {
+        id = USA_works_progress_administration
+        icon = GFX_focus_generic_industry_3
+        text = "WPA"
+        prerequisite = { focus = USA_second_new_deal }
+        x = 11
+        y = 12
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_wpa_program
+            add_political_power = 25
+            add_stability = 0.05
+            country_event = { id = usa_depression.wpa_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_massive_employment
+        icon = GFX_focus_generic_industry_1
+        text = "Massive Employment"
+        prerequisite = { focus = USA_works_progress_administration }
+        x = 10
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_federal_arts_project
+        icon = GFX_focus_generic_military_mission
+        text = "Federal Arts Project"
+        prerequisite = { focus = USA_works_progress_administration }
+        x = 12
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.10
+            add_ideas = USA_federal_arts_projects
+        }
+    }
+    
+    focus = {
+        id = USA_national_infrastructure
+        icon = GFX_focus_generic_construct_infrastructure
+        text = "National Infrastructure"
+        prerequisite = { 
+            focus = USA_massive_employment
+            focus = USA_federal_arts_project
+        }
+        x = 11
+        y = 14
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = infrastructure
+                        size > 0
+                    }
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            if = {
+                limit = { has_idea = great_depression_recovering }
+                swap_ideas = {
+                    remove_idea = great_depression_recovering
+                    add_idea = great_depression_ended
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # REGIONAL DEVELOPMENT PROJECTS
+    # ====================================================================================
+    
+    focus = {
+        id = USA_regional_development
+        icon = GFX_focus_generic_industry_1
+        text = "Regional Development"
+        prerequisite = { focus = USA_national_recovery_administration }
+        prerequisite = { focus = USA_public_works_administration }
+        x = 15
+        y = 8
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            country_event = { id = usa_depression.regional_development days = 1 }
+        }
+    }
+    
+    # TENNESSEE VALLEY AUTHORITY
+    focus = {
+        id = USA_tennessee_valley_authority
+        icon = GFX_focus_generic_hydro_power
+        text = "TVA"
+        prerequisite = { focus = USA_regional_development }
+        x = 13
+        y = 9
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_tva_program
+            add_political_power = 25
+            country_event = { id = usa_depression.tva_established days = 1 }
+            371 = { # Tennessee
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+                add_extra_state_shared_building_slots = 2
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_flood_control
+        icon = GFX_focus_generic_hydro_power
+        text = "Flood Control"
+        prerequisite = { focus = USA_tennessee_valley_authority }
+        x = 13
+        y = 10
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            371 = { # Tennessee
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            370 = { # Kentucky
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_hydroelectric_power
+        icon = GFX_focus_generic_construction
+        text = "Hydroelectric Power"
+        prerequisite = { focus = USA_flood_control }
+        x = 13
+        y = 11
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            371 = { # Tennessee
+                add_resource = {
+                    type = electricity
+                    amount = 8
+                }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+    
+    # RURAL ELECTRIFICATION ADMINISTRATION
+    focus = {
+        id = USA_rural_electrification_admin
+        icon = GFX_focus_generic_electricity
+        text = "REA"
+        prerequisite = { focus = USA_regional_development }
+        x = 15
+        y = 9
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_rural_electrification
+            add_political_power = 25
+            country_event = { id = usa_depression.rea_established days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_rural_electrification
+        icon = GFX_focus_generic_electricity
+        text = "Rural Electrification"
+        prerequisite = { focus = USA_rural_electrification_admin }
+        x = 15
+        y = 10
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_coastal = no
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_modern_rural_life
+        icon = GFX_focus_generic_concessions
+        text = "Modern Rural Life"
+        prerequisite = { focus = USA_rural_electrification }
+        x = 15
+        y = 11
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_ideas = USA_modernized_agriculture
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+    
+    # DUST BOWL RESPONSE
+    focus = {
+        id = USA_dust_bowl_response
+        icon = GFX_focus_generic_agrarian_reform
+        text = "Dust Bowl Response"
+        prerequisite = { focus = USA_regional_development }
+        x = 17
+        y = 9
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = -0.05
+            country_event = { id = usa_depression.dust_bowl days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_soil_management
+        icon = GFX_focus_generic_agrarian_society
+        text = "Soil Management"
+        prerequisite = { focus = USA_dust_bowl_response }
+        x = 17
+        y = 10
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+            add_ideas = USA_soil_conservation_service
+            375 = { # Kansas
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            376 = { # Oklahoma
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_migrant_assistance
+        icon = GFX_focus_generic_concessions
+        text = "Migrant Assistance"
+        prerequisite = { focus = USA_soil_management }
+        x = 17
+        y = 11
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_ideas = USA_migrant_worker_programs
+            378 = { # California
+                add_manpower = 500
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # 1937 RECESSION
+    # ====================================================================================
+    
+    focus = {
+        id = USA_1937_recession
+        icon = GFX_focus_generic_concessions
+        text = "1937 Recession"
+        prerequisite = { focus = USA_national_infrastructure }
+        prerequisite = { focus = USA_migrant_assistance }
+        prerequisite = { focus = USA_modern_rural_life }
+        prerequisite = { focus = USA_hydroelectric_power }
+        available = {
+            date > 1937.5.1
+        }
+        x = 12
+        y = 12
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = -50
+            add_stability = -0.05
+            if = {
+                limit = { has_idea = great_depression_recovering }
+                swap_ideas = {
+                    remove_idea = great_depression_recovering
+                    add_idea = great_depression_major
+                }
+            }
+            country_event = { id = usa_depression.recession_1937 days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_renewed_spending
+        icon = GFX_focus_generic_the_giant_wakes
+        text = "Renewed Spending"
+        prerequisite = { focus = USA_1937_recession }
+        x = 12
+        y = 13
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            add_ideas = USA_keynesian_stimulus
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_economic_thesis
+        icon = GFX_focus_generic_treaty
+        text = "Economic Thesis"
+        prerequisite = { focus = USA_renewed_spending }
+        x = 12
+        y = 14
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            add_timed_idea = {
+                idea = USA_keynesian_economics
+                days = 1825
+            }
+            if = {
+                limit = { has_idea = great_depression_recovering }
+                swap_ideas = {
+                    remove_idea = great_depression_recovering
+                    add_idea = great_depression_ended
+                }
+            }
+        }
+    }
+    
+    # ====================================================================================
+    # WAR PREPARATIONS
+    # ====================================================================================
+    
+    focus = {
+        id = USA_war_preparations
+        icon = GFX_focus_generic_military_mission
+        text = "War Preparations"
+        prerequisite = { 
+            focus = USA_labor_movement
+            focus = USA_safety_net
+            focus = USA_national_infrastructure
+            focus = USA_economic_thesis
+        }
+        prerequisite = {
+            focus = USA_hydroelectric_power
+            focus = USA_modern_rural_life 
+            focus = USA_migrant_assistance
+        }
+        available = {
+            date > 1938.1.1
+        }
+        x = 10
+        y = 15
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.10
+            add_ideas = USA_war_preparations
+            country_event = { id = usa_depression.war_preparations days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_military_industrialization
+        icon = GFX_focus_generic_tank_production
+        text = "Military Industrialization"
+        prerequisite = { focus = USA_war_preparations }
+        x = 8
+        y = 16
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_ideas = USA_defense_industry_build_up
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
         }
     }
     
     focus = {
         id = USA_naval_expansion
-        icon = GFX_goal_generic_build_navy
-        text = "Naval Expansion Program"
-        prerequisite = { focus = USA_military_spending }
-        x = 7
-        y = 9
-        cost = 10
+        icon = GFX_focus_generic_navy_battleship2
+        text = "Naval Expansion"
+        prerequisite = { focus = USA_war_preparations }
+        x = 10
+        y = 16
+        cost = 70
+        
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        
         completion_reward = {
             navy_experience = 25
-            add_tech_bonus = {
-                name = naval_bonus
-                bonus = 0.5
-                uses = 2
-                category = naval_equipment
-            }
+            add_ideas = USA_naval_expansion_program
             random_owned_controlled_state = {
                 limit = {
                     is_coastal = yes
@@ -450,50 +2057,74 @@ focus_tree = {
     }
     
     focus = {
-        id = USA_army_expansion
-        icon = GFX_goal_generic_army_doctrines
-        text = "Army Modernization"
-        prerequisite = { focus = USA_military_spending }
-        x = 9
-        y = 9
-        cost = 10
+        id = USA_strategic_resources
+        icon = GFX_focus_generic_aluminum
+        text = "Strategic Resources"
+        prerequisite = { focus = USA_war_preparations }
+        x = 12
+        y = 16
+        cost = 70
+        
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        
         completion_reward = {
-            army_experience = 25
             add_tech_bonus = {
-                name = land_doc_bonus
+                name = synth_bonus
                 bonus = 0.5
                 uses = 2
-                category = land_doctrine
+                category = synth_resources
             }
-            add_tech_bonus = {
-                name = infantry_weapons_bonus
-                bonus = 0.5
-                uses = 1
-                category = infantry_weapons
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = synthetic_refinery
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = synthetic_refinery
+                    level = 1
+                    instant_build = yes
+                }
             }
         }
     }
     
     focus = {
-        id = USA_prepare_for_war
-        icon = GFX_goal_generic_allies_build_infantry
-        text = "Prepare for Global Conflict"
+        id = USA_wartime_production_board
+        icon = GFX_focus_generic_industry_3
+        text = "Wartime Production Board"
         prerequisite = { 
+            focus = USA_military_industrialization
             focus = USA_naval_expansion
-            focus = USA_army_expansion
+            focus = USA_strategic_resources
         }
-        x = 8
-        y = 10
-        cost = 10
+        x = 10
+        y = 17
+        cost = 70
+        
         available_if_capitulated = yes
-        ai_will_do = { factor = 1 }
+        
         completion_reward = {
+            add_ideas = USA_war_production_board
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+            }
             add_war_support = 0.15
-            add_stability = 0.05
-            add_ideas = USA_war_preparations
-            add_political_power = 100
         }
     }
 }

@@ -1,0 +1,1192 @@
+# USA Political, Economic, and Military Advisors for the Great Depression Era
+# Place in common/characters/USA.txt
+
+characters = {
+    # COUNTRY LEADERS
+    USA_herbert_hoover = {
+        name = "Herbert Hoover"
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
+            }
+        }
+        country_leader = {
+            ideology = conservatism
+            traits = { 
+                great_depression_president
+                business_background
+                staunch_constitutionalist 
+            }
+            desc = "POLITICS_HERBERT_HOOVER_DESC"
+        }
+    }
+    
+    USA_franklin_roosevelt = {
+        name = "Franklin D. Roosevelt"
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/USA/Portrait_USA_Franklin_D_Roosevelt.dds"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {
+                dislikes_germany
+                new_deal_democrat
+                great_depression_reformer
+            }
+            desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+        }
+    }
+    
+    # POLITICAL ADVISORS - CABINET MEMBERS
+    
+    # FDR's Cabinet
+    USA_henry_morgenthau = {
+        name = "Henry Morgenthau Jr."
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_henry_morgenthau"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_fdr_victory
+            }
+            traits = { financial_expert }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_frances_perkins = {
+        name = "Frances Perkins"
+        gender = female
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_frances_perkins"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_wagner_act
+            }
+            traits = { compassionate_gentleman }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_harold_ickes = {
+        name = "Harold Ickes"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_harold_ickes"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_public_works_administration
+            }
+            traits = { armaments_organizer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_cordell_hull = {
+        name = "Cordell Hull"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_cordell_hull"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_fdr_victory
+            }
+            traits = { smooth_talking_charmer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_henry_wallace = {
+        name = "Henry A. Wallace"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_henry_wallace"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_agricultural_adjustment_act
+            }
+            traits = { agrarian_reformer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_harry_hopkins = {
+        name = "Harry Hopkins"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_harry_hopkins"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_works_progress_administration
+            }
+            traits = { new_deal_administrator }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # Hoover Cabinet and Associates
+    USA_andrew_mellon = {
+        name = "Andrew Mellon"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_andrew_mellon"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                OR = {
+                    has_country_flag = hoover_wins_1932
+                    NOT = { has_completed_focus = USA_fdr_victory }
+                }
+            }
+            traits = { fiscal_conservative }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_ogden_mills = {
+        name = "Ogden Mills"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_ogden_mills"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                OR = {
+                    has_country_flag = hoover_wins_1932
+                    NOT = { has_completed_focus = USA_fdr_victory }
+                }
+            }
+            traits = { bank_president }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # Economic Theorists and Advisors
+    USA_marriner_eccles = {
+        name = "Marriner Eccles"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_marriner_eccles"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_banking_reform
+            }
+            traits = { keynesian_economist }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_rexford_tugwell = {
+        name = "Rexford Tugwell"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_rexford_tugwell"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_economic_relief
+            }
+            traits = { brain_trust_member }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_raymond_moley = {
+        name = "Raymond Moley"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_raymond_moley"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_fdr_victory
+            }
+            traits = { ideological_crusader }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_john_maynard_keynes = {
+        name = "John Maynard Keynes"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_john_maynard_keynes"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_economic_thesis
+            }
+            traits = { economic_reformer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # Labor Leaders
+    USA_john_l_lewis = {
+        name = "John L. Lewis"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_john_l_lewis"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_wagner_act
+            }
+            traits = { union_organizer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_sidney_hillman = {
+        name = "Sidney Hillman"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_sidney_hillman"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_labor_movement
+            }
+            traits = { labor_relations_expert }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # Regional Development Experts
+    USA_david_lilienthal = {
+        name = "David Lilienthal"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_david_lilienthal"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_tennessee_valley_authority
+            }
+            traits = { infrastructure_developer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_morris_cooke = {
+        name = "Morris Cooke"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_morris_cooke"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_rural_electrification_admin
+            }
+            traits = { electricity_pioneer }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_hugh_bennett = {
+        name = "Hugh Bennett"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_hugh_bennett"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_soil_management
+            }
+            traits = { soil_conservationist }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # MILITARY HIGH COMMAND
+    
+    # Army
+    USA_george_marshall = {
+        name = "George Marshall"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_george_marshall"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_war_preparations
+            }
+            traits = { army_organization_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_douglas_macarthur = {
+        name = "Douglas MacArthur"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_douglas_macarthur"
+                large = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_military_industrialization
+            }
+            traits = { army_infantry_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+        
+        corps_commander = {
+            traits = { 
+                brilliant_strategist 
+                media_personality
+                politically_connected
+                infantry_officer
+            }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+    
+    USA_dwight_eisenhower = {
+        name = "Dwight D. Eisenhower"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_dwight_eisenhower"
+                large = "gfx/leaders/USA/Portrait_USA_Dwight_D_Eisenhower.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_military_industrialization
+            }
+            traits = { army_armored_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+        
+        corps_commander = {
+            traits = { 
+                career_officer 
+                politically_connected
+                armor_officer
+            }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 3
+        }
+    }
+    
+    USA_omar_bradley = {
+        name = "Omar Bradley"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_omar_bradley"
+                large = "gfx/leaders/USA/Portrait_USA_Omar_Bradley.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_military_industrialization
+            }
+            traits = { army_logistics_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+        
+        corps_commander = {
+            traits = { 
+                organizer 
+                infantry_officer
+                infantry_leader
+            }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+        }
+    }
+    
+    # Navy
+    USA_ernest_king = {
+        name = "Ernest King"
+        portraits = {
+            navy = {
+                small = "GFX_idea_USA_ernest_king"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_naval_expansion
+            }
+            traits = { navy_fleet_maintenance_1 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_william_leahy = {
+        name = "William Leahy"
+        portraits = {
+            navy = {
+                small = "GFX_idea_USA_william_leahy"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_naval_expansion
+            }
+            traits = { navy_capital_ship_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_harold_stark = {
+        name = "Harold Stark"
+        portraits = {
+            navy = {
+                small = "GFX_idea_USA_harold_stark"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_naval_expansion
+            }
+            traits = { navy_naval_air_defense_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # Air Force
+    USA_henry_arnold = {
+        name = "Henry H. 'Hap' Arnold"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_henry_arnold"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_war_preparations
+            }
+            traits = { air_strategic_bombing_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_ira_eaker = {
+        name = "Ira Eaker"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_ira_eaker"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_war_preparations
+            }
+            traits = { air_bombardment_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_claire_chennault = {
+        name = "Claire Chennault"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_claire_chennault"
+            }
+        }
+        advisor = {
+            slot = high_command
+            available = {
+                has_completed_focus = USA_war_preparations
+            }
+            traits = { air_air_superiority_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # CHIEF OF STAFF
+    
+    USA_malin_craig = {
+        name = "Malin Craig"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_malin_craig"
+            }
+        }
+        advisor = {
+            slot = chief_of_staff
+            available = {
+                date < 1939.8.31
+            }
+            traits = { army_chief_organizational_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_george_marshall_cos = {
+        name = "George Marshall"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_george_marshall"
+            }
+        }
+        advisor = {
+            slot = chief_of_staff
+            available = {
+                date > 1939.8.31
+            }
+            traits = { army_chief_offensive_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # CHIEF OF ARMY
+    
+    USA_john_pershing = {
+        name = "John Pershing"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_john_pershing"
+            }
+        }
+        advisor = {
+            slot = chief_of_army
+            available = {
+                date < 1937.1.1
+            }
+            traits = { army_chief_drill_1 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_douglas_macarthur_coa = {
+        name = "Douglas MacArthur"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_douglas_macarthur"
+            }
+        }
+        advisor = {
+            slot = chief_of_army
+            available = {
+                date > 1930.11.21
+                date < 1935.10.1
+            }
+            traits = { army_chief_reform_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # CHIEF OF NAVY
+    
+    USA_william_leahy_con = {
+        name = "William Leahy"
+        portraits = {
+            navy = {
+                small = "GFX_idea_USA_william_leahy"
+            }
+        }
+        advisor = {
+            slot = chief_of_navy
+            available = {
+                date > 1937.1.1
+                date < 1939.8.1
+            }
+            traits = { navy_chief_decisive_battle_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_harold_stark_con = {
+        name = "Harold Stark"
+        portraits = {
+            navy = {
+                small = "GFX_idea_USA_harold_stark"
+            }
+        }
+        advisor = {
+            slot = chief_of_navy
+            available = {
+                date > 1939.8.1
+            }
+            traits = { navy_chief_naval_aviation_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # CHIEF OF AIR FORCE
+    
+    USA_frank_andrews = {
+        name = "Frank Andrews"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_frank_andrews"
+            }
+        }
+        advisor = {
+            slot = chief_of_air_force
+            available = {
+                date > 1935.3.1
+                date < 1939.1.1
+            }
+            traits = { air_chief_ground_support_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_henry_arnold_coaf = {
+        name = "Henry H. 'Hap' Arnold"
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_henry_arnold"
+            }
+        }
+        advisor = {
+            slot = chief_of_air_force
+            available = {
+                date > 1938.9.29
+            }
+            traits = { air_chief_all_weather_2 }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # WAR PRODUCTION BOARD
+    
+    USA_donald_nelson = {
+        name = "Donald Nelson"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_donald_nelson"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_wartime_production_board
+            }
+            traits = { war_industrialist }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_william_knudsen = {
+        name = "William Knudsen"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_william_knudsen"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_wartime_production_board
+            }
+            traits = { captain_of_industry }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    # SPECIAL POLITICAL FIGURES
+    
+    USA_eleanor_roosevelt = {
+        name = "Eleanor Roosevelt"
+        gender = female
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_eleanor_roosevelt"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                has_completed_focus = USA_fdr_victory
+            }
+            traits = { compassionate_first_lady }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_huey_long = {
+        name = "Huey Long"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_huey_long"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                date < 1935.9.10
+            }
+            traits = { populist_demagogue }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+    
+    USA_father_coughlin = {
+        name = "Father Charles Coughlin"
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_father_coughlin"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            available = {
+                NOT = { has_completed_focus = USA_fdr_victory }
+            }
+            traits = { radio_priest }
+            cost = 150
+            ai_will_do = {
+                factor = 1.0
+            }
+        }
+    }
+}
+
+# ADD NEW TRAITS FOR THE ADVISORS
+
+ideas = {
+    political_advisor = {
+        new_deal_administrator = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { new_deal_administrator }
+            
+            modifier = {
+                political_power_gain = 0.10
+                stability_factor = 0.05
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        keynesian_economist = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { keynesian_economist }
+            
+            modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = 0.10
+                stability_factor = 0.05
+            }
+        }
+        
+        brain_trust_member = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { brain_trust_member }
+            
+            modifier = {
+                political_power_gain = 0.05
+                research_speed_factor = 0.05
+            }
+        }
+        
+        fiscal_conservative = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { fiscal_conservative }
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = -0.03
+                political_power_gain = 0.10
+            }
+        }
+        
+        union_organizer = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { union_organizer }
+            
+            modifier = {
+                industrial_capacity_factory = -0.05
+                stability_factor = 0.10
+                consumer_goods_factor = 0.03
+            }
+        }
+        
+        labor_relations_expert = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { labor_relations_expert }
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                stability_factor = 0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        infrastructure_developer = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { infrastructure_developer }
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_industrial_complex_factor = 0.10
+            }
+        }
+        
+        electricity_pioneer = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { electricity_pioneer }
+            
+            modifier = {
+                local_resources_factor = 0.10
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        
+        soil_conservationist = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { soil_conservationist }
+            
+            modifier = {
+                local_resources_factor = 0.15
+                political_power_gain = 0.05
+            }
+        }
+        
+        agrarian_reformer = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { agrarian_reformer }
+            
+            modifier = {
+                local_resources_factor = 0.10
+                stability_factor = 0.05
+                consumer_goods_factor = -0.03
+            }
+        }
+        
+        compassionate_first_lady = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { compassionate_first_lady }
+            
+            modifier = {
+                stability_factor = 0.10
+                political_power_gain = 0.05
+                drift_defence_factor = 0.10
+            }
+        }
+        
+        populist_demagogue = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { populist_demagogue }
+            
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = 0.15
+                communism_drift = 0.01
+                fascism_drift = 0.01
+            }
+        }
+        
+        radio_priest = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { radio_priest }
+            
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = 0.10
+                fascism_drift = 0.02
+            }
+        }
+        
+        war_industrialist = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { war_industrialist }
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                industrial_capacity_factory = 0.10
+                conversion_cost_civ_to_mil_factor = -0.15
+            }
+        }
+    }
+    
+    country = {
+        great_depression_president = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { great_depression_president }
+            
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = -0.15
+                industrial_capacity_factory = -0.10
+            }
+        }
+        
+        business_background = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { business_background }
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                consumer_goods_factor = -0.03
+                political_power_gain = 0.05
+            }
+        }
+        
+        staunch_constitutionalist = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { staunch_constitutionalist }
+            
+            modifier = {
+                political_power_gain = 0.10
+                stability_factor = 0.03
+                communism_drift = -0.01
+                fascism_drift = -0.01
+            }
+        }
+        
+        new_deal_democrat = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { new_deal_democrat }
+            
+            modifier = {
+                political_power_gain = 0.15
+                stability_factor = 0.10
+                industrial_capacity_factory = 0.05
+                consumer_goods_factor = 0.03
+            }
+        }
+        
+        great_depression_reformer = {
+            allowed = {
+                original_tag = USA
+            }
+            
+            traits = { great_depression_reformer }
+            
+            modifier = {
+                stability_factor = 0.15
+                political_power_gain = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+    }
+}
