@@ -1,0 +1,170 @@
+# File: common/state_modifiers/usa_depression_modifiers.txt
+
+dust_bowl_devastation = {
+    icon = GFX_modifiers_dust_bowl
+    
+    local_resources_factor = -0.5
+    local_building_slots_factor = -0.25
+    conscription_factor = -0.2
+    compliance_growth = -0.2
+    resistance_target = 0.1
+    local_factory_output = -0.2
+}
+
+agricultural_labor_unrest = {
+    icon = GFX_modifiers_strike
+    
+    local_resources_factor = -0.15
+    local_factory_output = -0.15
+    conscription_factor = -0.1
+    resistance_target = 0.05
+}
+
+agricultural_labor_suppression = {
+    icon = GFX_modifiers_forced_labor
+    
+    local_resources_factor = 0.05
+    resistance_target = 0.1
+    compliance_growth = -0.15
+    conscription_factor = -0.05
+}
+
+steel_workers_strike = {
+    icon = GFX_modifiers_strike
+    
+    local_resources_factor = -0.25
+    local_factory_output = -0.25
+    compliance_growth = -0.05
+    resistance_target = 0.05
+}
+
+steel_strike_broken = {
+    icon = GFX_modifiers_forced_labor
+    
+    local_resources_factor = 0.1
+    local_factory_output = 0.1
+    resistance_target = 0.1
+    compliance_growth = -0.1
+}
+
+new_deal_construction_projects = {
+    icon = GFX_modifiers_industry_civilian
+    
+    repair_speed_factor = 0.25
+    local_building_slots_factor = 0.15
+    local_resources_factor = 0.1
+    compliance_growth = 0.05
+}
+
+ccc_conservation_work = {
+    icon = GFX_modifiers_local_resources
+    
+    local_resources_factor = 0.15
+    attrition = -0.15
+    local_building_slots_factor = 0.1
+}
+
+tva_hydroelectric_development = {
+    icon = GFX_modifiers_industry_civilian
+    
+    local_resources_factor = 0.2
+    local_factory_output = 0.15
+    compliance_growth = 0.1
+}
+
+wpa_infrastructure_projects = {
+    icon = GFX_modifiers_industry_civilian
+    
+    supply_factor = 0.15
+    attrition = -0.1
+    local_building_slots_factor = 0.1
+}
+
+bank_failures = {
+    icon = GFX_modifiers_depression
+    
+    local_factory_output = -0.25
+    local_resources_factor = -0.15
+    compliance_growth = -0.15
+}
+
+urban_unemployment = {
+    icon = GFX_modifiers_depression
+    
+    local_factory_output = -0.2
+    conscription_factor = -0.1
+    resistance_target = 0.1
+}
+
+recovered_from_depression = {
+    icon = GFX_modifiers_industry_civilian
+    
+    local_factory_output = 0.15
+    local_resources_factor = 0.1
+    compliance_growth = 0.1
+    resistance_target = -0.05
+}
+
+prohibition_bootlegging = {
+    icon = GFX_modifiers_organized_crime
+    
+    compliance_growth = -0.1
+    resistance_target = 0.1
+    conscription_factor = -0.05
+}
+
+post_prohibition_boom = {
+    icon = GFX_modifiers_industry_civilian
+    
+    local_factory_output = 0.1
+    conscription_factor = 0.05
+    compliance_growth = 0.05
+}
+
+war_industry_conversion = {
+    icon = GFX_modifiers_industry_military
+    
+    local_factory_output = 0.2
+    local_resources_factor = 0.1
+    compliance_growth = 0.1
+}
+
+military_manufacturing_center = {
+    icon = GFX_modifiers_industry_military
+    
+    local_factory_output = 0.15
+    compliance_growth = 0.05
+    supply_factor = 0.1
+}
+
+rural_electrification = {
+    icon = GFX_modifiers_industry_civilian
+    
+    local_resources_factor = 0.15
+    local_factory_output = 0.1
+    compliance_growth = 0.1
+}
+
+soil_conservation_service = {
+    icon = GFX_modifiers_local_resources
+    
+    local_resources_factor = 0.2
+    attrition = -0.1
+}
+
+urban_renewal_projects = {
+    icon = GFX_modifiers_industry_civilian
+    
+    local_building_slots_factor = 0.15
+    local_factory_output = 0.1
+    compliance_growth = 0.1
+    resistance_target = -0.05
+}
+
+migrant_labor_camp = {
+    icon = GFX_modifiers_local_resources
+    
+    local_resources_factor = 0.1
+    conscription_factor = 0.05
+    resistance_target = -0.05
+}

@@ -1,0 +1,835 @@
+# Additional events for the USA Great Depression focus tree
+# File: events/usa_depression_additional_events.txt
+
+add_namespace = usa_depression_add
+
+# Banking Crisis 1933
+country_event = {
+    id = usa_depression_add.1
+    title = usa_depression_add.1.t
+    desc = usa_depression_add.1.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        date > 1933.2.1
+        date < 1933.2.10
+        has_completed_focus = USA_fdr_victory
+        NOT = { has_country_flag = banking_crisis_1933 }
+    }
+    
+    mean_time_to_happen = {
+        days = 3
+    }
+    
+    immediate = {
+        set_country_flag = banking_crisis_1933
+    }
+    
+    option = {
+        name = usa_depression_add.1.a
+        add_political_power = -25
+        add_stability = -0.05
+        country_event = { id = usa_depression_add.2 days = 3 }
+    }
+}
+
+# Roosevelt's Bank Holiday
+country_event = {
+    id = usa_depression_add.2
+    title = usa_depression_add.2.t
+    desc = usa_depression_add.2.d
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.2.a
+        add_timed_idea = {
+            idea = USA_bank_holiday
+            days = 14
+        }
+        country_event = { id = usa_depression_add.3 days = 14 }
+    }
+}
+
+# Emergency Banking Act of 1933
+country_event = {
+    id = usa_depression_add.3
+    title = usa_depression_add.3.t
+    desc = usa_depression_add.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.3.a
+        add_political_power = 50
+        add_stability = 0.05
+        add_ideas = USA_emergency_banking_measures
+        complete_national_focus = USA_emergency_banking_act
+    }
+}
+
+# Agricultural Crisis Deepens
+country_event = {
+    id = usa_depression_add.4
+    title = usa_depression_add.4.t
+    desc = usa_depression_add.4.d
+    picture = GFX_report_event_generic_farm
+    
+    trigger = {
+        tag = USA
+        date > 1932.8.1
+        date < 1932.8.30
+        has_idea = great_depression_severe
+        NOT = { has_country_flag = agricultural_crisis_1932 }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = agricultural_crisis_1932
+    }
+    
+    option = {
+        name = usa_depression_add.4.a
+        add_political_power = -15
+        add_stability = -0.03
+    }
+    
+    option = {
+        name = usa_depression_add.4.b
+        add_political_power = -30
+        add_stability = 0.02
+        set_country_flag = agricultural_relief_promised
+    }
+}
+
+# The "Hundred Days Congress"
+country_event = {
+    id = usa_depression_add.5
+    title = usa_depression_add.5.t
+    desc = usa_depression_add.5.d
+    picture = GFX_report_event_generic_sign_treaty2
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_first_hundred_days
+        date > 1933.6.15
+        date < 1933.6.25
+        NOT = { has_country_flag = hundred_days_congress_complete }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = hundred_days_congress_complete
+    }
+    
+    option = {
+        name = usa_depression_add.5.a
+        add_political_power = 100
+        add_stability = 0.05
+        add_war_support = 0.03
+        
+        complete_national_focus = USA_economic_relief
+        complete_national_focus = USA_banking_reform
+        complete_national_focus = USA_labor_reform
+    }
+}
+
+# Fireside Chat
+country_event = {
+    id = usa_depression_add.6
+    title = usa_depression_add.6.t
+    desc = usa_depression_add.6.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_fdr_victory
+        date > 1933.3.10
+        date < 1933.3.20
+        NOT = { has_country_flag = first_fireside_chat }
+    }
+    
+    mean_time_to_happen = {
+        days = 3
+    }
+    
+    immediate = {
+        set_country_flag = first_fireside_chat
+    }
+    
+    option = {
+        name = usa_depression_add.6.a
+        add_stability = 0.05
+        add_political_power = 25
+    }
+}
+
+# Dust Storm - Black Sunday
+country_event = {
+    id = usa_depression_add.7
+    title = usa_depression_add.7.t
+    desc = usa_depression_add.7.d
+    picture = GFX_report_event_generic_dust_bowl
+    
+    trigger = {
+        tag = USA
+        date > 1935.4.12
+        date < 1935.4.17
+        NOT = { has_country_flag = black_sunday_dust_storm }
+    }
+    
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    immediate = {
+        set_country_flag = black_sunday_dust_storm
+    }
+    
+    option = {
+        name = usa_depression_add.7.a
+        add_political_power = -25
+        add_stability = -0.03
+        set_country_flag = dust_bowl_priority
+        
+        375 = { # Kansas
+            add_state_modifier = {
+                modifier = dust_bowl_devastation
+                days = 365
+            }
+        }
+        376 = { # Oklahoma
+            add_state_modifier = {
+                modifier = dust_bowl_devastation
+                days = 365
+            }
+        }
+        news_event = { id = usa_depression_add.8 days = 2 }
+    }
+}
+
+# Dust Bowl News
+news_event = {
+    id = usa_depression_add.8
+    title = usa_depression_add.8.t
+    desc = usa_depression_add.8.d
+    picture = GFX_news_event_generic_dust_bowl
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.8.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.8.b
+        trigger = {
+            tag = USA
+        }
+    }
+}
+
+# Labor Strikes
+country_event = {
+    id = usa_depression_add.9
+    title = usa_depression_add.9.t
+    desc = usa_depression_add.9.d
+    picture = GFX_report_event_generic_rally
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_wagner_act
+        date > 1935.7.1
+        date < 1935.9.1
+        NOT = { has_country_flag = labor_strikes_1935 }
+    }
+    
+    mean_time_to_happen = {
+        days = 20
+    }
+    
+    immediate = {
+        set_country_flag = labor_strikes_1935
+    }
+    
+    option = {
+        name = usa_depression_add.9.a
+        add_political_power = -25
+        add_stability = 0.05
+        add_timed_idea = {
+            idea = labor_strike_concessions
+            days = 180
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.9.b
+        add_political_power = 25
+        add_stability = -0.05
+        add_timed_idea = {
+            idea = labor_strike_suppression
+            days = 90
+        }
+    }
+}
+
+# Huey Long's Share Our Wealth
+country_event = {
+    id = usa_depression_add.10
+    title = usa_depression_add.10.t
+    desc = usa_depression_add.10.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_fdr_victory
+        date > 1934.2.1
+        date < 1934.3.1
+        NOT = { has_country_flag = huey_long_share_our_wealth }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = huey_long_share_our_wealth
+    }
+    
+    option = {
+        name = usa_depression_add.10.a
+        add_political_power = -15
+        add_stability = -0.02
+    }
+    
+    option = {
+        name = usa_depression_add.10.b
+        add_political_power = -5
+        add_stability = 0.01
+        set_country_flag = compromise_with_long
+    }
+}
+
+# Assassination of Huey Long
+country_event = {
+    id = usa_depression_add.11
+    title = usa_depression_add.11.t
+    desc = usa_depression_add.11.d
+    picture = GFX_report_event_funeral
+    
+    trigger = {
+        tag = USA
+        date > 1935.9.8
+        date < 1935.9.11
+        has_country_flag = huey_long_share_our_wealth
+        NOT = { has_country_flag = huey_long_assassination }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        set_country_flag = huey_long_assassination
+    }
+    
+    option = {
+        name = usa_depression_add.11.a
+        add_political_power = 10
+        add_stability = 0.02
+        news_event = { id = usa_depression_add.12 days = 1 }
+    }
+}
+
+# Huey Long Assassination News
+news_event = {
+    id = usa_depression_add.12
+    title = usa_depression_add.12.t
+    desc = usa_depression_add.12.d
+    picture = GFX_news_event_generic_funeral
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.12.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.12.b
+        trigger = {
+            tag = USA
+        }
+    }
+}
+
+# 1934 Midterm Elections
+country_event = {
+    id = usa_depression_add.13
+    title = usa_depression_add.13.t
+    desc = usa_depression_add.13.d
+    picture = GFX_report_event_usa_congress_senate
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_fdr_victory
+        date > 1934.11.6
+        date < 1934.11.10
+        NOT = { has_country_flag = midterm_elections_1934 }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        set_country_flag = midterm_elections_1934
+    }
+    
+    option = {
+        name = usa_depression_add.13.a
+        add_political_power = 50
+        add_stability = 0.05
+        add_timed_idea = {
+            idea = democrat_congress_support
+            days = 730
+        }
+    }
+}
+
+# Business Plot Rumors (if Hoover wins)
+country_event = {
+    id = usa_depression_add.14
+    title = usa_depression_add.14.t
+    desc = usa_depression_add.14.d
+    picture = GFX_report_event_generic_meeting
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_hoover_second_term
+        date > 1933.7.1
+        date < 1933.8.1
+        NOT = { has_country_flag = business_plot_rumors }
+    }
+    
+    mean_time_to_happen = {
+        days = 15
+    }
+    
+    immediate = {
+        set_country_flag = business_plot_rumors
+    }
+    
+    option = {
+        name = usa_depression_add.14.a
+        add_political_power = -25
+        add_stability = -0.03
+    }
+    
+    option = {
+        name = usa_depression_add.14.b
+        add_political_power = -5
+        add_war_support = 0.03
+        set_country_flag = investigate_business_plot
+        country_event = { id = usa_depression_add.15 days = 30 }
+    }
+}
+
+# Business Plot Investigation (if Hoover wins)
+country_event = {
+    id = usa_depression_add.15
+    title = usa_depression_add.15.t
+    desc = usa_depression_add.15.d
+    picture = GFX_report_event_generic_meeting
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.15.a
+        add_political_power = 25
+        add_stability = 0.02
+        set_country_flag = business_plot_defused
+    }
+}
+
+# California Agricultural Workers Strike
+country_event = {
+    id = usa_depression_add.16
+    title = usa_depression_add.16.t
+    desc = usa_depression_add.16.d
+    picture = GFX_report_event_generic_rally
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_migrant_assistance
+        date > 1933.10.1
+        date < 1933.11.1
+        NOT = { has_country_flag = california_agricultural_strike }
+    }
+    
+    mean_time_to_happen = {
+        days = 15
+    }
+    
+    immediate = {
+        set_country_flag = california_agricultural_strike
+    }
+    
+    option = {
+        name = usa_depression_add.16.a
+        add_political_power = -15
+        add_stability = 0.02
+        378 = { # California
+            add_state_modifier = {
+                modifier = agricultural_labor_unrest
+                days = 120
+            }
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.16.b
+        add_political_power = -5
+        add_stability = -0.03
+        add_war_support = 0.01
+        378 = { # California
+            add_state_modifier = {
+                modifier = agricultural_labor_suppression
+                days = 90
+            }
+        }
+    }
+}
+
+# The "Switch in Time" - Supreme Court Backs Down
+country_event = {
+    id = usa_depression_add.17
+    title = usa_depression_add.17.t
+    desc = usa_depression_add.17.d
+    picture = GFX_report_event_generic_courthouse
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_court_packing_plan
+        date > 1937.3.28
+        date < 1937.4.5
+        NOT = { has_country_flag = supreme_court_switch_in_time }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = supreme_court_switch_in_time
+    }
+    
+    option = {
+        name = usa_depression_add.17.a
+        add_political_power = 75
+        add_stability = 0.05
+        remove_ideas = USA_court_packing_controversy
+        news_event = { id = usa_depression_add.18 days = 1 }
+    }
+}
+
+# Supreme Court News - New Deal Vindicated
+news_event = {
+    id = usa_depression_add.18
+    title = usa_depression_add.18.t
+    desc = usa_depression_add.18.d
+    picture = GFX_news_event_generic_usa_congress
+    
+    major = yes
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa_depression_add.18.a
+        trigger = {
+            NOT = { tag = USA }
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.18.b
+        trigger = {
+            tag = USA
+        }
+    }
+}
+
+# Steel Workers Strike 1937
+country_event = {
+    id = usa_depression_add.19
+    title = usa_depression_add.19.t
+    desc = usa_depression_add.19.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_wagner_act
+        date > 1937.5.25
+        date < 1937.6.5
+        NOT = { has_country_flag = steel_strike_1937 }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = steel_strike_1937
+    }
+    
+    option = {
+        name = usa_depression_add.19.a
+        add_political_power = -20
+        add_stability = 0.03
+        357 = { # New York
+            add_state_modifier = {
+                modifier = steel_workers_strike
+                days = 60
+            }
+        }
+        390 = { # Pennsylvania
+            add_state_modifier = {
+                modifier = steel_workers_strike
+                days = 60
+            }
+        }
+    }
+    
+    option = {
+        name = usa_depression_add.19.b
+        add_political_power = 10
+        add_stability = -0.05
+        357 = { # New York
+            add_state_modifier = {
+                modifier = steel_strike_broken
+                days = 90
+            }
+        }
+        390 = { # Pennsylvania
+            add_state_modifier = {
+                modifier = steel_strike_broken
+                days = 90
+            }
+        }
+    }
+}
+
+# Roosevelt Recession Message 1937
+country_event = {
+    id = usa_depression_add.20
+    title = usa_depression_add.20.t
+    desc = usa_depression_add.20.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_1937_recession
+        date > 1937.11.10
+        date < 1937.11.20
+        NOT = { has_country_flag = roosevelt_recession_message }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = roosevelt_recession_message
+    }
+    
+    option = {
+        name = usa_depression_add.20.a
+        add_political_power = 25
+        add_stability = 0.03
+        set_country_flag = new_spending_program
+    }
+}
+
+# End of Prohibition State Celebrations
+country_event = {
+    id = usa_depression_add.21
+    title = usa_depression_add.21.t
+    desc = usa_depression_add.21.d
+    picture = GFX_report_event_generic_celebration
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_twenty_first_amendment
+        date > 1933.12.5
+        date < 1933.12.15
+        NOT = { has_country_flag = prohibition_end_celebration }
+    }
+    
+    mean_time_to_happen = {
+        days = 3
+    }
+    
+    immediate = {
+        set_country_flag = prohibition_end_celebration
+    }
+    
+    option = {
+        name = usa_depression_add.21.a
+        add_stability = 0.05
+        add_political_power = 25
+        add_war_support = 0.02
+    }
+}
+
+# Munich Crisis - American Reaction
+country_event = {
+    id = usa_depression_add.22
+    title = usa_depression_add.22.t
+    desc = usa_depression_add.22.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        date > 1938.9.29
+        date < 1938.10.5
+        has_global_flag = munich_agreement
+        NOT = { has_country_flag = usa_munich_reaction }
+    }
+    
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    immediate = {
+        set_country_flag = usa_munich_reaction
+    }
+    
+    option = {
+        name = usa_depression_add.22.a
+        add_political_power = 10
+        add_war_support = 0.02
+        set_country_flag = increased_caution_europe
+    }
+}
+
+# Father Coughlin Radio Broadcasts
+country_event = {
+    id = usa_depression_add.23
+    title = usa_depression_add.23.t
+    desc = usa_depression_add.23.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_fdr_victory
+        date > 1934.4.1
+        date < 1934.5.1
+        NOT = { has_country_flag = coughlin_radio_broadcasts }
+    }
+    
+    mean_time_to_happen = {
+        days = 15
+    }
+    
+    immediate = {
+        set_country_flag = coughlin_radio_broadcasts
+    }
+    
+    option = {
+        name = usa_depression_add.23.a
+        add_political_power = -10
+        add_stability = -0.02
+    }
+    
+    option = {
+        name = usa_depression_add.23.b
+        add_political_power = -25
+        add_stability = 0.01
+        set_country_flag = coughlin_restrictions
+    }
+}
+
+# Social Security Implementation
+country_event = {
+    id = usa_depression_add.24
+    title = usa_depression_add.24.t
+    desc = usa_depression_add.24.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_social_security_act
+        date > 1936.1.1
+        date < 1936.1.10
+        NOT = { has_country_flag = social_security_implementation }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = social_security_implementation
+    }
+    
+    option = {
+        name = usa_depression_add.24.a
+        add_political_power = 25
+        add_stability = 0.05
+    }
+}
+
+# China-Japan War Response (1937)
+country_event = {
+    id = usa_depression_add.25
+    title = usa_depression_add.25.t
+    desc = usa_depression_add.25.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        date > 1937.7.10
+        date < 1937.7.20
+        JAP = { has_war_with = CHI }
+        NOT = { has_country_flag = china_japan_war_response }
+    }
+    
+    mean_time_to_happen = {
+        days = 5
+    }
+    
+    immediate = {
+        set_country_flag = china_japan_war_response
+    }
+    
+    option = {
+        name = usa_depression_add.25.a
+        add_political_power = -5
+        add_war_support = 0.02
+        add_opinion_modifier = { target = JAP modifier = condemn_aggression }
+    }
+    
+    option = {
+        name = usa_depression_add.25.b
+        add_political_power = 5
+        add_war_support = -0.01
+    }
+}

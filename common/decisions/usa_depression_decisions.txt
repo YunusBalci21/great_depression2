@@ -1,5 +1,7 @@
+# New Deal Management
 usa_depression_management = {
 
+    # Emergency Relief Programs
     usa_emergency_relief = {
         icon = generic_civil_support
         
@@ -12,8 +14,7 @@ usa_depression_management = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_new_deal
+            has_completed_focus = USA_economic_relief
         }
         
         cost = 50
@@ -33,7 +34,45 @@ usa_depression_management = {
         }
     }
     
-    usa_labor_relations_board = {
+    # Federal Housing Programs
+    usa_federal_housing_program = {
+        icon = generic_political_support
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            has_completed_focus = USA_economic_relief
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            consumer_goods_factor = 0.02
+            stability_weekly = 0.005
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.05
+            if = {
+                limit = { has_idea = great_depression_major }
+                swap_ideas = {
+                    remove_idea = great_depression_major
+                    add_idea = great_depression_recovering
+                }
+            }
+        }
+    }
+    
+    # National Labor Relations Act Implementation
+    usa_nlrb_enforcement = {
         icon = generic_industry
         
         available = {
@@ -41,8 +80,7 @@ usa_depression_management = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_new_deal
+            has_completed_focus = USA_wagner_act
         }
         
         cost = 75
@@ -63,7 +101,8 @@ usa_depression_management = {
         }
     }
     
-    usa_rural_electrification = {
+    # Rural Electrification Projects
+    usa_expand_rural_electrification = {
         icon = generic_construction
         
         available = {
@@ -71,8 +110,7 @@ usa_depression_management = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_tva_program
+            has_completed_focus = USA_rural_electrification_admin
         }
         
         cost = 100
@@ -111,25 +149,56 @@ usa_depression_management = {
         }
     }
     
-    usa_federal_housing_administration = {
-        icon = generic_political_support
+    # Federal Writers' Project
+    usa_federal_writers_project = {
+        icon = generic_research
         
         available = {
-            has_political_power > 75
+            has_political_power > 50
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_new_deal
+            has_completed_focus = USA_federal_arts_project
         }
         
-        cost = 75
-        days_remove = 90
+        cost = 50
+        days_remove = 100
+        
+        modifier = {
+            political_power_gain = -0.1
+            research_speed_factor = 0.03
+            stability_weekly = 0.002
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_political_power = 25
+            add_stability = 0.02
+        }
+    }
+    
+    # Expand Social Security Coverage
+    usa_expand_social_security = {
+        icon = generic_political_support
+        
+        available = {
+            has_political_power > 100
+        }
+        
+        visible = {
+            has_completed_focus = USA_social_security_act
+        }
+        
+        cost = 100
+        days_remove = 180
         
         modifier = {
             political_power_gain = -0.2
-            consumer_goods_factor = 0.02
-            stability_weekly = 0.005
+            consumer_goods_factor = 0.03
+            stability_weekly = 0.003
         }
         
         ai_will_do = {
@@ -138,19 +207,15 @@ usa_depression_management = {
         
         remove_effect = {
             add_stability = 0.05
-            if = {
-                limit = { has_idea = great_depression_major }
-                swap_ideas = {
-                    remove_idea = great_depression_major
-                    add_idea = great_depression_recovering
-                }
-            }
+            add_political_power = 25
         }
     }
 }
 
+# Conservative Recovery Program
 usa_conservative_program = {
     
+    # Balanced Budget Initiative
     usa_balanced_budget_initiative = {
         icon = generic_economic_increase
         
@@ -159,8 +224,10 @@ usa_conservative_program = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_business_as_usual
+            OR = {
+                has_completed_focus = USA_continued_austerity
+                has_completed_focus = USA_business_as_usual
+            }
         }
         
         cost = 50
@@ -181,6 +248,7 @@ usa_conservative_program = {
         }
     }
     
+    # Voluntary Business Cooperation
     usa_voluntary_industrial_cooperation = {
         icon = generic_production
         
@@ -189,8 +257,10 @@ usa_conservative_program = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_business_as_usual
+            OR = {
+                has_completed_focus = USA_business_coordination
+                has_completed_focus = USA_voluntary_measures
+            }
         }
         
         cost = 75
@@ -216,7 +286,8 @@ usa_conservative_program = {
         }
     }
     
-    usa_business_incentives = {
+    # Corporate Tax Relief
+    usa_corporate_tax_relief = {
         icon = generic_goods_red_bonus
         
         available = {
@@ -224,8 +295,7 @@ usa_conservative_program = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_tax_cuts
+            has_completed_focus = USA_free_market_approach
         }
         
         cost = 100
@@ -251,10 +321,53 @@ usa_conservative_program = {
             }
         }
     }
+    
+    # Import Substitution Measures
+    usa_import_substitution = {
+        icon = generic_foreign_trade
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            has_completed_focus = USA_smoot_hawley
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            consumer_goods_factor = -0.02
+            local_resources_factor = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    has_resources_amount = {
+                        resource = steel
+                        amount > 0
+                    }
+                }
+                add_resource = {
+                    type = steel
+                    amount = 4
+                }
+            }
+        }
+    }
 }
 
+# Military Buildup Program
 usa_military_buildup = {
     
+    # Naval Expansion Program
     usa_naval_expansion_program = {
         icon = generic_naval
         
@@ -264,8 +377,10 @@ usa_military_buildup = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_naval_expansion
+            OR = {
+                has_completed_focus = USA_naval_expansion
+                has_completed_focus = USA_hoover_naval_program
+            }
         }
         
         cost = 100
@@ -297,6 +412,7 @@ usa_military_buildup = {
         }
     }
     
+    # Army Equipment Modernization
     usa_modernize_army_equipment = {
         icon = generic_tank
         
@@ -306,8 +422,10 @@ usa_military_buildup = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_army_expansion
+            OR = {
+                has_completed_focus = USA_military_industrialization
+                has_completed_focus = USA_hoover_army_modernization
+            }
         }
         
         cost = 75
@@ -333,6 +451,7 @@ usa_military_buildup = {
         }
     }
     
+    # Army Air Corps Expansion
     usa_expand_air_corps = {
         icon = generic_air
         
@@ -342,8 +461,10 @@ usa_military_buildup = {
         }
         
         visible = {
-            tag = USA
-            has_completed_focus = USA_military_spending
+            OR = {
+                has_completed_focus = USA_strategic_resources
+                has_completed_focus = USA_war_preparations
+            }
         }
         
         cost = 75
@@ -365,6 +486,355 @@ usa_military_buildup = {
                 bonus = 0.5
                 uses = 1
                 category = light_fighter
+            }
+        }
+    }
+    
+    # Strategic Material Stockpiling
+    usa_strategic_stockpiling = {
+        icon = generic_steel
+        
+        available = {
+            has_political_power > 50
+        }
+        
+        visible = {
+            has_completed_focus = USA_strategic_resources
+        }
+        
+        cost = 50
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.1
+            production_speed_synthetic_refinery_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    has_resources_amount = {
+                        resource = oil
+                        amount > 0
+                    }
+                }
+                add_resource = {
+                    type = oil
+                    amount = 8
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    has_resources_amount = {
+                        resource = rubber
+                        amount = 0
+                    }
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 4
+                }
+            }
+        }
+    }
+}
+
+# Prohibition-related decisions
+usa_prohibition_management = {
+    
+    # Combat Bootlegging
+    usa_combat_bootlegging = {
+        icon = generic_political_discourse
+        
+        available = {
+            has_political_power > 50
+            NOT = { has_completed_focus = USA_twenty_first_amendment }
+        }
+        
+        visible = {
+            has_country_flag = prohibition_in_effect
+        }
+        
+        cost = 50
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.2
+            stability_factor = -0.05
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.02
+        }
+    }
+    
+    # Promote Temperance Values
+    usa_temperance_campaign = {
+        icon = generic_propaganda
+        
+        available = {
+            has_political_power > 25
+            NOT = { has_completed_focus = USA_twenty_first_amendment }
+        }
+        
+        visible = {
+            has_country_flag = prohibition_in_effect
+        }
+        
+        cost = 25
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.1
+            stability_factor = 0.02
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_stability = 0.01
+        }
+    }
+    
+    # Expand Brewing Industry
+    usa_expand_brewing_industry = {
+        icon = generic_industry_3
+        
+        available = {
+            has_political_power > 50
+            has_completed_focus = USA_twenty_first_amendment
+        }
+        
+        visible = {
+            has_completed_focus = USA_twenty_first_amendment
+        }
+        
+        cost = 50
+        days_remove = 70
+        
+        modifier = {
+            political_power_gain = -0.1
+            consumer_goods_factor = 0.02
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # Increase Alcohol Taxes
+    usa_increase_alcohol_taxes = {
+        icon = generic_economic_increase
+        
+        available = {
+            has_political_power > 25
+            has_completed_focus = USA_alcohol_taxation
+        }
+        
+        visible = {
+            has_completed_focus = USA_twenty_first_amendment
+        }
+        
+        cost = 25
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.1
+            consumer_goods_factor = 0.01
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            add_political_power = 50
+        }
+    }
+}
+
+# Regional recovery decisions
+usa_regional_recovery = {
+    
+    # Tennessee Valley Projects
+    usa_additional_tva_dam = {
+        icon = generic_construction
+        
+        available = {
+            has_political_power > 75
+            has_completed_focus = USA_tennessee_valley_authority
+        }
+        
+        visible = {
+            has_completed_focus = USA_tennessee_valley_authority
+        }
+        
+        cost = 75
+        days_remove = 120
+        
+        modifier = {
+            political_power_gain = -0.1
+            production_speed_infrastructure_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            371 = { # Tennessee
+                add_resource = {
+                    type = electricity
+                    amount = 4
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # Great Plains Soil Conservation
+    usa_great_plains_conservation = {
+        icon = generic_agrarian_reform
+        
+        available = {
+            has_political_power > 75
+            has_completed_focus = USA_soil_management
+        }
+        
+        visible = {
+            has_completed_focus = USA_dust_bowl_response
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.1
+            production_speed_infrastructure_factor = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            376 = { # Oklahoma
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            375 = { # Kansas
+                add_resource = {
+                    type = food
+                    amount = 4
+                }
+            }
+        }
+    }
+    
+    # California Migrant Worker Camp
+    usa_migrant_worker_camp = {
+        icon = generic_political_support
+        
+        available = {
+            has_political_power > 50
+            has_completed_focus = USA_migrant_assistance
+        }
+        
+        visible = {
+            has_completed_focus = USA_dust_bowl_response
+        }
+        
+        cost = 50
+        days_remove = 60
+        
+        modifier = {
+            political_power_gain = -0.1
+            stability_weekly = 0.002
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            378 = { # California
+                add_manpower = 500
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # Northeast Industrial Recovery
+    usa_northeast_industrial_recovery = {
+        icon = generic_industry_2
+        
+        available = {
+            has_political_power > 75
+        }
+        
+        visible = {
+            has_completed_focus = USA_public_works_administration
+        }
+        
+        cost = 75
+        days_remove = 90
+        
+        modifier = {
+            political_power_gain = -0.1
+            production_speed_industrial_complex_factor = 0.1
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        remove_effect = {
+            357 = { # New York
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
             }
         }
     }

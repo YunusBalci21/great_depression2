@@ -1,3 +1,5 @@
+# File: history/units/USA_1929.txt
+
 division_template = {
     name = "Infantry Division"
     division_names_group = USA_INF_01
@@ -15,6 +17,7 @@ division_template = {
     }
     support = {
         artillery = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
     }
 }
 
@@ -30,10 +33,30 @@ division_template = {
         cavalry = { x = 1 y = 1 }
         cavalry = { x = 1 y = 2 }
     }
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Marine Division"
+    division_names_group = USA_MAR_01
+    
+    regiments = {
+        marine = { x = 0 y = 0 }
+        marine = { x = 0 y = 1 }
+        marine = { x = 0 y = 2 }
+        marine = { x = 1 y = 0 }
+        marine = { x = 1 y = 1 }
+        marine = { x = 1 y = 2 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+    }
 }
 
 units = {
-    # Eastern Command
+    # I Corps - Eastern Command
     division = {
         division_name = {
             is_name_ordered = yes
@@ -49,16 +72,57 @@ units = {
             is_name_ordered = yes
             name_order = 2
         }
+        location = 3878  # New York
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 5
+        }
+        location = 6732  # Philadelphia
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    # II Corps - Southern Command
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 3
+        }
         location = 788  # Norfolk
         division_template = "Infantry Division"
         start_experience_factor = 0.2
     }
     
-    # Central Command
     division = {
         division_name = {
             is_name_ordered = yes
-            name_order = 3
+            name_order = 4
+        }
+        location = 7118  # Charleston
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    # III Corps - Central Command
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 6
+        }
+        location = 6710  # Detroit
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 7
         }
         location = 9450  # St Louis
         division_template = "Infantry Division"
@@ -69,7 +133,7 @@ units = {
     division = {
         division_name = {
             is_name_ordered = yes
-            name_order = 4
+            name_order = 8
         }
         location = 9671  # San Francisco
         division_template = "Infantry Division"
@@ -79,12 +143,107 @@ units = {
     division = {
         division_name = {
             is_name_ordered = yes
+            name_order = 9
+        }
+        location = 9814  # Seattle
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+    }
+    
+    # Cavalry Divisions
+    division = {
+        division_name = {
+            is_name_ordered = yes
             name_order = 1
         }
         location = 7834  # Dallas
         division_template = "Cavalry Division"
-        start_experience_factor = 0.2
+        start_experience_factor = 0.3
     }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 2
+        }
+        location = 10337  # El Paso
+        division_template = "Cavalry Division"
+        start_experience_factor = 0.3
+    }
+    
+    # Marine Divisions
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9671  # San Francisco
+        division_template = "Marine Division"
+        start_experience_factor = 0.3
+    }
+    
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 2
+        }
+        location = 7480  # Norfolk
+        division_template = "Marine Division"
+        start_experience_factor = 0.3
+    }
+}
+
+### Naval OOB ###
+navy = {
+    name = "United States Navy"
+    base = 6845  # Washington DC
+    location = 6845  # Washington DC
+    
+    ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS New Mexico" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Mississippi" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Idaho" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+    
+    ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Northhampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Chester" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+    
+    ship = { name = "USS Omaha" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Milwaukee" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Cincinnati" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Raleigh" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Detroit" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+    
+    ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Saratoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+    
+    # Destroyers
+    ship = { name = "USS Porter" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Selfridge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS McDougal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Winslow" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Case" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Conyngham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Cassin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Shaw" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Tucker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Downes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Cushing" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Perkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Smith" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Preston" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Dunlap" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+    ship = { name = "USS Fanning" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 }
 
 ##### AIR FORCE UNITS #####
@@ -92,27 +251,36 @@ air_wings = {
     357 = { # New York
         fighter_equipment_0 = {
             owner = "USA"
-            amount = 50
+            amount = 48
         }
         
         tac_bomber_equipment_0 = {
             owner = "USA"
-            amount = 40
+            amount = 36
+        }
+    }
+    
+    371 = { # Tennessee
+        fighter_equipment_0 = {
+            owner = "USA"
+            amount = 24
         }
     }
     
     378 = { # California
         fighter_equipment_0 = {
             owner = "USA"
-            amount = 50
+            amount = 48
+        }
+        
+        nav_bomber_equipment_1 = {
+            owner = "USA"
+            amount = 24
         }
         
         tac_bomber_equipment_0 = {
             owner = "USA"
-            amount = 30
+            amount = 24
         }
     }
 }
-
-### NAVAL OOB ###
-# This will be handled through national focus rewards instead
