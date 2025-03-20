@@ -1,0 +1,61 @@
+﻿l_english:
+ # State Modifiers
+ dust_bowl_devastation:0 "Dust Bowl Devastation"
+ dust_bowl_devastation_desc:0 "This state has been severely impacted by the Dust Bowl, with massive soil erosion, crop failures, and dust storms making agriculture nearly impossible and everyday life miserable."
+ 
+ agricultural_labor_unrest:0 "Agricultural Labor Unrest"
+ agricultural_labor_unrest_desc:0 "Agricultural workers in this state are striking for better wages and working conditions, disrupting harvests and creating tensions between workers, farmers, and local authorities."
+ 
+ agricultural_labor_suppression:0 "Agricultural Labor Suppression"
+ agricultural_labor_suppression_desc:0 "Authorities have forcefully suppressed agricultural labor organizing in this state, maintaining production but creating resentment among workers and potential for future unrest."
+ 
+ steel_workers_strike:0 "Steel Workers Strike"
+ steel_workers_strike_desc:0 "Steel production in this state has been halted by a major strike as workers demand union recognition, better wages, and improved working conditions."
+ 
+ steel_strike_broken:0 "Steel Strike Broken"
+ steel_strike_broken_desc:0 "The steel workers' strike in this state has been broken through government intervention or company tactics, restoring production but leaving significant labor resentment."
+ 
+ new_deal_construction_projects:0 "New Deal Construction Projects"
+ new_deal_construction_projects_desc:0 "This state is benefiting from multiple New Deal construction projects, creating jobs and improving infrastructure while stimulating local economic activity."
+ 
+ ccc_conservation_work:0 "CCC Conservation Work"
+ ccc_conservation_work_desc:0 "The Civilian Conservation Corps has multiple camps in this state, employing young men in conservation projects that improve natural resources and public lands."
+ 
+ tva_hydroelectric_development:0 "TVA Hydroelectric Development"
+ tva_hydroelectric_development_desc:0 "The Tennessee Valley Authority has constructed dams and power plants in this region, controlling floods, generating cheap electricity, and stimulating economic development."
+ 
+ wpa_infrastructure_projects:0 "WPA Infrastructure Projects"
+ wpa_infrastructure_projects_desc:0 "The Works Progress Administration is employing thousands of workers in this state on infrastructure projects including roads, bridges, schools, and public buildings."
+ 
+ bank_failures:0 "Banking Crisis"
+ bank_failures_desc:0 "This state has experienced numerous bank failures, wiping out savings, restricting credit, and severely disrupting economic activity."
+ 
+ urban_unemployment:0 "Urban Unemployment Crisis"
+ urban_unemployment_desc:0 "This state's urban centers are experiencing massive unemployment, with factories closed, construction halted, and thousands of families relying on inadequate relief programs."
+ 
+ recovered_from_depression:0 "Depression Recovery"
+ recovered_from_depression_desc:0 "This state has largely recovered from the Great Depression, with factories reopening, employment rising, and economic activity approaching pre-Depression levels."
+ 
+ prohibition_bootlegging:0 "Prohibition Bootlegging"
+ prohibition_bootlegging_desc:0 "This state has significant illegal alcohol production and distribution networks, contributing to corruption, organized crime, and disrespect for law."
+ 
+ post_prohibition_boom:0 "Post-Prohibition Economic Boom"
+ post_prohibition_boom_desc:0 "This state is experiencing economic benefits from the end of Prohibition, with breweries, distilleries, and related businesses creating jobs and generating tax revenue."
+ 
+ war_industry_conversion:0 "War Industry Conversion"
+ war_industry_conversion_desc:0 "This state's industry is rapidly converting to war production, retooling factories and expanding capacity to meet military needs."
+ 
+ military_manufacturing_center:0 "Military Manufacturing Center"
+ military_manufacturing_center_desc:0 "This state has become a center for military equipment production, with factories working at full capacity to produce weapons, vehicles, and other war materiel."
+ 
+ rural_electrification:0 "Rural Electrification"
+ rural_electrification_desc:0 "The Rural Electrification Administration is bringing electricity to farms and small towns in this state, improving living conditions and modernizing agricultural production."
+ 
+ soil_conservation_service:0 "Soil Conservation Service"
+ soil_conservation_service_desc:0 "The Soil Conservation Service is implementing new farming techniques and land management practices in this state to prevent erosion and restore damaged farmland."
+ 
+ urban_renewal_projects:0 "Urban Renewal Projects"
+ urban_renewal_projects_desc:0 "Federal funding is supporting the redevelopment of urban areas in this state, replacing slums with new housing and improving city infrastructure."
+ 
+ migrant_labor_camp:0 "Migrant Labor Camp"
+ migrant_labor_camp_desc:0 "Government-run camps in this state provide basic services and housing for migrant agricultural workers, improving living conditions for these vulnerable families."

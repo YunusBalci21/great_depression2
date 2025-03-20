@@ -1,0 +1,69 @@
+﻿l_english:
+ # Advisor Traits
+ new_deal_administrator:0 "New Deal Administrator"
+ new_deal_administrator_desc:0 "An expert in implementing the complex administrative structures needed for New Deal programs, this advisor excels at organizing large-scale government initiatives."
+ 
+ keynesian_economist:0 "Keynesian Economist"
+ keynesian_economist_desc:0 "An advocate of John Maynard Keynes's economic theories, this advisor supports government spending during economic downturns to stimulate recovery."
+ 
+ brain_trust_member:0 "Brain Trust Member"
+ brain_trust_member_desc:0 "A member of President Roosevelt's informal group of academic advisors who provide intellectual guidance for New Deal policies."
+ 
+ fiscal_conservative:0 "Fiscal Conservative"
+ fiscal_conservative_desc:0 "An advocate of balanced budgets and limited government spending, even during economic downturns."
+ 
+ union_organizer:0 "Union Organizer"
+ union_organizer_desc:0 "An experienced labor leader who excels at building worker solidarity and negotiating with management."
+ 
+ labor_relations_expert:0 "Labor Relations Expert"
+ labor_relations_expert_desc:0 "A skilled mediator who can find common ground between workers and management, reducing labor conflicts."
+ 
+ infrastructure_developer:0 "Infrastructure Developer"
+ infrastructure_developer_desc:0 "An expert in planning and implementing large-scale public works projects efficiently."
+ 
+ electricity_pioneer:0 "Electricity Pioneer"
+ electricity_pioneer_desc:0 "A visionary who understands the transformative potential of bringing electrical power to underdeveloped regions."
+ 
+ soil_conservationist:0 "Soil Conservationist"
+ soil_conservationist_desc:0 "An expert in modern agricultural techniques that prevent soil erosion and restore depleted farmland."
+ 
+ agrarian_reformer:0 "Agrarian Reformer"
+ agrarian_reformer_desc:0 "An advocate for restructuring agricultural production and marketing to ensure fair prices for farmers."
+ 
+ compassionate_first_lady:0 "Compassionate First Lady"
+ compassionate_first_lady_desc:0 "A First Lady who actively promotes social welfare programs and serves as the administration's conscience."
+ 
+ populist_demagogue:0 "Populist Demagogue"
+ populist_demagogue_desc:0 "A charismatic speaker who stirs popular discontent against elites and established institutions."
+ 
+ radio_priest:0 "Radio Priest"
+ radio_priest_desc:0 "A religious figure who uses radio broadcasts to deliver political messages with moral authority."
+ 
+ war_industrialist:0 "War Industrialist"
+ war_industrialist_desc:0 "An expert in converting civilian manufacturing to military production efficiently."
+ 
+ # Leader Traits
+ great_depression_president:0 "Great Depression President"
+ great_depression_president_desc:0 "This leader faces the greatest economic crisis in modern history, testing their leadership under extreme pressure."
+ 
+ business_background:0 "Business Background"
+ business_background_desc:0 "A successful career in business provides this leader with insights into economic management, though perhaps a limited perspective on social needs."
+ 
+ staunch_constitutionalist:0 "Staunch Constitutionalist"
+ staunch_constitutionalist_desc:0 "This leader strictly interprets constitutional limits on federal power, resisting expansion of government authority even in crisis."
+ 
+ new_deal_democrat:0 "New Deal Democrat"
+ new_deal_democrat_desc:0 "A champion of active government intervention to address economic and social problems through comprehensive federal programs."
+ 
+ great_depression_reformer:0 "Great Depression Reformer"
+ great_depression_reformer_desc:0 "This leader sees the economic crisis as an opportunity to fundamentally reshape American institutions and the relationship between citizens and government."
+ 
+ # Event Effect Traits
+ labor_strike_concessions:0 "Labor Strike Concessions"
+ labor_strike_concessions_desc:0 "The government has supported labor demands in recent strikes, improving workers' conditions but potentially reducing short-term industrial output and business confidence."
+ 
+ labor_strike_suppression:0 "Labor Strike Suppression"
+ labor_strike_suppression_desc:0 "The government has supported employers in recent labor disputes, maintaining production but creating resentment among workers and potential for future unrest."
+ 
+ democrat_congress_support:0 "Strong Democratic Congress"
+ democrat_congress_support_desc:0 "The overwhelming Democratic majorities in Congress provide strong legislative support for the administration's programs, facilitating rapid implementation of new initiatives."
