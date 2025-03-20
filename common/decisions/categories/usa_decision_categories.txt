@@ -9,7 +9,12 @@ usa_depression_management = {
     
     visible = {
         tag = USA
-        has_completed_focus = USA_new_deal
+        # Using OR to allow it to be visible if either condition is met
+        OR = {
+            has_country_flag = USA_new_deal_enabled
+            # This will be used once you've defined the focus
+            # has_completed_focus = USA_new_deal
+        }
     }
 }
 
@@ -22,7 +27,12 @@ usa_conservative_program = {
     
     visible = {
         tag = USA
-        has_completed_focus = USA_business_as_usual
+        # Using OR to allow it to be visible if either condition is met
+        OR = {
+            has_country_flag = USA_business_as_usual_enabled
+            # This will be used once you've defined the focus
+            # has_completed_focus = USA_business_as_usual
+        }
     }
 }
 
@@ -35,6 +45,11 @@ usa_military_buildup = {
     
     visible = {
         tag = USA
-        has_completed_focus = USA_military_spending
+        # Using OR to allow it to be visible if either condition is met
+        OR = {
+            has_country_flag = USA_military_spending_enabled
+            # This will be used once you've defined the focus
+            # has_completed_focus = USA_military_spending
+        }
     }
 }

@@ -1,0 +1,39 @@
+leader_traits = {
+    great_depression_president = {
+        random = no
+        stability_factor = -0.05
+        political_power_gain = -0.15
+        industrial_capacity_factory = -0.10
+        ai_focus_defense_factor = 0.15
+    }
+    
+    business_background = {
+        random = no
+        industrial_capacity_factory = 0.05
+        consumer_goods_factor = -0.03
+        political_power_gain = 0.05
+    }
+    
+    staunch_constitutionalist = {
+        random = no
+        political_power_gain = 0.10
+        stability_factor = 0.03
+        communism_drift = -0.01
+        fascism_drift = -0.01
+    }
+    
+    new_deal_democrat = {
+        random = no
+        political_power_gain = 0.15
+        stability_factor = 0.10
+        industrial_capacity_factory = 0.05
+        consumer_goods_factor = 0.03
+    }
+    
+    great_depression_reformer = {
+        random = no
+        stability_factor = 0.15
+        political_power_gain = 0.10
+        production_speed_buildings_factor = 0.10
+    }
+}

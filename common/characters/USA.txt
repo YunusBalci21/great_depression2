@@ -7,15 +7,15 @@ characters = {
         name = "Herbert Hoover"
         portraits = {
             civilian = {
-                large = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
+                large = "GFX_Portrait_USA_Generic_land_1"  # Using generic vanilla portrait
             }
         }
         country_leader = {
             ideology = conservatism
-            traits = { 
-                great_depression_president
-                business_background
-                staunch_constitutionalist 
+            traits = {
+                backroom_backstabber
+                silent_workhorse
+                popular_figurehead
             }
             desc = "POLITICS_HERBERT_HOOVER_DESC"
         }
@@ -25,15 +25,14 @@ characters = {
         name = "Franklin D. Roosevelt"
         portraits = {
             civilian = {
-                large = "gfx/leaders/USA/Portrait_USA_Franklin_D_Roosevelt.dds"
+                large = "GFX_portrait_usa_franklin_delano_roosevelt"  # Using vanilla portrait reference
             }
         }
         country_leader = {
             ideology = liberalism
             traits = {
-                dislikes_germany
-                new_deal_democrat
-                great_depression_reformer
+                popular_figurehead
+                democratic_reformer
             }
             desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
         }
@@ -46,7 +45,7 @@ characters = {
         name = "Henry Morgenthau Jr."
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_henry_morgenthau"
+                small = "GFX_idea_generic_political_advisor_europe_1"
             }
         }
         advisor = {
@@ -67,7 +66,7 @@ characters = {
         gender = female
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_frances_perkins"
+                small = "GFX_idea_generic_political_advisor_female_europe"
             }
         }
         advisor = {
@@ -87,7 +86,7 @@ characters = {
         name = "Harold Ickes"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_harold_ickes"
+                small = "GFX_idea_generic_political_advisor_europe_2"
             }
         }
         advisor = {
@@ -107,7 +106,7 @@ characters = {
         name = "Cordell Hull"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_cordell_hull"
+                small = "GFX_idea_generic_political_advisor_europe_3"
             }
         }
         advisor = {
@@ -127,7 +126,7 @@ characters = {
         name = "Henry A. Wallace"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_henry_wallace"
+                small = "GFX_idea_generic_political_advisor_europe_4"
             }
         }
         advisor = {
@@ -135,7 +134,7 @@ characters = {
             available = {
                 has_completed_focus = USA_agricultural_adjustment_act
             }
-            traits = { agrarian_reformer }
+            traits = { democratic_reformer }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -147,7 +146,7 @@ characters = {
         name = "Harry Hopkins"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_harry_hopkins"
+                small = "GFX_idea_generic_political_advisor_europe_5"
             }
         }
         advisor = {
@@ -155,7 +154,7 @@ characters = {
             available = {
                 has_completed_focus = USA_works_progress_administration
             }
-            traits = { new_deal_administrator }
+            traits = { silent_workhorse }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -168,7 +167,7 @@ characters = {
         name = "Andrew Mellon"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_andrew_mellon"
+                small = "GFX_idea_generic_political_advisor_europe_6"
             }
         }
         advisor = {
@@ -179,7 +178,7 @@ characters = {
                     NOT = { has_completed_focus = USA_fdr_victory }
                 }
             }
-            traits = { fiscal_conservative }
+            traits = { captain_of_industry }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -191,7 +190,7 @@ characters = {
         name = "Ogden Mills"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_ogden_mills"
+                small = "GFX_idea_generic_political_advisor_europe_1"
             }
         }
         advisor = {
@@ -202,7 +201,7 @@ characters = {
                     NOT = { has_completed_focus = USA_fdr_victory }
                 }
             }
-            traits = { bank_president }
+            traits = { financial_expert }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -215,7 +214,7 @@ characters = {
         name = "Marriner Eccles"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_marriner_eccles"
+                small = "GFX_idea_generic_political_advisor_europe_2"
             }
         }
         advisor = {
@@ -223,7 +222,7 @@ characters = {
             available = {
                 has_completed_focus = USA_banking_reform
             }
-            traits = { keynesian_economist }
+            traits = { financial_expert }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -235,7 +234,7 @@ characters = {
         name = "Rexford Tugwell"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_rexford_tugwell"
+                small = "GFX_idea_generic_political_advisor_europe_3"
             }
         }
         advisor = {
@@ -243,7 +242,7 @@ characters = {
             available = {
                 has_completed_focus = USA_economic_relief
             }
-            traits = { brain_trust_member }
+            traits = { popular_figurehead }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -255,7 +254,7 @@ characters = {
         name = "Raymond Moley"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_raymond_moley"
+                small = "GFX_idea_generic_political_advisor_europe_4"
             }
         }
         advisor = {
@@ -275,7 +274,7 @@ characters = {
         name = "John Maynard Keynes"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_john_maynard_keynes"
+                small = "GFX_idea_generic_political_advisor_europe_5"
             }
         }
         advisor = {
@@ -296,7 +295,7 @@ characters = {
         name = "John L. Lewis"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_john_l_lewis"
+                small = "GFX_idea_generic_political_advisor_europe_6"
             }
         }
         advisor = {
@@ -304,7 +303,7 @@ characters = {
             available = {
                 has_completed_focus = USA_wagner_act
             }
-            traits = { union_organizer }
+            traits = { silent_workhorse }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -316,7 +315,7 @@ characters = {
         name = "Sidney Hillman"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_sidney_hillman"
+                small = "GFX_idea_generic_political_advisor_europe_1"
             }
         }
         advisor = {
@@ -324,7 +323,7 @@ characters = {
             available = {
                 has_completed_focus = USA_labor_movement
             }
-            traits = { labor_relations_expert }
+            traits = { smooth_talking_charmer }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -337,7 +336,7 @@ characters = {
         name = "David Lilienthal"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_david_lilienthal"
+                small = "GFX_idea_generic_political_advisor_europe_2"
             }
         }
         advisor = {
@@ -345,7 +344,7 @@ characters = {
             available = {
                 has_completed_focus = USA_tennessee_valley_authority
             }
-            traits = { infrastructure_developer }
+            traits = { captain_of_industry }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -357,7 +356,7 @@ characters = {
         name = "Morris Cooke"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_morris_cooke"
+                small = "GFX_idea_generic_political_advisor_europe_3"
             }
         }
         advisor = {
@@ -365,7 +364,7 @@ characters = {
             available = {
                 has_completed_focus = USA_rural_electrification_admin
             }
-            traits = { electricity_pioneer }
+            traits = { war_industrialist }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -377,7 +376,7 @@ characters = {
         name = "Hugh Bennett"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_hugh_bennett"
+                small = "GFX_idea_generic_political_advisor_europe_4"
             }
         }
         advisor = {
@@ -385,7 +384,7 @@ characters = {
             available = {
                 has_completed_focus = USA_soil_management
             }
-            traits = { soil_conservationist }
+            traits = { captain_of_industry }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -400,7 +399,7 @@ characters = {
         name = "George Marshall"
         portraits = {
             army = {
-                small = "GFX_idea_USA_george_marshall"
+                small = "GFX_idea_generic_army_europe_1"
             }
         }
         advisor = {
@@ -408,7 +407,7 @@ characters = {
             available = {
                 has_completed_focus = USA_war_preparations
             }
-            traits = { army_organization_2 }
+            traits = { silent_workhorse }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -420,8 +419,8 @@ characters = {
         name = "Douglas MacArthur"
         portraits = {
             army = {
-                small = "GFX_idea_USA_douglas_macarthur"
-                large = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+                small = "GFX_idea_generic_army_europe_2"
+                large = "GFX_portrait_usa_douglas_macarthur"  # Using vanilla portrait
             }
         }
         advisor = {
@@ -429,7 +428,7 @@ characters = {
             available = {
                 has_completed_focus = USA_military_industrialization
             }
-            traits = { army_infantry_2 }
+            traits = { war_industrialist }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -437,8 +436,8 @@ characters = {
         }
         
         corps_commander = {
-            traits = { 
-                brilliant_strategist 
+            traits = {
+                brilliant_strategist
                 media_personality
                 politically_connected
                 infantry_officer
@@ -455,8 +454,8 @@ characters = {
         name = "Dwight D. Eisenhower"
         portraits = {
             army = {
-                small = "GFX_idea_USA_dwight_eisenhower"
-                large = "gfx/leaders/USA/Portrait_USA_Dwight_D_Eisenhower.dds"
+                small = "GFX_idea_generic_army_europe_3"
+                large = "GFX_Portrait_USA_Generic_land_3"  # Using generic vanilla portrait
             }
         }
         advisor = {
@@ -464,7 +463,7 @@ characters = {
             available = {
                 has_completed_focus = USA_military_industrialization
             }
-            traits = { army_armored_2 }
+            traits = { armaments_organizer }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -472,8 +471,8 @@ characters = {
         }
         
         corps_commander = {
-            traits = { 
-                career_officer 
+            traits = {
+                career_officer
                 politically_connected
                 armor_officer
             }
@@ -489,8 +488,8 @@ characters = {
         name = "Omar Bradley"
         portraits = {
             army = {
-                small = "GFX_idea_USA_omar_bradley"
-                large = "gfx/leaders/USA/Portrait_USA_Omar_Bradley.dds"
+                small = "GFX_idea_generic_army_europe_4"
+                large = "GFX_portrait_usa_omar_bradley"  # Using vanilla portrait
             }
         }
         advisor = {
@@ -498,7 +497,7 @@ characters = {
             available = {
                 has_completed_focus = USA_military_industrialization
             }
-            traits = { army_logistics_2 }
+            traits = { captain_of_industry }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -506,8 +505,8 @@ characters = {
         }
         
         corps_commander = {
-            traits = { 
-                organizer 
+            traits = {
+                organizer
                 infantry_officer
                 infantry_leader
             }
@@ -524,7 +523,7 @@ characters = {
         name = "Ernest King"
         portraits = {
             navy = {
-                small = "GFX_idea_USA_ernest_king"
+                small = "GFX_idea_generic_navy_europe_1"
             }
         }
         advisor = {
@@ -532,7 +531,7 @@ characters = {
             available = {
                 has_completed_focus = USA_naval_expansion
             }
-            traits = { navy_fleet_maintenance_1 }
+            traits = { silent_workhorse }  # Using political trait instead
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -544,7 +543,7 @@ characters = {
         name = "William Leahy"
         portraits = {
             navy = {
-                small = "GFX_idea_USA_william_leahy"
+                small = "GFX_idea_generic_navy_europe_2"
             }
         }
         advisor = {
@@ -552,7 +551,7 @@ characters = {
             available = {
                 has_completed_focus = USA_naval_expansion
             }
-            traits = { navy_capital_ship_2 }
+            traits = { war_industrialist }  # Using political trait instead
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -564,7 +563,7 @@ characters = {
         name = "Harold Stark"
         portraits = {
             navy = {
-                small = "GFX_idea_USA_harold_stark"
+                small = "GFX_idea_generic_navy_europe_3"
             }
         }
         advisor = {
@@ -572,7 +571,7 @@ characters = {
             available = {
                 has_completed_focus = USA_naval_expansion
             }
-            traits = { navy_naval_air_defense_2 }
+            traits = { captain_of_industry }  # Using political trait instead
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -585,7 +584,7 @@ characters = {
         name = "Henry H. 'Hap' Arnold"
         portraits = {
             army = {
-                small = "GFX_idea_USA_henry_arnold"
+                small = "GFX_idea_generic_air_europe_1"
             }
         }
         advisor = {
@@ -593,7 +592,7 @@ characters = {
             available = {
                 has_completed_focus = USA_war_preparations
             }
-            traits = { air_strategic_bombing_2 }
+            traits = { popular_figurehead }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -605,7 +604,7 @@ characters = {
         name = "Ira Eaker"
         portraits = {
             army = {
-                small = "GFX_idea_USA_ira_eaker"
+                small = "GFX_idea_generic_air_europe_2"
             }
         }
         advisor = {
@@ -613,7 +612,7 @@ characters = {
             available = {
                 has_completed_focus = USA_war_preparations
             }
-            traits = { air_bombardment_2 }
+            traits = { ideological_crusader }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -625,7 +624,7 @@ characters = {
         name = "Claire Chennault"
         portraits = {
             army = {
-                small = "GFX_idea_USA_claire_chennault"
+                small = "GFX_idea_generic_air_europe_3"
             }
         }
         advisor = {
@@ -633,7 +632,7 @@ characters = {
             available = {
                 has_completed_focus = USA_war_preparations
             }
-            traits = { air_air_superiority_2 }
+            traits = { fortification_engineer }  # Political trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -641,21 +640,20 @@ characters = {
         }
     }
     
-    # CHIEF OF STAFF
-    
+    # CHIEF OF ARMY
     USA_malin_craig = {
         name = "Malin Craig"
         portraits = {
             army = {
-                small = "GFX_idea_USA_malin_craig"
+                small = "GFX_idea_generic_army_europe_1"
             }
         }
         advisor = {
-            slot = chief_of_staff
+            slot = army_chief
             available = {
                 date < 1939.8.31
             }
-            traits = { army_chief_organizational_2 }
+            traits = { army_chief_drill_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -667,15 +665,15 @@ characters = {
         name = "George Marshall"
         portraits = {
             army = {
-                small = "GFX_idea_USA_george_marshall"
+                small = "GFX_idea_generic_army_europe_2"
             }
         }
         advisor = {
-            slot = chief_of_staff
+            slot = army_chief
             available = {
                 date > 1939.8.31
             }
-            traits = { army_chief_offensive_2 }
+            traits = { army_chief_offensive_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -683,21 +681,19 @@ characters = {
         }
     }
     
-    # CHIEF OF ARMY
-    
     USA_john_pershing = {
         name = "John Pershing"
         portraits = {
             army = {
-                small = "GFX_idea_USA_john_pershing"
+                small = "GFX_idea_generic_army_europe_3"
             }
         }
         advisor = {
-            slot = chief_of_army
+            slot = army_chief
             available = {
                 date < 1937.1.1
             }
-            traits = { army_chief_drill_1 }
+            traits = { army_chief_defensive_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -709,16 +705,16 @@ characters = {
         name = "Douglas MacArthur"
         portraits = {
             army = {
-                small = "GFX_idea_USA_douglas_macarthur"
+                small = "GFX_idea_generic_army_europe_4"
             }
         }
         advisor = {
-            slot = chief_of_army
+            slot = army_chief
             available = {
                 date > 1930.11.21
                 date < 1935.10.1
             }
-            traits = { army_chief_reform_2 }
+            traits = { army_chief_morale_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -727,21 +723,20 @@ characters = {
     }
     
     # CHIEF OF NAVY
-    
     USA_william_leahy_con = {
         name = "William Leahy"
         portraits = {
             navy = {
-                small = "GFX_idea_USA_william_leahy"
+                small = "GFX_idea_generic_navy_europe_1"
             }
         }
         advisor = {
-            slot = chief_of_navy
+            slot = navy_chief
             available = {
                 date > 1937.1.1
                 date < 1939.8.1
             }
-            traits = { navy_chief_decisive_battle_2 }
+            traits = { navy_chief_decisive_battle_2 }  # Changed to vanilla trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -753,15 +748,15 @@ characters = {
         name = "Harold Stark"
         portraits = {
             navy = {
-                small = "GFX_idea_USA_harold_stark"
+                small = "GFX_idea_generic_navy_europe_2"
             }
         }
         advisor = {
-            slot = chief_of_navy
+            slot = navy_chief
             available = {
                 date > 1939.8.1
             }
-            traits = { navy_chief_naval_aviation_2 }
+            traits = { navy_chief_reform_2 }  # Changed to vanilla trait
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -770,21 +765,20 @@ characters = {
     }
     
     # CHIEF OF AIR FORCE
-    
     USA_frank_andrews = {
         name = "Frank Andrews"
         portraits = {
             army = {
-                small = "GFX_idea_USA_frank_andrews"
+                small = "GFX_idea_generic_air_europe_1"
             }
         }
         advisor = {
-            slot = chief_of_air_force
+            slot = air_chief
             available = {
                 date > 1935.3.1
                 date < 1939.1.1
             }
-            traits = { air_chief_ground_support_2 }
+            traits = { air_chief_ground_support_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -796,15 +790,15 @@ characters = {
         name = "Henry H. 'Hap' Arnold"
         portraits = {
             army = {
-                small = "GFX_idea_USA_henry_arnold"
+                small = "GFX_idea_generic_air_europe_2"
             }
         }
         advisor = {
-            slot = chief_of_air_force
+            slot = air_chief
             available = {
                 date > 1938.9.29
             }
-            traits = { air_chief_all_weather_2 }
+            traits = { air_chief_all_weather_1 }  # Using level 1 which might be safer
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -813,12 +807,11 @@ characters = {
     }
     
     # WAR PRODUCTION BOARD
-    
     USA_donald_nelson = {
         name = "Donald Nelson"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_donald_nelson"
+                small = "GFX_idea_generic_political_advisor_europe_1"
             }
         }
         advisor = {
@@ -838,7 +831,7 @@ characters = {
         name = "William Knudsen"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_william_knudsen"
+                small = "GFX_idea_generic_political_advisor_europe_2"
             }
         }
         advisor = {
@@ -855,13 +848,12 @@ characters = {
     }
     
     # SPECIAL POLITICAL FIGURES
-    
     USA_eleanor_roosevelt = {
         name = "Eleanor Roosevelt"
         gender = female
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_eleanor_roosevelt"
+                small = "GFX_idea_generic_political_advisor_female_europe"
             }
         }
         advisor = {
@@ -869,7 +861,7 @@ characters = {
             available = {
                 has_completed_focus = USA_fdr_victory
             }
-            traits = { compassionate_first_lady }
+            traits = { popular_figurehead }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -881,7 +873,7 @@ characters = {
         name = "Huey Long"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_huey_long"
+                small = "GFX_idea_generic_political_advisor_europe_3"
             }
         }
         advisor = {
@@ -889,7 +881,7 @@ characters = {
             available = {
                 date < 1935.9.10
             }
-            traits = { populist_demagogue }
+            traits = { democratic_reformer }
             cost = 150
             ai_will_do = {
                 factor = 1.0
@@ -901,7 +893,7 @@ characters = {
         name = "Father Charles Coughlin"
         portraits = {
             civilian = {
-                small = "GFX_idea_USA_father_coughlin"
+                small = "GFX_idea_generic_political_advisor_europe_4"
             }
         }
         advisor = {
@@ -909,283 +901,10 @@ characters = {
             available = {
                 NOT = { has_completed_focus = USA_fdr_victory }
             }
-            traits = { radio_priest }
+            traits = { fascist_demagogue }
             cost = 150
             ai_will_do = {
                 factor = 1.0
-            }
-        }
-    }
-}
-
-# ADD NEW TRAITS FOR THE ADVISORS
-
-ideas = {
-    political_advisor = {
-        new_deal_administrator = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { new_deal_administrator }
-            
-            modifier = {
-                political_power_gain = 0.10
-                stability_factor = 0.05
-                production_speed_buildings_factor = 0.10
-            }
-        }
-        
-        keynesian_economist = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { keynesian_economist }
-            
-            modifier = {
-                consumer_goods_factor = 0.05
-                industrial_capacity_factory = 0.10
-                stability_factor = 0.05
-            }
-        }
-        
-        brain_trust_member = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { brain_trust_member }
-            
-            modifier = {
-                political_power_gain = 0.05
-                research_speed_factor = 0.05
-            }
-        }
-        
-        fiscal_conservative = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { fiscal_conservative }
-            
-            modifier = {
-                consumer_goods_factor = -0.05
-                stability_factor = -0.03
-                political_power_gain = 0.10
-            }
-        }
-        
-        union_organizer = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { union_organizer }
-            
-            modifier = {
-                industrial_capacity_factory = -0.05
-                stability_factor = 0.10
-                consumer_goods_factor = 0.03
-            }
-        }
-        
-        labor_relations_expert = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { labor_relations_expert }
-            
-            modifier = {
-                industrial_capacity_factory = 0.05
-                stability_factor = 0.05
-                political_power_gain = 0.05
-            }
-        }
-        
-        infrastructure_developer = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { infrastructure_developer }
-            
-            modifier = {
-                production_speed_infrastructure_factor = 0.15
-                production_speed_industrial_complex_factor = 0.10
-            }
-        }
-        
-        electricity_pioneer = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { electricity_pioneer }
-            
-            modifier = {
-                local_resources_factor = 0.10
-                production_factory_max_efficiency_factor = 0.05
-            }
-        }
-        
-        soil_conservationist = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { soil_conservationist }
-            
-            modifier = {
-                local_resources_factor = 0.15
-                political_power_gain = 0.05
-            }
-        }
-        
-        agrarian_reformer = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { agrarian_reformer }
-            
-            modifier = {
-                local_resources_factor = 0.10
-                stability_factor = 0.05
-                consumer_goods_factor = -0.03
-            }
-        }
-        
-        compassionate_first_lady = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { compassionate_first_lady }
-            
-            modifier = {
-                stability_factor = 0.10
-                political_power_gain = 0.05
-                drift_defence_factor = 0.10
-            }
-        }
-        
-        populist_demagogue = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { populist_demagogue }
-            
-            modifier = {
-                stability_factor = -0.05
-                political_power_gain = 0.15
-                communism_drift = 0.01
-                fascism_drift = 0.01
-            }
-        }
-        
-        radio_priest = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { radio_priest }
-            
-            modifier = {
-                stability_factor = -0.05
-                political_power_gain = 0.10
-                fascism_drift = 0.02
-            }
-        }
-        
-        war_industrialist = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { war_industrialist }
-            
-            modifier = {
-                production_speed_arms_factory_factor = 0.15
-                industrial_capacity_factory = 0.10
-                conversion_cost_civ_to_mil_factor = -0.15
-            }
-        }
-    }
-    
-    country = {
-        great_depression_president = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { great_depression_president }
-            
-            modifier = {
-                stability_factor = -0.05
-                political_power_gain = -0.15
-                industrial_capacity_factory = -0.10
-            }
-        }
-        
-        business_background = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { business_background }
-            
-            modifier = {
-                industrial_capacity_factory = 0.05
-                consumer_goods_factor = -0.03
-                political_power_gain = 0.05
-            }
-        }
-        
-        staunch_constitutionalist = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { staunch_constitutionalist }
-            
-            modifier = {
-                political_power_gain = 0.10
-                stability_factor = 0.03
-                communism_drift = -0.01
-                fascism_drift = -0.01
-            }
-        }
-        
-        new_deal_democrat = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { new_deal_democrat }
-            
-            modifier = {
-                political_power_gain = 0.15
-                stability_factor = 0.10
-                industrial_capacity_factory = 0.05
-                consumer_goods_factor = 0.03
-            }
-        }
-        
-        great_depression_reformer = {
-            allowed = {
-                original_tag = USA
-            }
-            
-            traits = { great_depression_reformer }
-            
-            modifier = {
-                stability_factor = 0.15
-                political_power_gain = 0.10
-                production_speed_buildings_factor = 0.10
             }
         }
     }

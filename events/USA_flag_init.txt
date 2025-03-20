@@ -1,0 +1,83 @@
+# Event file to set up the necessary country flags for USA decisions
+# This should be placed in events/USA_flag_init.txt
+
+add_namespace = usa_flags
+
+# USA Flag Initialization Event
+country_event = {
+    id = usa_flags.1
+    title = "USA Decision System Initialization"
+    desc = "This event initializes flags needed for decision visibility"
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+    
+    immediate = {
+        log = "[GetDateText]: [Root.GetName]: Event usa_flags.1 USA Decision System Initialization"
+    }
+    
+    # Initialize all flags
+    option = {
+        name = "Initialize USA decision system"
+        
+        # New Deal flags
+        set_country_flag = USA_economic_relief_enabled
+        set_country_flag = USA_wagner_act_enabled
+        set_country_flag = USA_rural_electrification_admin_enabled
+        set_country_flag = USA_federal_arts_project_enabled
+        set_country_flag = USA_social_security_act_enabled
+        
+        # Conservative policies flags
+        set_country_flag = USA_continued_austerity_enabled
+        set_country_flag = USA_business_as_usual_enabled
+        set_country_flag = USA_business_coordination_enabled
+        set_country_flag = USA_voluntary_measures_enabled
+        set_country_flag = USA_free_market_approach_enabled
+        set_country_flag = USA_smoot_hawley_enabled
+        
+        # Military buildup flags
+        set_country_flag = USA_naval_expansion_enabled
+        set_country_flag = USA_hoover_naval_program_enabled
+        set_country_flag = USA_military_industrialization_enabled
+        set_country_flag = USA_hoover_army_modernization_enabled
+        set_country_flag = USA_strategic_resources_enabled
+        set_country_flag = USA_war_preparations_enabled
+        
+        # Prohibition flags
+        set_country_flag = USA_prohibition_active
+        # set_country_flag = USA_prohibition_repealed # Don't set by default, this is toggled later
+        set_country_flag = USA_alcohol_taxation_enabled
+        
+        # Regional recovery flags
+        set_country_flag = USA_tennessee_valley_authority_enabled
+        set_country_flag = USA_soil_management_enabled
+        set_country_flag = USA_dust_bowl_response_enabled
+        set_country_flag = USA_migrant_assistance_enabled
+        set_country_flag = USA_public_works_administration_enabled
+        
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+# Toggle Prohibition Event
+country_event = {
+    id = usa_flags.2
+    title = "Prohibition Repealed"
+    desc = "The 21st Amendment has now repealed prohibition."
+    picture = GFX_report_event_usa_election_generic
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = "Repeal Prohibition"
+        clr_country_flag = USA_prohibition_active
+        set_country_flag = USA_prohibition_repealed
+        
+        ai_chance = {
+            factor = 100
+        }
+    }
+}

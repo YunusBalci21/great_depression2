@@ -1,0 +1,141 @@
+leader_traits = {
+    new_deal_administrator = {
+        random = no
+        political_power_gain = 0.10
+        stability_factor = 0.05
+        production_speed_buildings_factor = 0.10
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    keynesian_economist = {
+        random = no
+        consumer_goods_factor = 0.05
+        industrial_capacity_factory = 0.10
+        stability_factor = 0.05
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    brain_trust_member = {
+        random = no
+        political_power_gain = 0.05
+        research_speed_factor = 0.05
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    fiscal_conservative = {
+        random = no
+        consumer_goods_factor = -0.05
+        stability_factor = -0.03
+        political_power_gain = 0.10
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    union_organizer = {
+        random = no
+        industrial_capacity_factory = -0.05
+        stability_factor = 0.10
+        consumer_goods_factor = 0.03
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    labor_relations_expert = {
+        random = no
+        industrial_capacity_factory = 0.05
+        stability_factor = 0.05
+        political_power_gain = 0.05
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    infrastructure_developer = {
+        random = no
+        production_speed_infrastructure_factor = 0.15
+        production_speed_industrial_complex_factor = 0.10
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    electricity_pioneer = {
+        random = no
+        local_resources_factor = 0.10
+        production_factory_max_efficiency_factor = 0.05
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    soil_conservationist = {
+        random = no
+        local_resources_factor = 0.15
+        political_power_gain = 0.05
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    agrarian_reformer = {
+        random = no
+        local_resources_factor = 0.10
+        stability_factor = 0.05
+        consumer_goods_factor = -0.03
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    compassionate_first_lady = {
+        random = no
+        stability_factor = 0.10
+        political_power_gain = 0.05
+        drift_defence_factor = 0.10
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    populist_demagogue = {
+        random = no
+        stability_factor = -0.05
+        political_power_gain = 0.15
+        communism_drift = 0.01
+        fascism_drift = 0.01
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    radio_priest = {
+        random = no
+        stability_factor = -0.05
+        political_power_gain = 0.10
+        fascism_drift = 0.02
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
