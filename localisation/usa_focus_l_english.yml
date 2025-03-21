@@ -1,0 +1,46 @@
+﻿l_english:
+ # New Deal focus tree localizations
+ USA_1932_election:0 "1932 Election"
+ USA_1932_election_desc:0 "The 1932 presidential election is taking place during the worst economic crisis in American history. The outcome will determine whether the government takes bold action or maintains a more conservative approach."
+ 
+ USA_fdr_victory:0 "FDR Victory"
+ USA_fdr_victory_desc:0 "Franklin D. Roosevelt has been elected president with his promise of a 'New Deal' for the American people. His charisma and confidence offer hope during the darkest days of the Depression."
+ 
+ USA_hoover_second_term:0 "Hoover Second Term"
+ USA_hoover_second_term_desc:0 "Herbert Hoover has won a second term as president, promising that his policies need more time to overcome the economic crisis while warning against radical government expansion."
+ 
+ USA_continued_austerity:0 "Continued Austerity"
+ USA_continued_austerity_desc:0 "The Hoover administration remains committed to balancing the budget despite the economic crisis, believing that fiscal discipline is necessary for long-term recovery."
+ 
+ USA_free_market_approach:0 "Free Market Approach"
+ USA_free_market_approach_desc:0 "Allowing the free market to correct itself without government interference remains the cornerstone of Hoover's economic philosophy, despite growing calls for intervention."
+ 
+ USA_limited_intervention_hoover:0 "Limited Intervention"
+ USA_limited_intervention_hoover_desc:0 "While maintaining his opposition to direct relief, Hoover is willing to consider some limited government action to stabilize the banking system and key industries."
+ 
+ USA_conservative_regulation:0 "Conservative Regulation"
+ USA_conservative_regulation_desc:0 "Implementing modest financial regulations may help prevent future market crashes while still preserving the fundamentals of the free enterprise system."
+ 
+ USA_business_recovery_program:0 "Business Recovery Program"
+ USA_business_recovery_program_desc:0 "A program of tax incentives and regulatory relief for businesses aims to stimulate private investment and job creation without direct government spending."
+ 
+ USA_conservative_recovery:0 "Conservative Recovery"
+ USA_conservative_recovery_desc:0 "Hoover's patient approach is beginning to yield results as the economy shows signs of stabilization, vindicating his belief in limited government intervention."
+ 
+ USA_hoover_military_buildup:0 "Military Buildup"
+ USA_hoover_military_buildup_desc:0 "With international tensions rising, expanding military production can both strengthen national defense and provide economic stimulus through private sector contracts."
+ 
+ USA_hoover_naval_program:0 "Naval Program"
+ USA_hoover_naval_program_desc:0 "Expanding the U.S. Navy will protect American interests abroad while creating jobs in shipyards and supporting industries across the country."
+ 
+ USA_hoover_army_modernization:0 "Army Modernization"
+ USA_hoover_army_modernization_desc:0 "The U.S. Army requires modern equipment and expanded training facilities to meet the challenges of potential future conflicts."
+ 
+ USA_hoover_war_preparedness:0 "War Preparedness"
+ USA_hoover_war_preparedness_desc:0 "A comprehensive military readiness program will prepare America for potential international conflicts while stimulating economic recovery through defense spending."
+ 
+ USA_first_hundred_days:0 "First Hundred Days"
+ USA_first_hundred_days_desc:0 "President Roosevelt has called for a special session of Congress to pass an unprecedented wave of legislation addressing the economic crisis during his first hundred days in office."
+ 
+ USA_economic_relief:0 "Economic Relief"
+ USA_economic_relief_desc:0 "Providing immediate relief to those hardest hit by the Depression is a moral necessity and economic imperative, requiring direct federal action on an unprecedented scale."

@@ -22,3 +22,50 @@
  great_depression.5.b:0 "A new direction for our nation"
  
  POLITICS_FRANKLIN_ROOSEVELT_DESC:0 "Franklin Delano Roosevelt, often referred to by his initials FDR, comes to the presidency at America's darkest economic hour. A patrician by birth but a champion of the common people by conviction, Roosevelt brings energy and optimism to the White House. His campaign promised a 'New Deal' for the American people, with active government intervention to address unemployment and economic collapse. Despite being partially paralyzed from polio, Roosevelt projects strength and confidence that has already begun to restore hope to a demoralized nation."
+
+ # USA Depression Events - First Part
+ usa_depression.stock_market_crash.t:0 "Wall Street Crash of 1929"
+ usa_depression.stock_market_crash.d:0 "On October 24, 1929, the United States stock market crashed in an event that would later be known as 'Black Thursday.' Stock prices plummeted, wiping out billions of dollars of wealth in a single day. The crash continued through October 29, 'Black Tuesday,' when shares of stocks were being sold at catastrophically reduced prices. This market crash marks the beginning of a decade of high unemployment, poverty, and deflation, known as the Great Depression."
+ usa_depression.stock_market_crash.a:0 "Troubling times lie ahead..."
+
+ usa_depression.stock_market_crash_news.t:0 "Wall Street Crash Shocks World"
+ usa_depression.stock_market_crash_news.d:0 "The New York stock market has crashed dramatically, with stocks losing over $14 billion in value. Panicked selling has gripped Wall Street as investors rush to liquidate their holdings. The effects are already being felt throughout the American economy, with banks calling in loans and businesses announcing immediate layoffs. Financial experts suggest this could mark the beginning of a severe economic downturn."
+ usa_depression.stock_market_crash_news.a:0 "This will affect the global economy"
+ usa_depression.stock_market_crash_news.b:0 "We must take immediate action"
+
+ usa_depression.hoover_response.t:0 "Hoover Administration Response"
+ usa_depression.hoover_response.d:0 "President Herbert Hoover has outlined his administration's response to the economic crisis. Emphasizing 'rugged individualism,' Hoover maintains that the economy will recover naturally without direct government intervention in the marketplace. His approach focuses on encouraging voluntary cooperation among businesses, providing loans to struggling financial institutions, and promoting public confidence in the economy."
+ usa_depression.hoover_response.a:0 "Let's hope this approach works"
+
+ usa_depression.rfc_established.t:0 "Reconstruction Finance Corporation"
+ usa_depression.rfc_established.d:0 "President Hoover has established the Reconstruction Finance Corporation (RFC) to provide emergency loans to banks, railroads, and other businesses at risk of failing due to the economic crisis. This marks a significant, if limited, step toward government intervention in the economy. Hoover hopes that by supporting key financial institutions, the RFC will prevent further economic collapse and restore confidence in the banking system."
+ usa_depression.rfc_established.a:0 "A necessary measure"
+
+ usa_depression.smoot_hawley.t:0 "Smoot-Hawley Tariff Act"
+ usa_depression.smoot_hawley.d:0 "President Hoover has signed the Smoot-Hawley Tariff Act, raising import duties to protect American businesses and farmers from foreign competition. Over 1,000 economists petitioned against this legislation, warning that it would worsen the economic crisis by reducing international trade. Their concerns appear justified as foreign nations are already announcing retaliatory tariffs against American goods."
+ usa_depression.smoot_hawley.a:0 "This could backfire"
+
+ usa_depression.smoot_hawley_news.t:0 "United States Raises Tariffs"
+ usa_depression.smoot_hawley_news.d:0 "The United States has enacted the Smoot-Hawley Tariff Act, dramatically increasing duties on thousands of imported goods. This protectionist measure has been met with outrage from America's trading partners, many of whom are already planning retaliatory tariffs. Economists worldwide predict this will further contract global trade, which has already been in decline since the Wall Street Crash."
+ usa_depression.smoot_hawley_news.a:0 "We should respond in kind"
+ usa_depression.smoot_hawley_news.b:0 "This will hurt everyone involved"
+
+ usa_depression.bonus_army.t:0 "The Bonus Army Marches"
+ usa_depression.bonus_army.d:0 "Thousands of World War I veterans and their families have marched on Washington D.C., demanding immediate payment of service bonuses that were promised but scheduled for 1945. They have established a 'Hooverville' encampment, vowing to remain until their demands are met. Police have failed to disperse the protesters, and tensions are rising as more veterans arrive daily. How should we respond to this unprecedented situation?"
+ usa_depression.bonus_army.a:0 "Send in the Army under General MacArthur"
+ usa_depression.bonus_army.b:0 "Negotiate with the veterans' leaders"
+
+ usa_depression.bonus_army_suppression_news.t:0 "US Army Clashes With Veterans in Washington"
+ usa_depression.bonus_army_suppression_news.d:0 "Shocking scenes unfolded in Washington D.C. today as U.S. Army troops under General Douglas MacArthur forcibly dispersed thousands of World War I veterans protesting for early payment of promised service bonuses. Cavalry charged with drawn sabers, infantry advanced with fixed bayonets, and tanks rolled through the streets as soldiers used tear gas to clear the 'Bonus Army' camps. Several veterans were killed, many more injured, and their makeshift settlement was burned to the ground."
+ usa_depression.bonus_army_suppression_news.a:0 "A shameful response to their own soldiers"
+ usa_depression.bonus_army_suppression_news.b:0 "A difficult but necessary action"
+
+ usa_depression.election_1932.t:0 "The 1932 Presidential Election"
+ usa_depression.election_1932.d:0 "The 1932 presidential election is taking place against the backdrop of the Great Depression. President Herbert Hoover, seeking re-election, faces Democratic challenger Franklin D. Roosevelt, the Governor of New York. Roosevelt has campaigned on a promise of bold federal action to combat the economic crisis, contrasting with Hoover's more limited approach. As Americans go to the polls, they face a clear choice about the government's role in addressing the Depression."
+ usa_depression.election_1932.a:0 "Roosevelt wins in a landslide"
+ usa_depression.election_1932.b:0 "Hoover pulls off a surprise victory"
+
+ usa_depression.election_1932_fdr_news.t:0 "Franklin D. Roosevelt Elected President"
+ usa_depression.election_1932_fdr_news.d:0 "Franklin D. Roosevelt has won a decisive victory in the United States presidential election, defeating incumbent Herbert Hoover. Roosevelt's promise of a 'New Deal' for the American people resonated with voters suffering through the Great Depression. In his campaign, Roosevelt pledged unprecedented government action to provide relief, recovery, and reform. His election marks a potential turning point in America's response to the economic crisis."
+ usa_depression.election_1932_fdr_news.a:0 "A new approach for America"
+ usa_depression.election_1932_fdr_news.b:0 "The people have spoken"

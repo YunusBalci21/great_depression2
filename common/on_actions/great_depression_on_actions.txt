@@ -1,4 +1,4 @@
-# File: common/on_actions/great_depression_on_actions.txt
+# On actions for Great Depression mod
 
 on_actions = {
     # When game starts
@@ -6,11 +6,10 @@ on_actions = {
         effect = {
             if = {
                 limit = {
-                    date = 1929.10.24
-                    date < 1930.1.1
+                    has_global_flag = great_depression_bookmark
                 }
-                set_global_flag = great_depression_bookmark
                 USA = {
+                    country_event = { id = great_depression.1 days = 1 }
                     load_focus_tree = { tree = usa_depression_era keep_completed = no }
                 }
             }

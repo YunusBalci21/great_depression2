@@ -60,3 +60,6 @@ create_country_leader = {
     ideology = liberalism
     traits = { }
 }
+
+# Load custom focus tree
+load_focus_tree = usa_depression_era

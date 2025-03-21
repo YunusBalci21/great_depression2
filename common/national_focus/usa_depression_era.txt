@@ -1,6 +1,3 @@
-# Extended focus tree for USA Great Depression mod
-# File: common/national_focus/usa_depression_era.txt
-
 focus_tree = {
     id = usa_depression_era
     
@@ -22,7 +19,7 @@ focus_tree = {
         id = USA_wall_street_crash
         icon = GFX_focus_usa_reestablish_the_gold_standard
         text = "Wall Street Crash"
-        x = 9
+        x = 24
         y = 0
         cost = 10
         available_if_capitulated = yes
@@ -46,7 +43,7 @@ focus_tree = {
         icon = GFX_focus_usa_republican_presidency
         text = "Hoover Administration"
         prerequisite = { focus = USA_wall_street_crash }
-        x = 7
+        x = 16
         y = 1
         cost = 70
         available_if_capitulated = yes
@@ -67,7 +64,7 @@ focus_tree = {
         icon = GFX_focus_generic_self_management
         text = "RFC Establishment"
         prerequisite = { focus = USA_hoover_administration }
-        x = 5
+        x = 12
         y = 2
         cost = 70
         available_if_capitulated = yes
@@ -85,7 +82,7 @@ focus_tree = {
         icon = GFX_focus_generic_foreign_loans
         text = "Emergency Loans"
         prerequisite = { focus = USA_rfc_establishment }
-        x = 5
+        x = 12
         y = 3
         cost = 70
         available_if_capitulated = yes
@@ -122,7 +119,7 @@ focus_tree = {
         icon = GFX_focus_generic_diplomatic_treaty
         text = "Voluntary Measures"
         prerequisite = { focus = USA_hoover_administration }
-        x = 7
+        x = 16
         y = 2
         cost = 70
         available_if_capitulated = yes
@@ -138,7 +135,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_1
         text = "Business Coordination"
         prerequisite = { focus = USA_voluntary_measures }
-        x = 7
+        x = 16
         y = 3
         cost = 70
         available_if_capitulated = yes
@@ -164,7 +161,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "Smoot-Hawley Tariff"
         prerequisite = { focus = USA_hoover_administration }
-        x = 9
+        x = 20
         y = 2
         cost = 70
         available_if_capitulated = yes
@@ -182,7 +179,7 @@ focus_tree = {
         icon = GFX_focus_generic_foreign_trade
         text = "Tariff Protection"
         prerequisite = { focus = USA_smoot_hawley }
-        x = 9
+        x = 20
         y = 3
         cost = 70
         available_if_capitulated = yes
@@ -203,17 +200,25 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-            add_trade_opinion_modifier = {
-                target = ENG
-                modifier = trade_sanctions
-            }
-            add_trade_opinion_modifier = {
-                target = FRA
-                modifier = trade_sanctions
-            }
-            add_trade_opinion_modifier = {
-                target = GER
-                modifier = trade_sanctions
+            if = {
+                limit = {
+                    any_other_country = {
+                        has_war = no
+                        is_major = yes
+                        NOT = { tag = SOV }
+                    }
+                }
+                random_other_country = {
+                    limit = {
+                        has_war = no
+                        is_major = yes
+                        NOT = { tag = SOV }
+                    }
+                    add_opinion_modifier = {
+                        target = ROOT
+                        modifier = trade_sanctions
+                    }
+                }
             }
         }
     }
@@ -228,7 +233,7 @@ focus_tree = {
             focus = USA_business_coordination
             focus = USA_tariff_protection
         }
-        x = 7
+        x = 16
         y = 4
         cost = 70
         available_if_capitulated = yes
@@ -247,7 +252,7 @@ focus_tree = {
         available = {
             has_country_flag = bonus_army_suppressed
         }
-        x = 6
+        x = 14
         y = 5
         cost = 70
         available_if_capitulated = yes
@@ -271,7 +276,7 @@ focus_tree = {
         available = {
             has_country_flag = bonus_army_negotiated
         }
-        x = 8
+        x = 18
         y = 5
         cost = 70
         available_if_capitulated = yes
@@ -295,7 +300,7 @@ focus_tree = {
         icon = GFX_focus_usa_voter_registration_act
         text = "1932 Election"
         prerequisite = { focus = USA_wall_street_crash }
-        x = 11
+        x = 32
         y = 1
         cost = 70
         
@@ -320,7 +325,7 @@ focus_tree = {
             has_country_flag = fdr_wins_1932
         }
         mutually_exclusive = { focus = USA_hoover_second_term }
-        x = 9
+        x = 28
         y = 2
         cost = 70
         
@@ -355,7 +360,7 @@ focus_tree = {
             has_country_flag = hoover_wins_1932
         }
         mutually_exclusive = { focus = USA_fdr_victory }
-        x = 13
+        x = 36
         y = 2
         cost = 70
         
@@ -376,7 +381,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Continued Austerity"
         prerequisite = { focus = USA_hoover_second_term }
-        x = 13
+        x = 36
         y = 3
         cost = 70
         
@@ -394,8 +399,8 @@ focus_tree = {
         icon = GFX_focus_generic_foreign_trade
         text = "Free Market Approach"
         prerequisite = { focus = USA_continued_austerity }
-        mutually_exclusive = { focus = USA_limited_intervention }
-        x = 12
+        mutually_exclusive = { focus = USA_limited_intervention_hoover }
+        x = 34
         y = 4
         cost = 70
         
@@ -411,12 +416,12 @@ focus_tree = {
     }
     
     focus = {
-        id = USA_limited_intervention
+        id = USA_limited_intervention_hoover
         icon = GFX_focus_generic_treaty
         text = "Limited Intervention"
         prerequisite = { focus = USA_continued_austerity }
         mutually_exclusive = { focus = USA_free_market_approach }
-        x = 14
+        x = 38
         y = 4
         cost = 70
         
@@ -436,8 +441,8 @@ focus_tree = {
         id = USA_conservative_regulation
         icon = GFX_focus_generic_self_management
         text = "Conservative Regulation"
-        prerequisite = { focus = USA_free_market_approach focus = USA_limited_intervention }
-        x = 13
+        prerequisite = { focus = USA_free_market_approach focus = USA_limited_intervention_hoover }
+        x = 36
         y = 5
         cost = 70
         
@@ -458,7 +463,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_2
         text = "Business Recovery Program"
         prerequisite = { focus = USA_conservative_regulation }
-        x = 13
+        x = 36
         y = 6
         cost = 70
         
@@ -489,7 +494,7 @@ focus_tree = {
         icon = GFX_focus_generic_join_comintern
         text = "Conservative Recovery"
         prerequisite = { focus = USA_business_recovery_program }
-        x = 13
+        x = 36
         y = 7
         cost = 70
         
@@ -518,7 +523,7 @@ focus_tree = {
         available = {
             date > 1935.1.1
         }
-        x = 13
+        x = 36
         y = 8
         cost = 70
         
@@ -536,7 +541,7 @@ focus_tree = {
         icon = GFX_focus_generic_navy_battleship2
         text = "Naval Program"
         prerequisite = { focus = USA_hoover_military_buildup }
-        x = 12
+        x = 34
         y = 9
         cost = 70
         
@@ -564,7 +569,7 @@ focus_tree = {
         icon = GFX_focus_generic_army_tanks2
         text = "Army Modernization"
         prerequisite = { focus = USA_hoover_military_buildup }
-        x = 14
+        x = 38
         y = 9
         cost = 70
         
@@ -604,7 +609,7 @@ focus_tree = {
             focus = USA_hoover_naval_program
             focus = USA_hoover_army_modernization
         }
-        x = 13
+        x = 36
         y = 10
         cost = 70
         
@@ -634,7 +639,7 @@ focus_tree = {
         icon = GFX_focus_usa_america_first
         text = "First Hundred Days"
         prerequisite = { focus = USA_fdr_victory }
-        x = 9
+        x = 28
         y = 3
         cost = 70
         
@@ -660,7 +665,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_1
         text = "Economic Relief"
         prerequisite = { focus = USA_first_hundred_days }
-        x = 6
+        x = 20
         y = 4
         cost = 70
         
@@ -681,11 +686,11 @@ focus_tree = {
     
     # AGRICULTURE ADJUSTMENT ACT SUB-BRANCH
     focus = {
-        id = USA_agricultural_adjustment_act
+        id = USA_agricultural_adjustment_act_1933
         icon = GFX_focus_generic_agrarian_reform
         text = "AAA"
         prerequisite = { focus = USA_economic_relief }
-        x = 4
+        x = 16
         y = 5
         cost = 70
         
@@ -702,8 +707,8 @@ focus_tree = {
         id = USA_farm_subsidies
         icon = GFX_focus_generic_agrarian_society
         text = "Farm Subsidies"
-        prerequisite = { focus = USA_agricultural_adjustment_act }
-        x = 4
+        prerequisite = { focus = USA_agricultural_adjustment_act_1933 }
+        x = 16
         y = 6
         cost = 70
         
@@ -714,12 +719,12 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     has_resources_amount = { 
-                        resource = food
+                        resource = steel
                         amount > 0
                     }
                 }
                 add_resource = {
-                    type = food
+                    type = steel
                     amount = 8
                 }
             }
@@ -731,7 +736,7 @@ focus_tree = {
         icon = GFX_focus_generic_agrarian_reform
         text = "Soil Conservation"
         prerequisite = { focus = USA_farm_subsidies }
-        x = 4
+        x = 16
         y = 7
         cost = 70
         
@@ -743,12 +748,12 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     has_resources_amount = { 
-                        resource = food
+                        resource = steel
                         amount > 0
                     }
                 }
                 add_resource = {
-                    type = food
+                    type = steel
                     amount = 4
                 }
                 add_building_construction = {
@@ -766,7 +771,7 @@ focus_tree = {
         icon = GFX_focus_generic_self_management
         text = "CCC"
         prerequisite = { focus = USA_economic_relief }
-        x = 6
+        x = 20
         y = 5
         cost = 70
         
@@ -784,7 +789,7 @@ focus_tree = {
         icon = GFX_focus_generic_manpower
         text = "Youth Employment"
         prerequisite = { focus = USA_civilian_conservation_corps }
-        x = 6
+        x = 20
         y = 6
         cost = 70
         
@@ -802,7 +807,7 @@ focus_tree = {
         icon = GFX_focus_generic_support_the_left_right
         text = "National Parks"
         prerequisite = { focus = USA_youth_employment }
-        x = 6
+        x = 20
         y = 7
         cost = 70
         
@@ -839,7 +844,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "FERA"
         prerequisite = { focus = USA_economic_relief }
-        x = 8
+        x = 24
         y = 5
         cost = 70
         
@@ -861,7 +866,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Direct Relief"
         prerequisite = { focus = USA_federal_emergency_relief }
-        x = 8
+        x = 24
         y = 6
         cost = 70
         
@@ -879,7 +884,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_3
         text = "Work Programs"
         prerequisite = { focus = USA_direct_relief }
-        x = 8
+        x = 24
         y = 7
         cost = 70
         
@@ -913,7 +918,7 @@ focus_tree = {
         icon = GFX_focus_generic_treaty
         text = "Banking Reform"
         prerequisite = { focus = USA_first_hundred_days }
-        x = 9
+        x = 28
         y = 4
         cost = 70
         
@@ -932,7 +937,7 @@ focus_tree = {
         icon = GFX_focus_generic_treaty
         text = "Emergency Banking Act"
         prerequisite = { focus = USA_banking_reform }
-        x = 8
+        x = 26
         y = 5
         cost = 70
         
@@ -953,7 +958,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "Bank Holiday"
         prerequisite = { focus = USA_emergency_banking_act }
-        x = 8
+        x = 26
         y = 6
         cost = 70
         
@@ -963,7 +968,7 @@ focus_tree = {
             add_stability = 0.05
             add_political_power = -25
             add_timed_idea = {
-                idea = USA_bank_holiday
+                idea = USA_temporary_bank_holiday
                 days = 30
             }
         }
@@ -975,7 +980,7 @@ focus_tree = {
         icon = GFX_focus_generic_self_management
         text = "Glass-Steagall Act"
         prerequisite = { focus = USA_banking_reform }
-        x = 9
+        x = 28
         y = 5
         cost = 70
         
@@ -994,7 +999,7 @@ focus_tree = {
         icon = GFX_focus_generic_treaty
         text = "Banking Separation"
         prerequisite = { focus = USA_glass_steagall_act }
-        x = 9
+        x = 28
         y = 6
         cost = 70
         
@@ -1012,7 +1017,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "FDIC Insurance"
         prerequisite = { focus = USA_banking_separation }
-        x = 9
+        x = 28
         y = 7
         cost = 70
         
@@ -1037,7 +1042,7 @@ focus_tree = {
         icon = GFX_focus_generic_support_the_left_right
         text = "SEC"
         prerequisite = { focus = USA_banking_reform }
-        x = 10
+        x = 30
         y = 5
         cost = 70
         
@@ -1056,7 +1061,7 @@ focus_tree = {
         icon = GFX_focus_generic_self_management
         text = "Market Regulation"
         prerequisite = { focus = USA_securities_exchange_commission }
-        x = 10
+        x = 30
         y = 6
         cost = 70
         
@@ -1074,7 +1079,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Investor Protection"
         prerequisite = { focus = USA_market_regulation }
-        x = 10
+        x = 30
         y = 7
         cost = 70
         
@@ -1102,7 +1107,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "Labor Reform"
         prerequisite = { focus = USA_first_hundred_days }
-        x = 12
+        x = 36
         y = 4
         cost = 70
         
@@ -1121,7 +1126,7 @@ focus_tree = {
         icon = GFX_focus_generic_the_giant_wakes
         text = "NIRA"
         prerequisite = { focus = USA_labor_reform }
-        x = 11
+        x = 32
         y = 5
         cost = 70
         
@@ -1139,7 +1144,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_1
         text = "Industry Codes"
         prerequisite = { focus = USA_national_industrial_recovery_act }
-        x = 11
+        x = 32
         y = 6
         cost = 70
         
@@ -1174,7 +1179,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "Labor Protections"
         prerequisite = { focus = USA_industry_codes }
-        x = 11
+        x = 32
         y = 7
         cost = 70
         
@@ -1193,7 +1198,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_3
         text = "PWA"
         prerequisite = { focus = USA_labor_reform }
-        x = 12
+        x = 36
         y = 5
         cost = 70
         
@@ -1211,7 +1216,7 @@ focus_tree = {
         icon = GFX_focus_generic_construct_civilian
         text = "Public Works"
         prerequisite = { focus = USA_public_works_administration }
-        x = 12
+        x = 36
         y = 6
         cost = 70
         
@@ -1253,7 +1258,7 @@ focus_tree = {
         icon = GFX_focus_generic_construct_infrastructure
         text = "Large Construction"
         prerequisite = { focus = USA_public_works }
-        x = 12
+        x = 36
         y = 7
         cost = 70
         
@@ -1286,7 +1291,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_2
         text = "NRA"
         prerequisite = { focus = USA_labor_reform }
-        x = 13
+        x = 40
         y = 5
         cost = 70
         
@@ -1304,7 +1309,7 @@ focus_tree = {
         icon = GFX_focus_generic_little_entente
         text = "Blue Eagle"
         prerequisite = { focus = USA_national_recovery_administration }
-        x = 13
+        x = 40
         y = 6
         cost = 70
         
@@ -1325,7 +1330,7 @@ focus_tree = {
         icon = GFX_focus_generic_foreign_trade
         text = "Business Cooperation"
         prerequisite = { focus = USA_blue_eagle }
-        x = 13
+        x = 40
         y = 7
         cost = 70
         
@@ -1334,6 +1339,77 @@ focus_tree = {
         completion_reward = {
             add_stability = 0.05
             add_political_power = 25
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    # NEW FOCUSES - PROHIBITION REPEAL
+    
+    focus = {
+        id = USA_prohibition_debate
+        icon = GFX_focus_generic_self_management
+        text = "Prohibition Debate"
+        prerequisite = { focus = USA_fdr_victory }
+        x = 44
+        y = 3
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            country_event = { id = usa_depression.prohibition_debate days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_twenty_first_amendment
+        icon = GFX_focus_generic_support_the_left_right
+        text = "21st Amendment"
+        prerequisite = { focus = USA_prohibition_debate }
+        x = 44
+        y = 4
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.05
+            add_ideas = USA_prohibition_repealed
+            country_event = { id = usa_depression.prohibition_repeal days = 1 }
+        }
+    }
+    
+    focus = {
+        id = USA_alcohol_taxation
+        icon = GFX_focus_generic_concessions
+        text = "Alcohol Taxation"
+        prerequisite = { focus = USA_twenty_first_amendment }
+        x = 44
+        y = 5
+        cost = 70
+        
+        available_if_capitulated = yes
+        
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+            add_ideas = USA_alcohol_tax_revenue
             random_owned_controlled_state = {
                 limit = {
                     free_building_slots = {
@@ -1373,7 +1449,7 @@ focus_tree = {
         available = {
             date > 1935.5.1
         }
-        x = 9
+        x = 28
         y = 8
         cost = 70
         
@@ -1391,7 +1467,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Schechter Decision"
         prerequisite = { focus = USA_supreme_court_challenge }
-        x = 8
+        x = 26
         y = 9
         cost = 70
         
@@ -1412,7 +1488,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "NIRA Invalidated"
         prerequisite = { focus = USA_schechter_decision }
-        x = 8
+        x = 26
         y = 10
         cost = 70
         
@@ -1433,7 +1509,7 @@ focus_tree = {
         icon = GFX_focus_generic_home_defense
         text = "Court Packing Plan"
         prerequisite = { focus = USA_supreme_court_challenge }
-        x = 10
+        x = 30
         y = 9
         cost = 70
         
@@ -1451,7 +1527,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Political Backlash"
         prerequisite = { focus = USA_court_packing_plan }
-        x = 10
+        x = 30
         y = 10
         cost = 70
         
@@ -1482,7 +1558,7 @@ focus_tree = {
         available = {
             date > 1935.6.1
         }
-        x = 9
+        x = 28
         y = 11
         cost = 70
         
@@ -1502,7 +1578,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "Wagner Act"
         prerequisite = { focus = USA_second_new_deal }
-        x = 7
+        x = 22
         y = 12
         cost = 70
         
@@ -1521,7 +1597,7 @@ focus_tree = {
         icon = GFX_focus_generic_strike_deal
         text = "NLRB Creation"
         prerequisite = { focus = USA_wagner_act }
-        x = 7
+        x = 22
         y = 13
         cost = 70
         
@@ -1542,7 +1618,7 @@ focus_tree = {
         icon = GFX_focus_generic_join_comintern
         text = "Labor Movement"
         prerequisite = { focus = USA_nlrb_creation }
-        x = 7
+        x = 22
         y = 14
         cost = 70
         
@@ -1568,7 +1644,7 @@ focus_tree = {
         icon = GFX_focus_generic_self_management
         text = "Social Security Act"
         prerequisite = { focus = USA_second_new_deal }
-        x = 9
+        x = 28
         y = 12
         cost = 70
         
@@ -1587,7 +1663,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Old Age Benefits"
         prerequisite = { focus = USA_social_security_act }
-        x = 8
+        x = 26
         y = 13
         cost = 70
         
@@ -1608,7 +1684,7 @@ focus_tree = {
         icon = GFX_focus_generic_selfpropelled_equipment
         text = "Unemployment Insurance"
         prerequisite = { focus = USA_social_security_act }
-        x = 10
+        x = 30
         y = 13
         cost = 70
         
@@ -1632,7 +1708,7 @@ focus_tree = {
             focus = USA_old_age_benefits
             focus = USA_unemployment_insurance
         }
-        x = 9
+        x = 28
         y = 14
         cost = 70
         
@@ -1657,7 +1733,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_3
         text = "WPA"
         prerequisite = { focus = USA_second_new_deal }
-        x = 11
+        x = 34
         y = 12
         cost = 70
         
@@ -1676,7 +1752,7 @@ focus_tree = {
         icon = GFX_focus_generic_industry_1
         text = "Massive Employment"
         prerequisite = { focus = USA_works_progress_administration }
-        x = 10
+        x = 32
         y = 13
         cost = 70
         
@@ -1706,7 +1782,7 @@ focus_tree = {
         icon = GFX_focus_generic_military_mission
         text = "Federal Arts Project"
         prerequisite = { focus = USA_works_progress_administration }
-        x = 12
+        x = 36
         y = 13
         cost = 70
         
@@ -1727,7 +1803,7 @@ focus_tree = {
             focus = USA_massive_employment
             focus = USA_federal_arts_project
         }
-        x = 11
+        x = 34
         y = 14
         cost = 70
         
@@ -1795,7 +1871,7 @@ focus_tree = {
         text = "Regional Development"
         prerequisite = { focus = USA_national_recovery_administration }
         prerequisite = { focus = USA_public_works_administration }
-        x = 15
+        x = 48
         y = 8
         cost = 70
         
@@ -1814,7 +1890,7 @@ focus_tree = {
         icon = GFX_focus_generic_hydro_power
         text = "TVA"
         prerequisite = { focus = USA_regional_development }
-        x = 13
+        x = 44
         y = 9
         cost = 70
         
@@ -1840,7 +1916,7 @@ focus_tree = {
         icon = GFX_focus_generic_hydro_power
         text = "Flood Control"
         prerequisite = { focus = USA_tennessee_valley_authority }
-        x = 13
+        x = 44
         y = 10
         cost = 70
         
@@ -1870,7 +1946,7 @@ focus_tree = {
         icon = GFX_focus_generic_construction
         text = "Hydroelectric Power"
         prerequisite = { focus = USA_flood_control }
-        x = 13
+        x = 44
         y = 11
         cost = 70
         
@@ -1881,7 +1957,7 @@ focus_tree = {
             add_stability = 0.05
             371 = { # Tennessee
                 add_resource = {
-                    type = electricity
+                    type = oil
                     amount = 8
                 }
                 add_building_construction = {
@@ -1906,7 +1982,7 @@ focus_tree = {
         icon = GFX_focus_generic_electricity
         text = "REA"
         prerequisite = { focus = USA_regional_development }
-        x = 15
+        x = 48
         y = 9
         cost = 70
         
@@ -1924,7 +2000,7 @@ focus_tree = {
         icon = GFX_focus_generic_electricity
         text = "Rural Electrification"
         prerequisite = { focus = USA_rural_electrification_admin }
-        x = 15
+        x = 48
         y = 10
         cost = 70
         
@@ -1970,7 +2046,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Modern Rural Life"
         prerequisite = { focus = USA_rural_electrification }
-        x = 15
+        x = 48
         y = 11
         cost = 70
         
@@ -1996,7 +2072,7 @@ focus_tree = {
         icon = GFX_focus_generic_agrarian_reform
         text = "Dust Bowl Response"
         prerequisite = { focus = USA_regional_development }
-        x = 17
+        x = 52
         y = 9
         cost = 70
         
@@ -2014,7 +2090,7 @@ focus_tree = {
         icon = GFX_focus_generic_agrarian_society
         text = "Soil Management"
         prerequisite = { focus = USA_dust_bowl_response }
-        x = 17
+        x = 52
         y = 10
         cost = 70
         
@@ -2046,7 +2122,7 @@ focus_tree = {
         icon = GFX_focus_generic_concessions
         text = "Migrant Assistance"
         prerequisite = { focus = USA_soil_management }
-        x = 17
+        x = 52
         y = 11
         cost = 70
         
@@ -2082,7 +2158,7 @@ focus_tree = {
         available = {
             date > 1937.5.1
         }
-        x = 12
+        x = 38
         y = 12
         cost = 70
         
@@ -2107,7 +2183,7 @@ focus_tree = {
         icon = GFX_focus_generic_the_giant_wakes
         text = "Renewed Spending"
         prerequisite = { focus = USA_1937_recession }
-        x = 12
+        x = 38
         y = 13
         cost = 70
         
@@ -2132,7 +2208,7 @@ focus_tree = {
         icon = GFX_focus_generic_treaty
         text = "Economic Thesis"
         prerequisite = { focus = USA_renewed_spending }
-        x = 12
+        x = 38
         y = 14
         cost = 70
         
@@ -2177,7 +2253,7 @@ focus_tree = {
         available = {
             date > 1938.1.1
         }
-        x = 10
+        x = 28
         y = 15
         cost = 70
         
@@ -2196,7 +2272,7 @@ focus_tree = {
         icon = GFX_focus_generic_tank_production
         text = "Military Industrialization"
         prerequisite = { focus = USA_war_preparations }
-        x = 8
+        x = 22
         y = 16
         cost = 70
         
@@ -2227,7 +2303,7 @@ focus_tree = {
         icon = GFX_focus_generic_navy_battleship2
         text = "Naval Expansion"
         prerequisite = { focus = USA_war_preparations }
-        x = 10
+        x = 28
         y = 16
         cost = 70
         
@@ -2255,7 +2331,7 @@ focus_tree = {
         icon = GFX_focus_generic_aluminum
         text = "Strategic Resources"
         prerequisite = { focus = USA_war_preparations }
-        x = 12
+        x = 34
         y = 16
         cost = 70
         
@@ -2295,7 +2371,7 @@ focus_tree = {
             focus = USA_naval_expansion
             focus = USA_strategic_resources
         }
-        x = 10
+        x = 28
         y = 17
         cost = 70
         
@@ -2321,6 +2397,7 @@ focus_tree = {
             add_war_support = 0.15
         }
     }
+}
     
     # NEW FOCUSES - PROHIBITION REPEAL
     
@@ -2392,4 +2469,3 @@ focus_tree = {
             }
         }
     }
-}

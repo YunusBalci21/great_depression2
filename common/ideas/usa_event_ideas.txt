@@ -1,6 +1,6 @@
 ideas = {
     country = {
-        USA_bank_holiday = {
+        USA_temporary_bank_holiday = {
             picture = great_depression
             
             modifier = {

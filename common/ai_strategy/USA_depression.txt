@@ -1,53 +1,265 @@
-# File: common/ai_strategy/USA_depression.txt
-
-# Historical New Deal path - FDR
-USA_fdr_new_deal = {
-    allowed = {
-        tag = USA
-    }
-    
+# AI strategy for historical focus path
+USA_depression_historical_fdr = {
     enable = {
+        tag = USA
+        date < 1936.1.1
         has_game_rule = {
             rule = USA_ai_behavior
             option = DEFAULT
         }
-        NOT = { has_country_flag = hoover_wins_1932 }
     }
     
-    abort_when_not_enabled = yes
+    abort = { always = no }
     
-    # Initial economic crisis response
-    ai_strategy = {
-        type = focus_priority
-        id = USA_wall_street_crash
-        value = 100
+    ai_national_focuses = {
+        # Initial response
+        USA_wall_street_crash = 100
+        USA_hoover_administration = 90
+        USA_voluntary_measures = 80
+        USA_business_coordination = 80
+        USA_rfc_establishment = 75
+        USA_emergency_loans = 75
+        USA_smoot_hawley = 70
+        USA_tariff_protection = 70
+        USA_bonus_army = 100
+        USA_macarthur_suppression = 90
+        
+        # Election path - Historical FDR Victory
+        USA_1932_election = 100
+        USA_fdr_victory = 100
+        USA_first_hundred_days = 100
+        
+        # First New Deal
+        USA_economic_relief = 90
+        USA_federal_emergency_relief = 90
+        USA_direct_relief = 85
+        USA_work_programs = 85
+        USA_civilian_conservation_corps = 85
+        USA_youth_employment = 80
+        USA_national_parks = 80
+        USA_agricultural_adjustment_act_1933 = 85  # Fixed name
+        USA_farm_subsidies = 80
+        USA_soil_conservation = 80
+        
+        # Banking and Financial reform
+        USA_banking_reform = 90
+        USA_emergency_banking_act = 90
+        USA_bank_holiday = 85
+        USA_glass_steagall_act = 90
+        USA_banking_separation = 85
+        USA_fdic_insurance = 85
+        USA_securities_exchange_commission = 85
+        USA_market_regulation = 80
+        USA_investor_protection = 80
+        
+        # Labor reform
+        USA_labor_reform = 90
+        USA_national_industrial_recovery_act = 90
+        USA_industry_codes = 85
+        USA_labor_protections = 85
+        USA_public_works_administration = 90
+        USA_public_works = 85
+        USA_large_construction = 85
+        USA_national_recovery_administration = 85
+        USA_blue_eagle = 80
+        USA_business_cooperation = 80
+        
+        # Prohibition Repeal
+        USA_prohibition_debate = 70
+        USA_twenty_first_amendment = 70
+        USA_alcohol_taxation = 65
+        
+        # Supreme Court Fight
+        USA_supreme_court_challenge = 100
+        USA_schechter_decision = 100
+        USA_nira_invalidated = 100
+        USA_court_packing_plan = 100
+        USA_political_backlash = 100
+        
+        # Second New Deal
+        USA_second_new_deal = 100
+        USA_wagner_act = 90
+        USA_nlrb_creation = 85
+        USA_labor_movement = 85
+        USA_social_security_act = 90
+        USA_old_age_benefits = 85
+        USA_unemployment_insurance = 85
+        USA_safety_net = 85
+        USA_works_progress_administration = 90
+        USA_massive_employment = 85
+        USA_federal_arts_project = 80
+        USA_national_infrastructure = 85
+        
+        # Regional Development
+        USA_regional_development = 80
+        USA_tennessee_valley_authority = 85
+        USA_flood_control = 80
+        USA_hydroelectric_power = 80
+        USA_rural_electrification_admin = 85
+        USA_rural_electrification = 80
+        USA_modern_rural_life = 80
+        USA_dust_bowl_response = 85
+        USA_soil_management = 80
+        USA_migrant_assistance = 80
+        
+        # 1937 Recession and Recovery
+        USA_1937_recession = 100
+        USA_renewed_spending = 100
+        USA_economic_thesis = 90
+        
+        # War Preparations - Lower priority as they come later
+        USA_war_preparations = 75
+        USA_military_industrialization = 70
+        USA_naval_expansion = 70
+        USA_strategic_resources = 70
+        USA_wartime_production_board = 65
+    }
+}
+
+# AI strategy for alternative Hoover second term
+USA_depression_hoover_term2 = {
+    enable = {
+        tag = USA
+        date < 1936.1.1
     }
     
-    ai_strategy = {
-        type = focus_priority
-        id = USA_hoover_administration
-        value = 90
+    abort = { always = no }
+    
+    ai_national_focuses = {
+        # Initial response
+        USA_wall_street_crash = 100
+        USA_hoover_administration = 90
+        USA_voluntary_measures = 80
+        USA_business_coordination = 80
+        USA_rfc_establishment = 75
+        USA_emergency_loans = 75
+        USA_smoot_hawley = 70
+        USA_tariff_protection = 70
+        USA_bonus_army = 100
+        USA_macarthur_suppression = 90
+        
+        # Election path - Alternative Hoover Victory
+        USA_1932_election = 100
+        USA_hoover_second_term = 100
+        USA_continued_austerity = 90
+        USA_free_market_approach = 85
+        USA_conservative_regulation = 85
+        USA_business_recovery_program = 80
+        USA_conservative_recovery = 80
+        
+        # Military Buildup
+        USA_hoover_military_buildup = 75
+        USA_hoover_naval_program = 70
+        USA_hoover_army_modernization = 70
+        USA_hoover_war_preparedness = 65
+    }
+}
+
+# AI strategy for decisions
+USA_depression_decisions = {
+    enable = {
+        tag = USA
+        has_idea = great_depression_severe
     }
     
-    ai_strategy = {
-        type = focus_priority
-        id = USA_1932_election
-        value = 100
+    abort = { always = no }
+    
+    # Using ai_will_do for decision priorities instead of type = decision
+    ai_will_do = {
+        factor = 1
+        modifier = {
+            factor = 10
+            id = usa_emergency_relief
+        }
+        modifier = {
+            factor = 10
+            id = usa_federal_housing_program
+        }
+        modifier = {
+            factor = 9
+            id = usa_nlrb_enforcement
+        }
+        modifier = {
+            factor = 8
+            id = usa_expand_rural_electrification
+        }
+        modifier = {
+            factor = 9
+            id = usa_expand_social_security
+        }
+        modifier = {
+            factor = 7
+            id = usa_federal_writers_project
+        }
+        modifier = {
+            factor = 8
+            id = usa_additional_tva_dam
+        }
+        modifier = {
+            factor = 8
+            id = usa_great_plains_conservation
+        }
+        modifier = {
+            factor = 7.5
+            id = usa_migrant_worker_camp
+        }
+        modifier = {
+            factor = 8.5
+            id = usa_northeast_industrial_recovery
+        }
+        
+        # Once prohibition is repealed
+        modifier = {
+            factor = 7.5
+            id = usa_expand_brewing_industry
+        }
+        modifier = {
+            factor = 8
+            id = usa_increase_alcohol_taxes
+        }
+        
+        # Military decisions come later
+        modifier = {
+            factor = 7.5
+            id = usa_naval_expansion_program
+        }
+        modifier = {
+            factor = 7
+            id = usa_modernize_army_equipment
+        }
+        modifier = {
+            factor = 7
+            id = usa_expand_air_corps
+        }
+        modifier = {
+            factor = 6.5
+            id = usa_strategic_stockpiling
+        }
+    }
+}
+
+# AI strategy for handling events
+USA_depression_events = {
+    enable = {
+        tag = USA
+        has_idea = great_depression_severe
     }
     
-    ai_strategy = {
-        type = focus_priority
-        id = USA_fdr_victory
-        value = 100
+    abort = { always = no }
+    
+    # Use ai_chance in events instead of this
+}
+
+# AI strategy for building focus
+USA_depression_buildings = {
+    enable = {
+        tag = USA
+        has_idea = great_depression_severe
     }
     
-    ai_strategy = {
-        type = focus_priority
-        id = USA_first_hundred_days
-        value = 100
-    }
+    abort = { always = no }
     
-    # Building priorities
+    # Prioritize infrastructure and civilian factories early
     ai_strategy = {
         type = building_target
         id = infrastructure
@@ -59,121 +271,20 @@ USA_fdr_new_deal = {
         id = industrial_complex
         value = 40
     }
-}
-
-# Alternative Hoover path
-USA_hoover_second_term = {
-    allowed = {
-        tag = USA
-    }
     
-    enable = {
-        has_game_rule = {
-            rule = USA_ai_behavior
-            option = ALTERNATE_HOOVER
-        }
-        has_country_flag = hoover_wins_1932
-    }
-    
-    abort_when_not_enabled = yes
-    
-    # Initial response
-    ai_strategy = {
-        type = focus_priority
-        id = USA_wall_street_crash
-        value = 100
-    }
-    
-    ai_strategy = {
-        type = focus_priority
-        id = USA_hoover_administration
-        value = 90
-    }
-    
-    ai_strategy = {
-        type = focus_priority
-        id = USA_1932_election
-        value = 100
-    }
-    
-    ai_strategy = {
-        type = focus_priority
-        id = USA_hoover_second_term
-        value = 100
-    }
-    
-    ai_strategy = {
-        type = focus_priority
-        id = USA_continued_austerity
-        value = 90
-    }
-    
-    # Building priorities - more military focus
-    ai_strategy = {
-        type = building_target
-        id = industrial_complex
-        value = 30
-    }
-    
-    ai_strategy = {
-        type = building_target
-        id = arms_factory
-        value = 40
-    }
-}
-
-# Decision priorities for New Deal path
-USA_new_deal_decisions = {
-    allowed = {
-        tag = USA
-    }
-    
-    enable = {
-        has_completed_focus = USA_fdr_victory
-    }
-    
-    abort_when_not_enabled = yes
-    
-    ai_strategy = {
-        type = decision_war_economy
-        id = usa_emergency_relief
-        value = 100
-    }
-    
-    ai_strategy = {
-        type = decision_war_economy
-        id = usa_federal_housing_program
-        value = 100
-    }
-}
-
-# War preparation priorities
-USA_war_preparation = {
-    allowed = {
-        tag = USA
-    }
-    
-    enable = {
-        date > 1937.1.1
-    }
-    
-    abort_when_not_enabled = yes
-    
-    ai_strategy = {
-        type = focus_priority
-        id = USA_war_preparations
-        value = 75
-    }
-    
+    # Later prioritize military factories as war approaches
     ai_strategy = {
         type = building_target
         id = arms_factory
         value = 30
+        # Use conditions in the value calculation instead of magnifier
+        # which seems to be causing errors
     }
     
     ai_strategy = {
         type = building_target
         id = dockyard
         value = 20
+        # Use conditions in the value calculation instead of magnifier
     }
 }

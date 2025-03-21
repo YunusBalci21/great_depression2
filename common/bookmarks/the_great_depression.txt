@@ -72,6 +72,7 @@ bookmarks = {
         
         effect = {
             randomize_weather = 12345
+            set_global_flag = great_depression_bookmark
         }
     }
 }

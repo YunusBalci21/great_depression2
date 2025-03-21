@@ -53,3 +53,32 @@ usa_military_buildup = {
         }
     }
 }
+
+usa_prohibition_management = {
+    icon = generic_political_discourse
+    
+    allowed = {
+        tag = USA
+    }
+    
+    visible = {
+        tag = USA
+        OR = {
+            has_country_flag = prohibition_in_effect
+            has_completed_focus = USA_twenty_first_amendment
+        }
+    }
+}
+
+usa_regional_recovery = {
+    icon = generic_construction
+    
+    allowed = {
+        tag = USA
+    }
+    
+    visible = {
+        tag = USA
+        has_completed_focus = USA_regional_development
+    }
+}

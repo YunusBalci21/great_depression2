@@ -1,0 +1,65 @@
+ideas = {
+    country = {
+        USA_conservative_financial_regulation = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_conservative_military_expansion = {
+            picture = generic_prepare_civil_war
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                production_speed_dockyard_factor = 0.10
+                industrial_capacity_factory = 0.05
+                war_support_factor = 0.05
+            }
+        }
+        
+        USA_business_recovery_incentives = {
+            picture = generic_production_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_industrial_complex_factor = 0.15
+                consumer_goods_factor = -0.05
+            }
+        }
+        
+        USA_conservative_war_production = {
+            picture = usa_plan_war_production
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                production_speed_dockyard_factor = 0.15
+                conversion_cost_civ_to_mil_factor = -0.2
+                industrial_capacity_factory = 0.10
+            }
+        }
+        
+        USA_prohibition_repealed = {
+            picture = generic_political_support
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = 0.02
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_alcohol_tax_revenue = {
+            picture = generic_economic_increase
+            
+            modifier = {
+                consumer_goods_factor = 0.03
+                political_power_gain = 0.05
+                stability_factor = 0.02
+            }
+        }
+    }
+}

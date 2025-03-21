@@ -80,3 +80,196 @@
  
  war_economy_preparations:0 "War Economy Preparations"
  war_economy_preparations_desc:0 "With global conflict appearing increasingly likely, the nation is beginning to shift toward a war economy. Defense industries are expanding, strategic resources are being stockpiled, and military production capacity is increasing."
+
+ # USA Depression Events - Second Part
+ usa_depression.election_1932_hoover_news.t:0 "Herbert Hoover Re-elected President"
+ usa_depression.election_1932_hoover_news.d:0 "In a surprising turn of events, Herbert Hoover has won re-election as President of the United States, defeating Democratic challenger Franklin D. Roosevelt. Despite widespread economic hardship under his administration, Hoover convinced enough voters that his policies needed more time to work and that Roosevelt's proposed 'New Deal' would be too radical a departure from American traditions. Hoover has promised a renewed effort to address the Depression through voluntary cooperation with business and limited government action."
+ usa_depression.election_1932_hoover_news.a:0 "Interesting development"
+ usa_depression.election_1932_hoover_news.b:0 "A vote for continuity"
+
+ usa_depression.fdr_inauguration.t:0 "Roosevelt's Inauguration"
+ usa_depression.fdr_inauguration.d:0 "Franklin D. Roosevelt has been inaugurated as the 32nd President of the United States. In his powerful inaugural address, he declared, 'The only thing we have to fear is fear itself,' calling for courage in the face of the economic crisis. Roosevelt immediately announced a four-day national banking holiday to prevent further bank failures, the first of many decisive actions planned under his administration. The new president has asked Congress for emergency powers to combat the Depression 'as we would treat the emergency of a war.'"
+ usa_depression.fdr_inauguration.a:0 "A new era begins"
+
+ usa_depression.bank_holiday_news.t:0 "United States Declares Banking Holiday"
+ usa_depression.bank_holiday_news.d:0 "President Franklin Roosevelt has declared a nationwide banking holiday, closing all banks across the United States for four days. This unprecedented action aims to stop the wave of bank failures that has devastated the American financial system. During the holiday, banks will be examined and only sound institutions will be allowed to reopen. Roosevelt has also called an emergency session of Congress to pass banking reform legislation, indicating a dramatic shift toward active government intervention in the economy."
+ usa_depression.bank_holiday_news.a:0 "A bold move"
+ usa_depression.bank_holiday_news.b:0 "Desperate times call for desperate measures"
+
+ usa_depression.hoover_second_term.t:0 "Hoover Begins Second Term"
+ usa_depression.hoover_second_term.d:0 "Herbert Hoover has been inaugurated for his second term as President of the United States. In his address, Hoover reaffirmed his belief in limited government and voluntary cooperation as the path to economic recovery. He has outlined plans to balance the federal budget, maintain the gold standard, and encourage business self-regulation. Hoover also pledged to continue the work of the Reconstruction Finance Corporation while opposing 'radical' proposals for direct government relief to individuals."
+ usa_depression.hoover_second_term.a:0 "We must stay the course"
+
+ usa_depression.first_hundred_days.t:0 "The First Hundred Days"
+ usa_depression.first_hundred_days.d:0 "President Roosevelt and the Democratic Congress have embarked on an unprecedented flurry of legislation during his first hundred days in office. Congress has passed bills establishing the Civilian Conservation Corps, the Federal Emergency Relief Administration, the Agricultural Adjustment Administration, and many other new agencies. The Banking Act has reformed the financial system, while the Tennessee Valley Authority will develop an entire region. This legislative onslaught represents the most dramatic peacetime expansion of federal government power in American history."
+ usa_depression.first_hundred_days.a:0 "A revolution in American governance"
+
+ usa_depression.economic_relief_programs.t:0 "New Deal Economic Relief"
+ usa_depression.economic_relief_programs.d:0 "President Roosevelt has initiated a sweeping array of economic relief programs designed to provide immediate assistance to those hardest hit by the Depression. The Federal Emergency Relief Administration is distributing funds to state relief programs, the Civilian Conservation Corps is employing young men in conservation work, and the Civil Works Administration is creating temporary jobs on public projects. These programs represent a fundamental shift from Hoover's approach, with the federal government now directly providing relief to citizens."
+ usa_depression.economic_relief_programs.a:0 "Help is finally reaching those in need"
+
+ usa_depression.aaa_implementation.t:0 "Agricultural Adjustment Act"
+ usa_depression.aaa_implementation.d:0 "The Agricultural Adjustment Administration has begun implementing programs to raise farm prices, which had fallen catastrophically during the Depression. The AAA is paying farmers to reduce production of key crops and livestock, an unprecedented intervention in agricultural markets. While controversial, these measures aim to restore farm income to pre-Depression levels. Critics argue that reducing food production during an economic crisis is counterproductive, while defenders point to the desperate situation of American farmers."
+ usa_depression.aaa_implementation.a:0 "Our farmers need this support"
+
+ usa_depression.ccc_established.t:0 "Civilian Conservation Corps"
+ usa_depression.ccc_established.d:0 "The Civilian Conservation Corps has begun operations, employing thousands of young men in conservation projects across the country. These workers, often from urban areas, are planting trees, preventing soil erosion, building parks, and undertaking other environmental improvements. The program provides employment, removes youth from overcrowded labor markets, teaches useful skills, and improves public lands. The CCC camps are run with military-style discipline but offer education programs alongside the conservation work."
+ usa_depression.ccc_established.a:0 "A win for both employment and conservation"
+
+ usa_depression.fera_established.t:0 "Federal Emergency Relief Administration"
+ usa_depression.fera_established.d:0 "The Federal Emergency Relief Administration has been established under the leadership of Harry Hopkins, a close Roosevelt advisor. FERA is providing federal funds to state relief programs, which had been overwhelmed by the Depression. Half the funds are direct grants, while the rest require state matching. Hopkins, known for his efficiency, is pushing states to distribute aid quickly to those in need. FERA is also developing work relief projects to provide jobs rather than direct handouts where possible."
+ usa_depression.fera_established.a:0 "Relief must reach people quickly"
+
+ # USA Depression Events - Third Part
+ usa_depression.banking_reform.t:0 "Banking Reform"
+ usa_depression.banking_reform.d:0 "President Roosevelt has initiated comprehensive reform of the banking system, beginning with the Emergency Banking Act passed during his first days in office. Banks have been reopened under federal supervision, with only sound institutions permitted to resume operations. The Federal Deposit Insurance Corporation has been established to insure bank deposits, while the Glass-Steagall Act has separated commercial and investment banking. These reforms aim to restore public confidence in banks and prevent future financial crises."
+ usa_depression.banking_reform.a:0 "Trust in our banking system must be restored"
+
+ usa_depression.glass_steagall.t:0 "Glass-Steagall Banking Act"
+ usa_depression.glass_steagall.d:0 "Congress has passed the Glass-Steagall Banking Act, separating commercial and investment banking activities. This landmark legislation prevents commercial banks from underwriting securities, a practice blamed for fueling speculation before the crash. The act also establishes the Federal Deposit Insurance Corporation, guaranteeing bank deposits up to $2,500. These reforms aim to create a more stable banking system and restore public confidence in financial institutions."
+ usa_depression.glass_steagall.a:0 "A necessary safeguard"
+
+ usa_depression.sec_established.t:0 "Securities and Exchange Commission"
+ usa_depression.sec_established.d:0 "The Securities and Exchange Commission has been established to regulate stock markets and prevent the abuses that contributed to the 1929 crash. The SEC will require full disclosure of information about securities being sold, register stock exchanges and brokers, and police against fraud and market manipulation. Joseph P. Kennedy, a controversial choice due to his own stock market activities, has been appointed as the first chairman with Roosevelt reportedly stating, 'It takes a thief to catch a thief.'"
+ usa_depression.sec_established.a:0 "Wall Street will finally have oversight"
+
+ usa_depression.labor_reform.t:0 "Labor Reform"
+ usa_depression.labor_reform.d:0 "The Roosevelt administration has begun implementing significant labor reforms as part of the New Deal. The National Industrial Recovery Act includes provisions guaranteeing workers' right to organize and bargain collectively. The National Labor Relations Board will enforce these protections, while the Fair Labor Standards Act will establish minimum wages and maximum hours. These reforms represent a historic shift in federal policy, with the government now actively supporting labor rights rather than siding with employers in industrial disputes."
+ usa_depression.labor_reform.a:0 "Workers deserve a fair deal too"
+
+ usa_depression.nira_established.t:0 "National Industrial Recovery Act"
+ usa_depression.nira_established.d:0 "President Roosevelt has signed the National Industrial Recovery Act, a centerpiece of the early New Deal. The NIRA aims to foster industrial recovery through business-government cooperation, with industries developing codes of fair competition that set prices, wages, and working conditions. These codes are exempt from antitrust laws. The act also guarantees workers' right to organize and establishes the Public Works Administration to create jobs through public construction projects. This represents an unprecedented peacetime expansion of federal economic regulation."
+ usa_depression.nira_established.a:0 "A bold experiment in economic planning"
+
+ usa_depression.pwa_established.t:0 "Public Works Administration"
+ usa_depression.pwa_established.d:0 "The Public Works Administration has been established under Secretary of the Interior Harold Ickes to construct major public infrastructure projects across the nation. Unlike work relief programs focused on creating jobs quickly, the PWA prioritizes substantial, high-quality projects including dams, bridges, hospitals, schools, and government buildings. Ickes, known for his caution and honesty, insists on careful planning and competitive bidding, ensuring efficient use of funds but slower implementation than other New Deal agencies."
+ usa_depression.pwa_established.a:0 "Building for America's future"
+
+ usa_depression.nra_established.t:0 "National Recovery Administration"
+ usa_depression.nra_established.d:0 "The National Recovery Administration has been established to implement the industrial codes authorized by the National Industrial Recovery Act. Under the leadership of General Hugh Johnson, the NRA is working with business, labor, and consumer representatives to develop codes of fair competition for each industry. These codes establish minimum wages, maximum hours, child labor restrictions, and price floors. The NRA's Blue Eagle emblem, displayed by participating businesses, has become a symbol of patriotic cooperation in economic recovery."
+ usa_depression.nra_established.a:0 "We do our part"
+
+ usa_depression.schechter_case.t:0 "Supreme Court Challenge"
+ usa_depression.schechter_case.d:0 "The Supreme Court has agreed to hear Schechter Poultry Corp. v. United States, a challenge to the constitutionality of the National Industrial Recovery Act. The Schechter brothers, kosher poultry dealers in Brooklyn, were convicted of violating the NRA's Live Poultry Code by selling unfit chickens and violating wage and hour provisions. Their appeal argues that the NIRA represents an unconstitutional delegation of legislative power to the executive branch and exceeds federal authority under the Commerce Clause. The case threatens a cornerstone of the early New Deal."
+ usa_depression.schechter_case.a:0 "This could undermine everything"
+
+ usa_depression.schechter_aftermath.t:0 "Schechter Decision"
+ usa_depression.schechter_aftermath.d:0 "In a unanimous decision, the Supreme Court has struck down the National Industrial Recovery Act in the Schechter case. Chief Justice Charles Evans Hughes wrote that the NIRA unconstitutionally delegated legislative power to the president and regulated intrastate commerce beyond federal authority. This decision invalidates all NIRA codes and effectively dismantles the National Recovery Administration, a centerpiece of the early New Deal. The ruling raises questions about the constitutionality of other New Deal programs and represents a major setback for the Roosevelt administration."
+ usa_depression.schechter_aftermath.a:0 "We need a new approach"
+
+ usa_depression.court_packing.t:0 "Court Packing Plan"
+ usa_depression.court_packing.d:0 "President Roosevelt has unveiled a controversial plan to reform the Supreme Court, which has struck down several key New Deal programs. The proposal would allow the president to appoint an additional justice for each sitting justice over the age of 70, potentially adding as many as six new justices favorable to the New Deal. While Roosevelt claims the plan aims to improve the Court's efficiency, critics view it as an attempt to undermine judicial independence and upset the constitutional balance of powers."
+ usa_depression.court_packing.a:0 "A necessary step to protect the New Deal"
+
+ usa_depression.court_packing_news.t:0 "Roosevelt Challenges Supreme Court"
+ usa_depression.court_packing_news.d:0 "President Franklin Roosevelt has proposed legislation that would allow him to appoint up to six additional justices to the United States Supreme Court. This dramatic plan comes after the Court struck down several key New Deal programs as unconstitutional. Roosevelt claims the reform aims to improve the Court's efficiency, but critics see it as an attempt to 'pack' the Court with judges favorable to his policies. The proposal has sparked intense debate about the separation of powers in the American constitutional system."
+ usa_depression.court_packing_news.a:0 "A dangerous precedent"
+ usa_depression.court_packing_news.b:0 "Bold leadership in a crisis"
+
+l_english:
+ # USA Depression Events - Fourth Part
+ usa_depression.court_packing_aftermath.t:0 "Court Packing Aftermath"
+ usa_depression.court_packing_aftermath.d:0 "President Roosevelt's Court reform plan has met with fierce opposition from Congress, the press, and much of the public. Many Democrats have joined Republicans in criticizing the proposal as an attack on judicial independence. The controversy has divided the New Deal coalition and diminished Roosevelt's political capital. Ironically, the Supreme Court has begun upholding New Deal legislation in recent decisions, with Justice Owen Roberts switching positions in what some call 'the switch in time that saved nine.'"
+ usa_depression.court_packing_aftermath.a:0 "A political miscalculation"
+
+ usa_depression.second_new_deal.t:0 "Second New Deal"
+ usa_depression.second_new_deal.d:0 "President Roosevelt has launched what observers are calling the 'Second New Deal,' a new wave of legislation even more ambitious than his early programs. This new phase includes the Social Security Act, establishing old-age pensions and unemployment insurance; the Wagner Act, protecting labor rights; and the Works Progress Administration, creating millions of jobs on public projects. Unlike the corporatist approach of the National Recovery Administration, these programs emphasize direct government action and stronger regulation of business."
+ usa_depression.second_new_deal.a:0 "Building on our momentum"
+
+ usa_depression.wagner_act.t:0 "National Labor Relations Act"
+ usa_depression.wagner_act.d:0 "President Roosevelt has signed the National Labor Relations Act, also known as the Wagner Act after its sponsor, Senator Robert Wagner. This landmark legislation guarantees workers' right to organize unions, engage in collective bargaining, and conduct strikes. It establishes the National Labor Relations Board to investigate unfair labor practices and oversee union elections. The Wagner Act represents a historic shift in federal labor policy, with the government now actively protecting workers' rights rather than intervening on behalf of employers."
+ usa_depression.wagner_act.a:0 "A victory for American workers"
+
+ usa_depression.social_security.t:0 "Social Security Act"
+ usa_depression.social_security.d:0 "President Roosevelt has signed the Social Security Act, establishing the first comprehensive federal social insurance system in American history. The act creates a federal old-age pension program funded by payroll taxes, a federal-state unemployment insurance system, and aid programs for dependent children, the blind, and the elderly poor. While more limited than social insurance systems in some European countries, Social Security represents a revolutionary expansion of the federal government's role in providing economic security."
+ usa_depression.social_security.a:0 "Security for our citizens"
+
+ usa_depression.social_security_news.t:0 "United States Establishes Social Security"
+ usa_depression.social_security_news.d:0 "The United States has established its first national social insurance system with the passage of the Social Security Act. The program will provide old-age pensions for retired workers, funded by payroll taxes on employers and employees. The American system is more limited than those in many European countries, with no health insurance component and exemptions for agricultural and domestic workers. Nevertheless, it represents a significant expansion of government responsibility for citizens' economic security."
+ usa_depression.social_security_news.a:0 "America catches up with modern social policy"
+ usa_depression.social_security_news.b:0 "A historic achievement"
+
+ usa_depression.wpa_established.t:0 "Works Progress Administration"
+ usa_depression.wpa_established.d:0 "The Works Progress Administration has been established under Harry Hopkins to provide jobs for unemployed Americans. Unlike earlier programs that funded public works through private contractors, the WPA directly employs workers on a vast array of projects including roads, schools, parks, airports, and public art. The program aims to provide useful work that preserves skills and self-respect rather than simple handouts. Critics call it wasteful, but supporters argue it is both humane and economically stimulating."
+ usa_depression.wpa_established.a:0 "Jobs with dignity"
+
+ usa_depression.regional_development.t:0 "Regional Development Programs"
+ usa_depression.regional_development.d:0 "The Roosevelt administration has launched several ambitious regional development programs as part of the New Deal. The Tennessee Valley Authority is developing an entire river basin with dams, power plants, and flood control; the Rural Electrification Administration is bringing electricity to farms; and the Soil Conservation Service is combating erosion in the Dust Bowl. These programs represent comprehensive planning at a regional scale, addressing environmental challenges while promoting economic development in impoverished areas."
+ usa_depression.regional_development.a:0 "Developing America's neglected regions"
+
+ usa_depression.tva_established.t:0 "Tennessee Valley Authority"
+ usa_depression.tva_established.d:0 "The Tennessee Valley Authority has begun operations as a federally owned corporation to develop the Tennessee River basin across seven states. The TVA will build dams for flood control and hydroelectric power, improve navigation, promote agricultural development, and produce fertilizers. This unprecedented experiment in regional planning aims to transform one of America's poorest areas through integrated resource development. Critics see it as socialist, but supporters view it as visionary regional development."
+ usa_depression.tva_established.a:0 "Harnessing nature for human progress"
+
+ usa_depression.rea_established.t:0 "Rural Electrification Administration"
+ usa_depression.rea_established.d:0 "The Rural Electrification Administration has been established to bring electricity to America's farms. While 90% of urban dwellers have electric service, only 10% of rural Americans enjoy this modern necessity. Private utilities have deemed rural electrification unprofitable, but the REA will provide low-interest loans to cooperative associations of farmers to build their own power lines. This program aims to modernize rural life while stimulating the economy through increased demand for electrical appliances and equipment."
+ usa_depression.rea_established.a:0 "Bringing our farms into the modern age"
+
+ usa_depression.dust_bowl.t:0 "The Dust Bowl"
+ usa_depression.dust_bowl.d:0 "A severe ecological disaster has struck the Great Plains, with massive dust storms blackening skies across several states. Years of drought combined with poor farming practices have led to widespread soil erosion, creating the 'Dust Bowl.' Thousands of farming families, already struggling with the Depression and falling agricultural prices, are abandoning their land and migrating west, particularly to California. This environmental catastrophe compounds the economic crisis and requires immediate federal action."
+ usa_depression.dust_bowl.a:0 "We must address this environmental disaster"
+
+ usa_depression.dust_bowl_news.t:0 "Dust Bowl Ravages American Plains"
+ usa_depression.dust_bowl_news.d:0 "Devastating dust storms are sweeping across the American Great Plains, creating an environmental disaster dubbed the 'Dust Bowl.' Massive clouds of dust have blackened skies from Texas to the Dakotas, smothering crops, livestock, and communities. The catastrophe results from years of drought combined with inappropriate farming techniques that stripped away the natural prairie grass. Thousands of farming families are abandoning their land in what may be the largest internal migration in American history."
+ usa_depression.dust_bowl_news.a:0 "A man-made disaster"
+ usa_depression.dust_bowl_news.b:0 "We need better land management"
+
+l_english:
+ # USA Depression Events - Fifth Part
+ usa_depression.recession_1937.t:0 "Recession of 1937"
+ usa_depression.recession_1937.d:0 "After four years of steady recovery, the American economy has suddenly plunged into a new recession. Industrial production has fallen sharply, unemployment is rising again, and the stock market has declined dramatically. Economists attribute this 'recession within a depression' to several factors: the Federal Reserve's tightening of monetary policy, reductions in federal spending as Roosevelt pursued a balanced budget, and the impact of new Social Security payroll taxes. The setback raises questions about the sustainability of New Deal policies."
+ usa_depression.recession_1937.a:0 "A significant setback"
+
+ usa_depression.war_preparations.t:0 "War Preparations Begin"
+ usa_depression.war_preparations.d:0 "With war spreading in Europe and Asia, the Roosevelt administration has begun shifting its focus toward military preparedness. Congress has approved increased defense spending, and plans are underway to expand the Army and Navy. New agencies are being established to coordinate industrial mobilization, stockpile strategic materials, and convert civilian factories for military production. While still officially neutral, the United States is clearly preparing for the possibility of involvement in these global conflicts."
+ usa_depression.war_preparations.a:0 "We must be ready for any eventuality"
+
+ usa_depression.conservative_recovery.t:0 "Conservative Recovery Program"
+ usa_depression.conservative_recovery.d:0 "President Hoover's conservative approach to economic recovery is showing modest signs of success as some economic indicators improve. The administration has focused on balancing the budget, maintaining the gold standard, and encouraging voluntary business cooperation rather than direct government intervention. While unemployment remains high, business confidence is slowly returning. Hoover has championed this approach as consistent with American traditions of limited government and self-reliance."
+ usa_depression.conservative_recovery.a:0 "Patience is beginning to pay off"
+
+ usa_depression.conservative_war_preparedness.t:0 "Conservative Defense Buildup"
+ usa_depression.conservative_war_preparedness.d:0 "President Hoover has initiated a significant defense buildup in response to growing international tensions. The administration is expanding military spending while encouraging private industry to convert for defense production. Unlike the New Deal approach, Hoover's military industrialization emphasizes private enterprise with limited government direction. The increased spending is helping to stimulate economic recovery while preparing the nation for potential conflicts abroad."
+ usa_depression.conservative_war_preparedness.a:0 "Strong defense and economic recovery go hand in hand"
+
+ usa_depression.prohibition_debate.t:0 "Prohibition Debate"
+ usa_depression.prohibition_debate.d:0 "The debate over Prohibition has intensified during the economic crisis. Many argue that legalizing alcohol would create jobs, generate tax revenue, and eliminate the crime associated with bootlegging. Anti-prohibition forces have gained momentum with the election of Roosevelt, who favors repeal. The Association Against the Prohibition Amendment, led by wealthy industrialists like Pierre du Pont, has campaigned effectively against what they call an unenforceable law that breeds disrespect for all legislation."
+ usa_depression.prohibition_debate.a:0 "The time has come to reconsider this policy"
+
+ usa_depression.prohibition_repeal.t:0 "Twenty-First Amendment"
+ usa_depression.prohibition_repeal.d:0 "The Twenty-First Amendment repealing Prohibition has been ratified, ending America's fourteen-year ban on alcoholic beverages. Celebrations have erupted across the country as legal alcohol sales resume. The repeal represents not only a social shift but an economic one, creating legitimate jobs in brewing, distilling, and hospitality while generating tax revenue for governments struggling with Depression-era budgets. Regulation of alcohol now returns to state and local control, with varying approaches across the country."
+ usa_depression.prohibition_repeal.a:0 "The noble experiment has ended"
+
+ # Focus Tree Names and Descriptions
+ USA_wall_street_crash:0 "Wall Street Crash"
+ USA_wall_street_crash_desc:0 "The stock market crash of October 1929 has devastated the American economy, wiping out billions in wealth and shaking confidence in the financial system."
+ 
+ USA_hoover_administration:0 "Hoover Administration"
+ USA_hoover_administration_desc:0 "President Herbert Hoover believes in limited government intervention, emphasizing voluntary cooperation among businesses and local relief efforts to address the economic crisis."
+ 
+ USA_rfc_establishment:0 "RFC Establishment"
+ USA_rfc_establishment_desc:0 "The Reconstruction Finance Corporation will provide emergency loans to banks, railroads, and other businesses to prevent further bankruptcies and economic deterioration."
+ 
+ USA_emergency_loans:0 "Emergency Loans"
+ USA_emergency_loans_desc:0 "Providing emergency loans to struggling businesses and financial institutions may help prevent further economic collapse while avoiding direct government intervention in the economy."
+ 
+ USA_voluntary_measures:0 "Voluntary Measures"
+ USA_voluntary_measures_desc:0 "President Hoover believes that voluntary cooperation among businesses, rather than government mandates, is the appropriate response to the economic crisis."
+ 
+ USA_business_coordination:0 "Business Coordination"
+ USA_business_coordination_desc:0 "Encouraging businesses to coordinate their actions without formal government regulation may help stabilize prices and prevent destructive competition during the crisis."
+ 
+ USA_smoot_hawley:0 "Smoot-Hawley Tariff"
+ USA_smoot_hawley_desc:0 "Raising tariffs on imported goods aims to protect American businesses and farmers from foreign competition, though economists warn this may reduce international trade and worsen the crisis."
+ 
+ USA_tariff_protection:0 "Tariff Protection"
+ USA_tariff_protection_desc:0 "With high tariffs in place, American industries can develop behind a protective wall, reducing foreign competition and preserving domestic jobs."
+ 
+ USA_bonus_army:0 "Bonus Army Crisis"
+ USA_bonus_army_desc:0 "Thousands of World War I veterans and their families have marched on Washington demanding immediate payment of service bonuses, creating a major political crisis for the administration."
+ 
+ USA_macarthur_suppression:0 "MacArthur Suppression"
+ USA_macarthur_suppression_desc:0 "Ordering General Douglas MacArthur to disperse the Bonus Army encampments with military force demonstrates the government's resolve to maintain order but risks significant political backlash."
+ 
+ USA_negotiated_settlement:0 "Negotiated Settlement"
+ USA_negotiated_settlement_desc:0 "Seeking a negotiated solution with the Bonus Army leaders may avoid violent confrontation while addressing some of the veterans' concerns through limited concessions."
