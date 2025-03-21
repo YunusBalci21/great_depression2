@@ -1,5 +1,3 @@
-# On actions for Great Depression mod
-
 on_actions = {
     # When game starts
     on_startup = {
@@ -7,11 +5,13 @@ on_actions = {
             if = {
                 limit = {
                     has_global_flag = great_depression_bookmark
+                    NOT = { has_global_flag = great_depression_event_fired }
                 }
                 USA = {
                     country_event = { id = great_depression.1 days = 1 }
                     load_focus_tree = { tree = usa_depression_era keep_completed = no }
                 }
+                set_global_flag = great_depression_event_fired
             }
         }
     }

@@ -21,7 +21,7 @@ focus_tree = {
         text = "Wall Street Crash"
         x = 24
         y = 0
-        cost = 10
+        cost = 7 # Quick initial focus (7 days)
         available_if_capitulated = yes
         ai_will_do = { factor = 100 }
         
@@ -45,7 +45,7 @@ focus_tree = {
         prerequisite = { focus = USA_wall_street_crash }
         x = 16
         y = 1
-        cost = 70
+        cost = 35 # Shorter early focus
         available_if_capitulated = yes
         
         completion_reward = {
@@ -235,7 +235,7 @@ focus_tree = {
         }
         x = 16
         y = 4
-        cost = 70
+        cost = 35 # Shorter crisis focus
         available_if_capitulated = yes
         
         completion_reward = {
@@ -254,7 +254,7 @@ focus_tree = {
         }
         x = 14
         y = 5
-        cost = 70
+        cost = 35 # Shorter crisis response
         available_if_capitulated = yes
         
         completion_reward = {
@@ -278,7 +278,7 @@ focus_tree = {
         }
         x = 18
         y = 5
-        cost = 70
+        cost = 35 # Shorter crisis response
         available_if_capitulated = yes
         
         completion_reward = {
@@ -327,7 +327,7 @@ focus_tree = {
         mutually_exclusive = { focus = USA_hoover_second_term }
         x = 28
         y = 2
-        cost = 70
+        cost = 35 # Shorter election result focus
         
         available_if_capitulated = yes
         
@@ -335,7 +335,7 @@ focus_tree = {
             create_country_leader = {
                 name = "Franklin D. Roosevelt"
                 desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
-                picture = "gfx/leaders/USA/Portrait_USA_Franklin_D_Roosevelt.dds"
+                picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds" # Using vanilla portrait
                 expire = "1965.1.1"
                 ideology = liberalism
                 traits = {
@@ -362,7 +362,7 @@ focus_tree = {
         mutually_exclusive = { focus = USA_fdr_victory }
         x = 36
         y = 2
-        cost = 70
+        cost = 35 # Shorter election result focus
         
         available_if_capitulated = yes
         
@@ -641,7 +641,7 @@ focus_tree = {
         prerequisite = { focus = USA_fdr_victory }
         x = 28
         y = 3
-        cost = 70
+        cost = 35 # Shorter for rapid New Deal implementation
         
         available_if_capitulated = yes
         
@@ -960,7 +960,7 @@ focus_tree = {
         prerequisite = { focus = USA_emergency_banking_act }
         x = 26
         y = 6
-        cost = 70
+        cost = 35 # Shorter for quick banking crisis resolution
         
         available_if_capitulated = yes
         
@@ -1366,7 +1366,7 @@ focus_tree = {
         prerequisite = { focus = USA_fdr_victory }
         x = 44
         y = 3
-        cost = 70
+        cost = 35 # Shorter for faster storyline progression
         
         available_if_capitulated = yes
         
@@ -1451,7 +1451,7 @@ focus_tree = {
         }
         x = 28
         y = 8
-        cost = 70
+        cost = 35 # Shorter for crisis event
         
         available_if_capitulated = yes
         
@@ -1469,7 +1469,7 @@ focus_tree = {
         prerequisite = { focus = USA_supreme_court_challenge }
         x = 26
         y = 9
-        cost = 70
+        cost = 35 # Shorter crisis response
         
         available_if_capitulated = yes
         
@@ -2160,7 +2160,7 @@ focus_tree = {
         }
         x = 38
         y = 12
-        cost = 70
+        cost = 35 # Shorter crisis focus
         
         available_if_capitulated = yes
         
@@ -2396,11 +2396,10 @@ focus_tree = {
             }
             add_war_support = 0.15
         }
-    }
-}
-    
+    }   
+}   
+
     # NEW FOCUSES - PROHIBITION REPEAL
-    
     focus = {
         id = USA_prohibition_debate
         icon = GFX_focus_generic_self_management

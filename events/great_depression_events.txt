@@ -8,14 +8,14 @@ country_event = {
     picture = GFX_report_event_generic_read_write  # Using existing graphic for now
     
     is_triggered_only = yes
-    
     fire_only_once = yes
     
     option = {
         name = great_depression.1.a
         add_political_power = -50
         add_stability = -0.1
-        
+        set_country_flag = wall_street_crash_happened 
+
         hidden_effect = {
             news_event = { id = great_depression.2 days = 1 }
         }
